@@ -25,7 +25,10 @@ if (!mobile_breakpoint.matches) {
     mobile_menu_element.classList.remove('hide');
     nav_element.classList.add('hide');
 }
-sticky_header_element.classList.add('sticky-header');
+
+if (sticky_header_element) {
+    sticky_header_element.classList.add('sticky-header');
+}
 
 copyright_element.textContent = "© Max Nielsen " + year;
 
@@ -167,9 +170,11 @@ about_link.addEventListener('click', function (event) {
 // https://stackoverflow.com/a/77004784
 const el = document.querySelector(".sticky-header");
 window.addEventListener("scroll", () => {
-    const stickyTop = parseInt(window.getComputedStyle(el).top);
-    const currentTop = el.getBoundingClientRect().top;
-    el.classList.toggle("header-scrolled", currentTop === stickyTop);
+    if (el) {
+        const stickyTop = parseInt(window.getComputedStyle(el).top);
+        const currentTop = el.getBoundingClientRect().top;
+        el.classList.toggle("header-scrolled", currentTop === stickyTop);
+    }
 });
 
 
