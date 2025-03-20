@@ -42,6 +42,7 @@ h1,
     font-family: "Synonym", Aptos, sans-serif;
     font-weight: 550;
     font-size: 3rem;
+    line-height: 120%;
 }
 
 h2 {
@@ -482,6 +483,7 @@ hgroup {
     flex-flow: row nowrap;
     position: relative;
     margin-top: 2.5rem;
+    gap: 5rem;
 }
 
 #table_of_contents {
@@ -619,6 +621,9 @@ li:last-of-type {
 
 #article {
     flex-shrink: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
 }
 
 
@@ -777,19 +782,36 @@ li:last-of-type {
 
 /* PROJECT DETAILS */
 .explanation-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-flow: row nowrap;
     gap: 5rem;
 }
 
+.summary-text {
+    font-size: 1.25rem;
+}
+
 .trailer {
-    max-width: 40rem;
+    width: 100%;
+}
+
+.trailer h3 {
+    border-bottom: none;
+    font-style: italic;
+    margin: 0 1.25rem 0 auto;
+    width: fit-content;
+    background-color: var(--c-bg-light);
+    padding: 0 0.5rem;
+    margin-bottom: -0.75rem !important;
+    position: relative;
 }
 
 .trailer iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
+    border: solid 0.075rem var(--c-link);
+    padding: 1.25rem;
 }
 
 .images-together {
@@ -1038,7 +1060,7 @@ iframe {
 }
 
 .wrapper-padding {
-    margin: 0 2.5rem;
+    margin: 0 2.5rem 0 0;
 }
 
 .wrapper-padding-vertical {
@@ -1114,7 +1136,7 @@ iframe {
     }
 }
 
-
+/* <1600px */
 @media screen and (max-width: 100rem) {
 
     /* ABOUT SECTION */
@@ -1167,8 +1189,17 @@ iframe {
 
 
     /* PROJECT DETAILS */
-    .trailer {
-        grid-column: span 2;
+    .two-col {
+        gap: 2.5rem;
+    }
+
+    #table_of_contents {
+        max-width: 24rem;
+    }
+
+    .explanation-wrapper {
+        gap: 0;
+        flex-flow: column;
     }
 
 }
@@ -1196,7 +1227,7 @@ iframe {
     }
 
     .explanation-wrapper {
-        grid-template-columns: 4fr 2fr 2fr;
+        
     }
 
     .explanation-wrapper:has(.selection-system) {
@@ -1218,6 +1249,7 @@ iframe {
 
     #project_details {
         order: 3;
+        height: fit-content;
     }
     
     #toc {
@@ -1238,7 +1270,7 @@ iframe {
         row-gap: 2.5rem;
         width: 100%;
         max-width: unset;
-        padding: 0 0 2.5rem 0;
+        padding: 0;
     }
 
     #table_of_contents_title {
@@ -1514,8 +1546,7 @@ iframe {
     }
 
     .explanation-wrapper {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        flex-flow: column;
     }
 
     /* FOOTER */
@@ -1567,6 +1598,10 @@ iframe {
 
     footer {
         flex-flow: column;
+    }
+
+    .trailer iframe {
+        padding: 0.75rem;
     }
 }
 
