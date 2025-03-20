@@ -299,7 +299,7 @@ nav li a:focus+.dropdown,
 
 .button-small {
     font-style: normal;
-    text-decoration: none;
+    text-decoration: none !important;
     border: 0.0625rem solid var(--c-link);
     font-weight: 400;
     padding: 0.25rem 1rem;
@@ -316,13 +316,14 @@ nav li a:focus+.dropdown,
     text-decoration: none;
     border: 0.0625rem solid var(--c-link);
     font-weight: 400;
-    padding: 0.125rem 0.25rem;
+    padding: 0.125rem 0.5rem;
     animation: unbold_text 0.5s forwards;
     transition-duration: 0.5s;
     line-height: 1.25rem;
 
     display: block;
     width: fit-content;
+    height: fit-content;
 }
 
 .button-tiny:hover, .button-tiny:focus {
@@ -535,17 +536,46 @@ hgroup {
     transition-duration: 0s !important;
 }
 
+
+.details-border {
+    border: 0.075rem solid var(--c-link);
+    padding: 1.25rem;
+}
+
 .article-details {
     display: block;
 }
 
-.project-detail-item {
-    margin-bottom: 1.25rem;
+.h-btn {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: start;
 }
+
+#project_details_toggle:hover {
+    cursor: pointer;
+}
+
+.project-details-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.25rem;
+}
+
+.project-details-wrapper > :last-child,
+.project-details-wrapper > :last-child ul,
+.project-details-wrapper > :last-child ul :last-child {
+    margin-bottom: 0 !important;
+}
+
+/* .project-detail-item {
+    margin-bottom: 1.25rem;
+} */
 
 .project-details {
     /* border: var(--c-link-change) 0.125rem solid; */
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-details p {
@@ -554,7 +584,7 @@ hgroup {
 }
 
 .project-details h3 {
-    margin-bottom: 0 !important;
+    margin-bottom: 0.25rem !important;
     width: fit-content;
 }
 
@@ -566,12 +596,17 @@ hgroup {
 }
 
 .toc {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .smaller-list-indent {
     margin-top: 0.5rem;
     padding-left: 0.5rem !important;
+    margin-bottom: 0;
+}
+
+li:last-of-type {
+    margin-bottom: 0 !important;
 }
 
 .project-deliverables * {
@@ -988,6 +1023,10 @@ footer p {
     display: none !important;
 }
 
+.no-margin {
+    margin: 0 !important;
+}
+
 iframe {
     border: none;
 }
@@ -1172,10 +1211,17 @@ iframe {
     }
 
     .project-details-wrapper {
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        row-gap: 0;
+        row-gap: 1.25rem;
         column-gap: 2.5rem;
+    }
+
+    #project_details {
+        order: 3;
+    }
+    
+    #toc {
+        order: 2;
     }
 
     .article-details {
@@ -1516,7 +1562,7 @@ iframe {
     }
 
     .project-details-wrapper {
-        display: unset;
+        grid-template-columns: 1fr;
     }
 
     footer {
