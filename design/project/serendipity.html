@@ -96,7 +96,7 @@
 
                         <div class="project-detail-item">
                             <h3>Timeframe</h3>
-                            <p>10 weeks</p>
+                            <p>April 2024 (8 weeks)</p>
                         </div>
 
                         <div class="project-detail-item">
@@ -158,18 +158,20 @@
                     <div>
                         <p class="summary-text">
                             Serendipity is a DIY physical and digital system where everyone in a large collaborative
-                            space can vote for music they want played and shared within that space. Three
-                            physical devices allow individuals to vote for a "vibe" (mood) of music. A random vibe is
-                            drawn from that voting pool, playing that type of music.
+                            space can vote for music they want played and shared within that space. Three physical
+                            devices allow individuals to vote for a "vibe" (mood) of music. A random vibe is drawn from
+                            that voting pool, playing that type of music.
                         </p>
-                        <p class="summary-text">People can visit Serendipity's website to see what music is playing and, if they like it, quickly add it to their playlist.</p>
+                        <p class="summary-text">People can visit Serendipity's website to see what music is playing,
+                            and, if they like the song, quickly add it to their playlist.</p>
 
-                        <p class="summary-text">As part of a three person group, I designed and created its web
-                            interface and the system of how it selects music in a fair manner.
+                        <p class="summary-text">As part of a three-person group, I designed and created the system of
+                            how it selects music in a fair manner, Serendipity’s web interface, and most of the Arduino
+                            code.
                         </p>
                     </div>
 
-                    <div class="trailer">
+                    <div class="trailer subheading">
                         <h3 class="heading-underline">Watch the trailer here</h3>
                         <iframe width="560" height="315"
                             src="https://www.youtube-nocookie.com/embed/DHk9P7hJ0ig?si=3ILLlr82pMtRjBcy"
@@ -183,46 +185,40 @@
             </section>
 
             <section class="wrapper-padding article-section" id="feedback_and_iteration">
-                <h2 class="heading-underline">Feedback and iteration</h2>
-                <div class="explanation-wrapper">
+                <h2 class="heading-underline">Voting system imbalance</h2>
+                <div class="explanation-wrapper two-sections">
                     <div>
+                        <div class="subheading">
+                            <h3 class="heading-underline">Original voting system</h3>
+                            <img src="../../img/design/serendipity/system1.webp" height="998" width="3604"
+                                id="before_img" alt="Winner-takes-all system">
+                        </div>
                         <p>
-                            A hands-on critique session with other students and our instructors helped us discover an
-                            imbalance
-                            in
-                            voting power which hampered music discovery. The majority could constantly vote for and play
-                            one
-                            vibe
-                            while one person’s taste in a less popular vibe would never be heard. This would become
-                            increasingly
-                            apparent the more devices (and therefore votes) were apart of the system.
+                            Originally, we had a majority rules-based method of choosing vibes: the most popular vibe
+                            voted for would always be played.
                         </p>
 
                         <p>
-                            Instead of a democratized voting system, I found that a lottery-style system created an
-                            equal
-                            playing
-                            field for individual voters. The vibe would be drawn at random from the votes gathered. The
-                            majority
-                            vote will still have great odds, but everyone’s vote now has a shot to be chosen.
+                            A hands-on critique session with students and instructors helped us discover an imbalance in
+                            voting power. With this majority rules system, one’s taste in less popular vibes would never
+                            be heard.
                         </p>
                     </div>
-                    <div class="selection-system">
-                        <h3 class="heading-underline">Selection systems</h3>
-                        <img src="../../img/design/serendipity/system1.webp" height="998" width="3604" id="before_img"
-                            alt="Winner-takes-all system">
-                        <img src="../../img/design/serendipity/system2.webp" height="998" width="3604" id="after_img"
-                            alt="Lottery system">
-                        <div class="hide">
-                            <div>
-                                <input type="radio" id="r_before_img" name="imageToggle" value="image1" checked />
-                                <label class="button-small" for="r_before_img">Winner-takes-all system</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="r_after_img" name="imageToggle" value="image2" />
-                                <label class="button-small" for="r_after_img">Lottery system</label>
-                            </div>
+                    <div>
+                        <div class="subheading">
+                            <h3 class="heading-underline">New voting system</h3>
+                            <img src="../../img/design/serendipity/system2.webp" height="998" width="3604"
+                                id="after_img" alt="Lottery system">
                         </div>
+                        <p>
+                            After that critique session, I initiated a roundtable discussion to disseminate feedback and
+                            pitch new ideas. We decided that a lottery-style system created an equal playing field for
+                            individual voters while also balancing feasibility.
+                        </p>
+                        <p>
+                            Now, the vibe would be drawn at random from the votes gathered. The majority vote will have
+                            the odds in their favour, but everyone’s vote now has a shot to be chosen.
+                        </p>
                     </div>
                 </div>
             </section>

@@ -795,7 +795,11 @@ li:last-of-type {
     width: 100%;
 }
 
-.trailer h3 {
+.explanation-wrapper p {
+    font-size: 1.25rem;
+}
+
+.subheading h3 {
     border-bottom: none;
     font-style: italic;
     margin: 0 1.25rem 0 auto;
@@ -812,6 +816,18 @@ li:last-of-type {
     aspect-ratio: 16 / 9;
     border: solid 0.075rem var(--c-link);
     padding: 1.25rem;
+}
+
+.subheading img {
+    width: 100%;
+    height: auto;
+    border: solid 0.075rem var(--c-link);
+    padding: 1.25rem;
+}
+
+.subheading:has(img) {
+    margin-bottom: 1.25rem;
+    
 }
 
 .images-together {
@@ -1202,6 +1218,9 @@ iframe {
         flex-flow: column;
     }
 
+    .explanation-wrapper.two-sections {
+        gap: 1.25rem;
+    }
 }
 
 
