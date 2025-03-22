@@ -483,6 +483,7 @@ hgroup {
     flex-flow: row nowrap;
     position: relative;
     margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     gap: 5rem;
 }
 
@@ -624,6 +625,15 @@ li:last-of-type {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 2.5rem;
+}
+
+.deliverables {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
 }
 
 
@@ -795,8 +805,9 @@ li:last-of-type {
     width: 100%;
 }
 
-.explanation-wrapper p {
+.article-section p {
     font-size: 1.25rem;
+    min-width: 24rem;
 }
 
 .subheading h3 {
@@ -1203,7 +1214,12 @@ iframe {
         padding: 0.5rem 2rem 0.5rem 3rem;
     }
 
+    .explanation-wrapper {
+        gap: 2.5rem;
+    }
+}
 
+@media screen and (max-width: 87.5rem) {
     /* PROJECT DETAILS */
     .two-col {
         gap: 2.5rem;
@@ -1590,6 +1606,9 @@ iframe {
     .footer-location {
         margin: 0 auto;
     }
+    .article-section p {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 31.25rem) {
@@ -1619,8 +1638,12 @@ iframe {
         flex-flow: column;
     }
 
-    .trailer iframe {
+    .trailer iframe, .subheading img  {
         padding: 0.75rem;
+    }
+    
+    .article-section p {
+        font-size: 1rem;
     }
 }
 
