@@ -131,7 +131,7 @@ header {
 
     background-color: var(--c-bg-light);
 
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 1.5rem;
     /* margin-bottom: 5rem; */
 }
 
@@ -142,6 +142,10 @@ header {
 header nav.active * {
     z-index: 100;
 }
+/* 
+header:has(#nav-projects:hover, #nav-projects:focus) {
+    padding-bottom: 0;
+} */
 
 .sticky-header {
     position: sticky;
@@ -335,9 +339,11 @@ nav li a:focus+.dropdown,
 }
 
 .button-tiny:hover, .button-tiny:focus {
-    color: var(--c-link-change);
+    color: var(--c-bg-light);
     border: 0.0625rem solid var(--c-link-change);
-    text-decoration: underline;
+    background-color: var(--c-link-change);
+    /* text-decoration: underline; */
+    animation: bold_text 0.3s forwards;
     
     transition-duration: 0.3s;
 }
@@ -500,6 +506,12 @@ hgroup {
     flex-flow: row wrap;
     gap: 1.25rem;
     margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-filters p {
+    margin: 0;
 }
 
 
@@ -518,14 +530,22 @@ hgroup {
     flex-flow: column;
     justify-content: space-between;
     border: var(--c-link) solid 0;
+    border-top-color: var(--c-bg-light);
+    border-right-color: var(--c-bg-light);
 }
 
 .project-card:hover, .project-card:focus {
     border-width: 0.75rem;
     border-top-style: hidden;
     border-right-style: hidden;
+}
 
+.project-card:active {
+    border-color: var(--c-link-change);
+}
 
+.project-card:hover h3, .project-card:focus h3 {
+    /* color: var(--c-link-change); */
 }
 
 
@@ -619,6 +639,12 @@ hgroup {
     margin: 0;
 }
 
+.project-title h3:hover, .project-title h3:focus {
+    text-decoration: underline;
+    text-decoration-thickness: 0.125rem;
+    color: var(--c-link-change);
+}
+
 .project-title p {
     font-size: 1.25rem;
 }
@@ -646,11 +672,15 @@ hgroup {
    height: 1.25rem;
 }
 
-.project-card:hover .project-title .project-hover p, .project-card:focus .project-title .project-hover p {
+.project-card .project-title .project-hover:hover p, .project-card .project-title .project-hover:focus p {
     background-color: var(--c-link-change);
 }
 
-.project-card:hover .project-title .project-hover, .project-card:focus .project-title .project-hover {
+.project-card .project-title .project-hover:hover, .project-card .project-title .project-hover:focus {
+    background-color: var(--c-link-change);
+}
+
+.project-card:active .project-title .project-hover, .project-card:active .project-title .project-hover p {
     background-color: var(--c-link-change);
 }
 
@@ -665,6 +695,13 @@ hgroup {
     gap: 5rem;
 }
 
+.scroll-sidebar {
+    height: calc(100vh - 2.5rem);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-bottom: 5rem;
+}
+
 #table_of_contents {
     min-width: 20rem;
     max-width: 30rem;
@@ -677,7 +714,7 @@ hgroup {
 }
 
 #table_of_contents_title {
-    /* margin-bottom: 1rem; */
+    margin-bottom: 0.5rem;
     min-width: 16rem;
     max-width: max-content;
     
@@ -697,7 +734,15 @@ hgroup {
     margin-bottom: 0.33rem;
 }
 
-#table_of_contents li a {
+/* #project_details_wrapper ul li a {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--c-link);
+    transition-duration: 0s !important;
+} */
+
+#toc li a {
     margin: 0;
     font-family: "Synonym", Aptos, sans-serif;
     font-weight: 400;
@@ -706,13 +751,13 @@ hgroup {
     transition-duration: 0s !important;
 }
 
-#table_of_contents li a:hover, #table_of_contents li a:focus {
+#toc li a:hover, #toc li a:focus {
     /* text-decoration: underline; */
     font-weight: 500;
     transition-duration: 0s !important;
 }
 
-#table_of_contents li a.active {
+#toc li a.active {
     font-weight: 500;
     transition-duration: 0s !important;
 }
@@ -817,6 +862,10 @@ li:last-of-type {
 
 
 /* PROJECTS */
+
+#projects {
+    margin-top: 2.5rem;
+}
 
 .project-wrapper {
     display: grid;
@@ -965,6 +1014,10 @@ li:last-of-type {
     min-width: 24rem;
 }
 
+.article-section .project-details p {
+    font-size: initial;
+}
+
 .subheading h3 {
     border-bottom: none;
     font-style: italic;
@@ -976,12 +1029,20 @@ li:last-of-type {
     position: relative;
 }
 
+.subheading a {
+    margin: 0 0 0 auto;
+}
+
 .trailer iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
     border: solid 0.075rem var(--c-link);
     padding: 1.25rem;
+}
+
+.figma-embed iframe {
+    aspect-ratio: 16 / 10.75;
 }
 
 .subheading img {
@@ -1467,7 +1528,7 @@ iframe {
         width: 100%;
     }
 
-    #table_of_contents .tagline, #table_of_contents_title {
+    #table_of_contents .tagline {
         margin-bottom: 0;
     }
 
