@@ -1,26 +1,82 @@
 'use-strict'
 
 
-const project_details_toggle = document.querySelector("#project_details_toggle");
-const project_details_wrapper = document.querySelector("#project_details_wrapper");
-const project_details_title = document.querySelector("#project_details_title");
+// const project_details_toggle = document.querySelector("#project_details_toggle");
+// const project_details_wrapper = document.querySelector("#project_details_wrapper");
+// const project_details_title = document.querySelector("#project_details_title");
 
-project_details_toggle.addEventListener("click", function() {
-    // Hide contents
-    if(!project_details_wrapper.classList.contains("hide")) {
-        project_details_toggle.innerHTML = "Show";
-        project_details_wrapper.classList.add("hide");
-        project_details_title.classList.add("no-margin");
-        console.log("open");
-    }
-    // Open contents
-    else {
-        project_details_toggle.innerHTML = "Hide";
-        project_details_wrapper.classList.remove("hide");
-        project_details_title.classList.remove("no-margin");
-        console.log("close");
-    }
-}); 
+const detail_panes = document.querySelectorAll(".project-details");
+
+detail_panes.forEach(detail_pane => {
+
+    detail_pane.querySelector(".button-toggle").addEventListener("click", function() {
+        // Hide contents
+        if(!detail_pane.querySelector(".project-details-wrapper").classList.contains("hide")) {
+            detail_pane.querySelector(".button-toggle").innerHTML = detail_pane.querySelector(".button-toggle").getAttribute("data-show-text");
+            detail_pane.querySelector(".project-details-wrapper").classList.add("hide");
+            detail_pane.querySelector(".details-title").classList.add("no-margin");
+            console.log("closing.");
+        }
+        // Open contents
+        else {
+            detail_pane.querySelector(".button-toggle").innerHTML = detail_pane.querySelector(".button-toggle").getAttribute("data-hide-text");
+            detail_pane.querySelector(".project-details-wrapper").classList.remove("hide");
+            detail_pane.querySelector(".details-title").classList.remove("no-margin");
+            console.log("opening...");
+        }
+
+    });
+
+    detail_pane.querySelector(".button-toggle").innerHTML = detail_pane.querySelector(".button-toggle").getAttribute("data-show-text");
+    detail_pane.querySelector(".project-details-wrapper").classList.add("hide");
+    detail_pane.querySelector(".details-title").classList.add("no-margin");
+    console.log("closing.");
+});
+
+
+// const toggle_buttons = document.querySelectorAll(".button-toggle");
+// const toggle_titles = document.querySelectorAll(".project-details .details-title");
+// const toggle_wrappers = document.querySelectorAll(".project-details .project-details-wrapper");
+
+// for(var i = 0; i < toggle_buttons.length; i++) {
+//     var button = toggle_buttons[i];
+//     var title = toggle_titles[i];
+//     var wrapper = toggle_wrappers[i];
+
+//     button.addEventListener("click", function() {
+//         // Hide contents
+//         if(!wrapper.classList.contains("hide")) {
+//             button.innerHTML = "Show";
+//             wrapper.classList.add("hide");
+//             title.classList.add("no-margin");
+//             console.log("closing.");
+//         }
+//         // Open contents
+//         else {
+//             button.innerHTML = "Hide";
+//             wrapper.classList.remove("hide");
+//             title.classList.remove("no-margin");
+//             console.log("opening...");
+//         }
+//     });
+// }
+
+// project_details_toggle.addEventListener("click", function() {
+//     // Hide contents
+//     if(!project_details_wrapper.classList.contains("hide")) {
+//         project_details_toggle.innerHTML = "Show";
+//         project_details_wrapper.classList.add("hide");
+//         project_details_title.classList.add("no-margin");
+//         console.log("open");
+//     }
+//     // Open contents
+//     else {
+//         project_details_toggle.innerHTML = "Hide";
+//         project_details_wrapper.classList.remove("hide");
+//         project_details_title.classList.remove("no-margin");
+//         console.log("close");
+//     }
+// }); 
 
 function updateTOCWidth() {
     // Get the h1 element
@@ -111,12 +167,12 @@ function updateTOCTitle() {
 window.addEventListener('load', function () {
     // updateTOCWidth();
     // updateTOCTitle();
-    if(!project_details_wrapper.classList.contains("hide")) {
-        project_details_toggle.innerHTML = "Show";
-        project_details_wrapper.classList.add("hide");
-        project_details_title.classList.add("no-margin");
-        console.log("open");
-    }
+    // if(!project_details_wrapper.classList.contains("hide")) {
+    //     project_details_toggle.innerHTML = "Show";
+    //     project_details_wrapper.classList.add("hide");
+    //     project_details_title.classList.add("no-margin");
+    //     console.log("open");
+    // }
 });
 
 window.addEventListener('resize', function () {
