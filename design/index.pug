@@ -1,0 +1,113 @@
+include mixins/head.pug
+
+doctype html
+html
+	// HTML Head
+	+index_head("Max Nielsen's Design Portfolio")
+
+	body
+
+		// Header
+		include includes/header
+
+		// Projects
+		section#projects.home-margin
+			h2.heading-underline Projects
+			.project-cards
+				a.project-card(href='project/headliner.html')
+					img.project-thumbnail(src='../img/design/headliner/user-journey.webp')
+					.project-tags
+						p April 2025 (13 weeks)
+						p Group project
+						p Design methods
+					.project-title
+						.project-title-combo
+							h3 Transit Fare Map
+							.project-arrow
+								img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
+						p
+							| Making it easier for low-frequency transit riders to purchase tickets; in collaboration with
+							| TransLink.
+						.project-hover
+							p Explore project
+							img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
+				a.project-card(href='project/serendipity.html')
+					img.project-thumbnail(src='../img/design/serendipity/selector.webp')
+					.project-tags
+						p April 2024 (8 weeks)
+						p Group project
+						p System &amp; website design
+					.project-title
+						.project-title-combo
+							h3 Serendipity
+							.project-arrow
+								img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
+						p
+							| A shared listening experience for large student design spaces of the near future.
+						.project-hover
+							p Explore project
+							img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
+				a.project-card(href='project/bc.html')
+					img.project-thumbnail(src='../img/design/serendipity/design-context.webp')
+					.project-tags
+						p December 2024 (8 weeks)
+						p Group project
+						p System &amp; app design
+					.project-title
+						.project-title-combo
+							h3 BC Healthcare Hub
+							.project-arrow
+								img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
+						p
+							| An interactive system to help international students apply for provincial health
+							| insurance.
+						.project-hover
+							p Explore project
+							img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
+		// About Me
+		section#about.home-margin
+			h2.heading-underline About me: your next UX designer
+			.about
+				section
+					p
+						| As a user experience (UX) designer, I enjoy designing physical interactive products which work in tandem with
+						| digital systems and experiences. In contemporary UX design, I believe great
+						| experiences emerge when tangible interaction seamlessly merges with digital complexity.
+					p
+						| Iterative processes and user-centered design methods have driven my ideas and decisions while
+						| studying at 
+						a#sfu.in-text-popup(href='https://www.sfu.ca/siat.html#about-details' target='_blank') Simon Fraser University&rsquo;s SIAT program
+						| . Recently, attending 
+						a#tue.in-text-popup(href='https://www.tue.nl/en/our-university/departments/industrial-design' target='_blank')
+							| TU/e&rsquo;s Industrial Design
+							| exchange program
+						|  in The Netherlands introduced me to a unique learning and working
+						| &#x9;&#x9;&#x9;&#x9;&#x9;environment.
+						| &#x9;&#x9;&#x9;&#x9;&#x9;Their emphasis on active reflection and personal development helps me bring fresh perspectives to
+						| &#x9;&#x9;&#x9;&#x9;&#x9;projects today and refinements to my design process tomorrow.
+				section#about-details
+					h3#details-heading.heading-underline
+						| Eindhoven University of Technology, The Netherlands
+					p#details-subheading 5 month international exchange
+					.popup-content
+						img#details-image(src='../img/tue.webp' width='1280' height='853' alt='University campus building on a sunny day')
+						.popup-content-links
+							div
+								h4#details-title Projects from TU/e
+								a#details-project-1.button-small(href='project/serendipity.html') Serendipity
+								a#details-project-2.button-small(href='project/serendipity.html') Serendipity
+							div
+								h4 Check out the program
+								a#details-program.button-small(href='https://www.tue.nl/en/our-university/departments/industrial-design' target='_blank')
+									| Industrial
+									| Design
+		// Contact
+		section#connect.wrapper-padding
+			h2 Let&apos;s connect through:
+			address
+				a.button-small(href='mailto:contact@maxnielsen.ca') Email
+				a.button-small(href='tel:7786364131') Phone
+				a.button-small(href='https://www.linkedin.com/in/mnielsen-/' target='_blank') LinkedIn
+		
+		// Footer
+		include includes/footer

@@ -1,332 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- HTML Head-->
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Serendipity - Max Nielsen</title>
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="../../css/fonts.css">
-    <script src="../../js/header.js" defer></script>
-    <script src="../../js/radio_img.js" defer></script>
-    <!-- <script src="../../js/back_home.js" defer></script> -->
-    <script src="../../js/toc.js" defer></script>
-
-</head>
-
-<body>
-    <!-- Title and nav(?) -->
+    <link rel="stylesheet" href="../../css/main.css"/>
+    <script src="../../js/header.js" defer=""></script>
+    <script src="../../js/toc.js" defer=""></script>
+  </head>
+  <body>
+    <!-- Header-->
     <header id="menu-header">
-        <div>
-            <!-- <img src="img/logo.png" height="512" width="512"> -->
-            <a href="../index.html">
-                <h1>Max Nielsen</h1>
-            </a>
-        </div>
-
-        <a id="mobile-menu-link" href="#" class="button-small submenu-dropdown hide">
-            Menu
-            <img src="../../img/icon/chevron.png" width="36" height="18" alt="Show menu">
-        </a>
-
-        <nav aria-label="Main">
-            <ul>
-                <li><a id="about-link" href="../index.html#about" class="button-small">About me</a></li>
-                <li>
-                    <a id="nav-projects" href="../index.html#projects"
-                        class="button-small submenu-dropdown">Projects<img src="../../img/icon/chevron.png" width="36"
-                            height="18" alt="Show submenu"></a>
-                    <ul class="dropdown" id="subnav-projects">
-                        <li><a href="serendipity.html" class="button-small button-dropdown">Serendipity</a></li>
-                        <li><a href="bc.html" class="button-small button-dropdown">BC Healthcare Hub</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a id="nav-connect" href="#connect" class="button-small submenu-dropdown">Let's connect<img
-                            src="../../img/icon/chevron.png" width="36" height="18" alt="Show submenu"></a>
-                    <ul class="dropdown" id="subnav-connect">
-                        <li><a href="mailto:contact@maxnielsen.ca" class="button-small button-dropdown">Email</a></li>
-                        <li><a href="tel:7786364131" class="button-small button-dropdown">Phone</a></li>
-                        <li><a href="https://www.linkedin.com/in/mnielsen-/"
-                                class="button-small button-dropdown">LinkedIn</a></li>
-                    </ul>
-                </li>
+      <div><a href="../index.html">
+          <h1>Max Nielsen</h1></a></div><a class="button-small submenu-dropdown hide" id="mobile-menu-link" href="#">Menu<img alt="Show menu" height="18" width="36" src="../../img/icon/chevron.png"></a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a class="button-small" id="about-link" href="../index.html#about">About me</a></li>
+          <li><a class="button-small submenu-dropdown" id="nav-projects" href="../index.html#projects">Projects<img alt="Show submenu" height="18" width="36" src="../../img/icon/chevron.png"></a>
+            <ul class="dropdown" id="subnav-projects">
+              <li><a class="button-small button-dropdown" href="headliner.html">Transit Fare Map</a></li>
+              <li><a class="button-small button-dropdown" href="serendipity.html">Serendipity</a></li>
+              <li><a class="button-small button-dropdown" href="bc.html">BC Healthcare Hub</a></li>
             </ul>
-        </nav>
-
-
+          </li>
+          <li><a class="button-small submenu-dropdown" id="nav-connect" href="#connect">Let's connect<img alt="Show submenu" height="18" width="36" src="../../img/icon/chevron.png"></a>
+            <ul class="dropdown" id="subnav-connect">
+              <li><a class="button-small button-dropdown" href="mailto:contact@maxnielsen.ca">Email</a></li>
+              <li><a class="button-small button-dropdown" href="tel:7786364131">Phone</a></li>
+              <li><a class="button-small button-dropdown" href="https://www.linkedin.com/in/mnielsen-/">LinkedIn</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </header>
-
-    <!-- Title and nav(?) -->
-
+    <!-- Title and nav(?)-->
     <picture class="project-hero-img serendipity-hero-img">
-        <source media="(min-width: 58.125rem)" srcset="../../img/design/serendipity/design-context.webp" />
-        <source media="(max-width: 58.125rem)" srcset="../../img/design/serendipity/selector.webp" />
-        <img src="../../img/design/bc/intro.webp" />
+      <source srcset="../../img/design/serendipity/design-context.webp" media="(min-width: 58.125rem)">
+      <source srcset="../../img/design/serendipity/selector.webp" media="(max-width: 58.125rem)"><img src="../../img/design/serendipity/selector.webp">
     </picture>
-
-    <!-- <hgroup class="project-hero-title" id="">
-        <h1 id="title">Serendipity</h1>
-        <p class="tagline">A shared listening experience for large student design spaces of the near future.</p>
-    </hgroup> -->
-
-
-    <!-- About Me -->
+    <!-- About Me-->
     <div class="two-col">
-        <aside id="table_of_contents">
-            <!-- <hgroup class="title-wrapper"> -->
-            <h1 id="table_of_contents_title" class="">Serendipity</h1>
-            <p class="tagline">A shared listening experience for large student design spaces of the near
-                future.</p>
-            <!-- </hgroup> -->
-            <!-- <div class="article-details"> -->
-            <div id="project_details">
-                <div class="project-details details-border">
-                    <div class="h-btn">
-                        <h2 id="project_details_title" class="details-title">Project details</h2>
-                        <a id="project_details_toggle" class="button-tiny button-small button-toggle"
-                            data-show-text="Show" data-hide-text="Hide">Hide</a>
-                    </div>
-                    <div id="project_details_wrapper" class="project-details-wrapper">
-                        <div class="project-for project-detail-item">
-                            <h3>Group project for</h3>
-                            <a class="button-tiny" target="_blank"
-                                href="https://tue.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=DBSU10&collegejaar=2023">DBSU10
-                                - Designing Connected Experiences</a>
-                        </div>
-
-                        <div class="project-detail-item">
-                            <h3>Timeframe</h3>
-                            <p>April 2024 (8 weeks)</p>
-                        </div>
-
-                        <div class="project-detail-item">
-                            <h3>Project focus</h3>
-                            <ul class="smaller-list-indent">
-                                <li>Physical prototyping</li>
-                                <li>DIY networked electronics</li>
-                                <li>Interaction/system design</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-detail-item">
-                            <h3>Tools used</h3>
-                            <ul class="smaller-list-indent">
-                                <li>HTML/CSS/JS</li>
-                                <li>Music steaming service APIs</li>
-                                <li>Arduino electronics</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-detail-item">
-                            <h3>The team</h3>
-                            <ul class="smaller-list-indent">
-                                <li><a href="https://www.linkedin.com/in/maarten-van-der-hart-b420a5167/"
-                                        target="_blank" class="button-tiny">Maarten van der Hart</a>
-                                </li>
-                                <li><a href="https://www.linkedin.com/in/stan-wijnen-1594981ab/" target="_blank"
-                                        class="button-tiny">Stan Wijnen</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="project-detail-item">
-                            <h3>What I did</h3>
-                            <p>I designed and created the system of how it selects music in a fair manner, Serendipity’s
-                                web interface, and most of the Arduino code.</p>
-                        </div>
-                    </div>
-                </div>
+      <aside id="table_of_contents">
+        <h1 id="table_of_contents_title">Serendipity</h1>
+        <p class="tagline">
+          A shared listening experience for large student design spaces of the near
+            future.
+        </p>
+        <div id="project_details">
+          <div class="project-details details-border">
+            <div class="h-btn">
+              <h2 class="details-title" id="project_details_title">Project details</h2><a class="button-tiny button-small button-toggle" data-hide-text="Hide" data-show-text="Show" id="project_details_toggle">Hide</a>
             </div>
-            <div class="toc" id="toc">
-                <h2>In this piece</h2>
-                <ul>
-                    <li>
-                        <a href="#what_it_is" data-target="what_it_is">What it is</a>
-                    </li>
-                    <li>
-                        <a href="#feedback_and_iteration" data-target="feedback_and_iteration">Feedback and
-                            iteration</a>
-                    </li>
-                    <li>
-                        <a href="#reflection" data-target="reflection">Reflection</a>
-                    </li>
-                    <li>
-                        <a href="#check_it_out_yourself" data-target="check_it_out_yourself">Check it out
-                            yourself</a>
-                    </li>
+            <div class="project-details-wrapper" id="project_details_wrapper">
+              <div class="project-for project-detail-item">
+                <h3>Group project for</h3><a class="button-tiny" href="https://tue.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=DBSU10&amp;collegejaar=2023" target="_blank">
+                  DBSU10
+                    - Designing Connected Experiences</a>
+              </div>
+              <div class="project-detail-item">
+                <h3>Timeframe</h3>
+                <p>April 2024 (8 weeks)</p>
+              </div>
+              <div class="project-detail-item">
+                <h3>Project focus</h3>
+                <ul class="smaller-list-indent">
+                  <li>Physical prototyping</li>
+                  <li>DIY networked electronics</li>
+                  <li>Interaction/system design</li>
                 </ul>
-            </div>
-            <!-- <div class="project-for project-detail-item project-deliverables">
-                <h2>Deliverables</h2>
-                <a class="button-small" target="_blank"
-                    href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Trailer</a>
-                <a class="button-small" target="_blank" href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Final
-                    Report</a>
-                <a class="button-small" target="_blank" href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Data
-                    Canvas</a>
-                <a class="button-small" target="_blank"
-                    href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Website</a>
-            </div> -->
-        </aside>
-        <div id="article">
-            <section class="wrapper-padding article-section" id="what_it_is">
-                <h2 class="heading-underline">What it is</h2>
-
-                <div class="explanation-wrapper">
-                    <div>
-                        <p class="summary-text">
-                            Serendipity is a DIY physical and digital system where everyone in a large collaborative
-                            space can vote for music they want played and shared within that space. Three physical
-                            devices allow individuals to vote for a "vibe" (mood) of music. A random vibe is drawn from
-                            that voting pool, playing that type of music.
-                        </p>
-                        <p class="summary-text">People can visit Serendipity's website to see what music is playing,
-                            and, if they like the song, quickly add it to their playlist.</p>
-
-                        <p class="summary-text">As part of a three-person group, I designed and created the system of
-                            how it selects music in a fair manner, Serendipity’s web interface, and most of the Arduino
-                            code.
-                        </p>
-                    </div>
-
-                    <div class="trailer subheading">
-                        <h3 class="heading-underline">Watch the trailer here</h3>
-                        <iframe width="560" height="315"
-                            src="https://www.youtube-nocookie.com/embed/DHk9P7hJ0ig?si=3ILLlr82pMtRjBcy"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section class="wrapper-padding article-section" id="feedback_and_iteration">
-                <h2 class="heading-underline">Voting system imbalance</h2>
-                <div class="explanation-wrapper two-sections">
-                    <div>
-                        <div class="subheading">
-                            <h3 class="heading-underline">Original voting system</h3>
-                            <img src="../../img/design/serendipity/system1.webp" height="998" width="3604"
-                                id="before_img" alt="Winner-takes-all system">
-                        </div>
-                        <p>
-                            Originally, we had a majority rules-based method of choosing vibes: the most popular vibe
-                            voted for would always be played.
-                        </p>
-
-                        <p>
-                            A hands-on critique session with students and instructors helped us discover an imbalance in
-                            voting power. With this majority rules system, one’s taste in less popular vibes would never
-                            be heard.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="subheading">
-                            <h3 class="heading-underline">New voting system</h3>
-                            <img src="../../img/design/serendipity/system2.webp" height="998" width="3604"
-                                id="after_img" alt="Lottery system">
-                        </div>
-                        <p>
-                            After that critique session, I initiated a roundtable discussion to disseminate feedback and
-                            pitch new ideas. We decided that a lottery-style system created an equal playing field for
-                            individual voters while also balancing feasibility.
-                        </p>
-                        <p>
-                            Now, the vibe would be drawn at random from the votes gathered. The majority vote will have
-                            the odds in their favour, but everyone’s vote now has a shot to be chosen.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="wrapper-padding article-section" id="reflection">
-                <h2 class="heading-underline">Web interface features</h2>
-                <div class="explanation-wrapper">
-                    <div>
-
-                        <p>
-                            I went on to implement the new voting system in our Arduino code and build the web
-                            interface.
-                        </p>
-
-                        <p>The web interface’s original plan was to only show the state of the physical devices. This
-                            was
-                            pointless for everyone in the space when the devices already had state indicators. To
-                            incentivize
-                            visiting the website, I used Spotify, Tidal, and Deezer’s APIs to display song details. I
-                            also added
-                            Add to playlist links that allowed users to quickly add the song to their music streaming
-                            playlist.
-                            This gave non-voters a reason to interact with the system.</p>
-                    </div>
-
-                    <div class="subheading">
-                        <h3 class="heading-underline">Add to playlist links</h3>
-                        <img src="../../img/design/serendipity/design-context.webp" height="998" width="3604"
-                            id="after_img" alt="Lottery system">
-                    </div>
-
-            </section>
-
-            <section class="wrapper-padding article-section" id="reflection">
-                <h2 class="heading-underline">Reflection</h2>
-
+              </div>
+              <div class="project-detail-item">
+                <h3>Tools used</h3>
+                <ul class="smaller-list-indent">
+                  <li>HTML/CSS/JS</li>
+                  <li>Music steaming service APIs</li>
+                  <li>Arduino electronics</li>
+                </ul>
+              </div>
+              <div class="project-detail-item">
+                <h3>The team</h3>
+                <ul class="smaller-list-indent">
+                  <li><a class="button-tiny" target="_blank" href="https://www.linkedin.com/in/maarten-van-der-hart-b420a5167/">Maarten van der Hart</a></li>
+                  <li><a class="button-tiny" target="_blank" href="https://www.linkedin.com/in/stan-wijnen-1594981ab/">Stan Wijnen</a></li>
+                </ul>
+              </div>
+              <div class="project-detail-item">
+                <h3>What I did</h3>
                 <p>
-                    As the project progressed, it became apparent that workloads were unbalanced. I took on too many
-                    tasks as my knowledge of web, interaction, and system design aligned with this course’s content. My
-                    team members also stuck to their strengths in physical prototyping. Next time, I will focus on
-                    developing new skills while acting as a mentor for others taking over my expected job. This way, we
-                    can distribute tasks more evenly and foster better learning outcomes for each team member.
+                  I designed and created the system of how it selects music in a fair manner, Serendipity’s
+                    web interface, and most of the Arduino code.
                 </p>
-
-            </section>
-
-            <section class="wrapper-padding article-section" id="check_it_out_yourself">
-                <h2 class="heading-underline">Check it out</h2>
-                <ul class="deliverables">
-                    <li>
-                        <a class="button-small" target="_blank"
-                            href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Trailer</a>
-                    </li>
-                    <li>
-                        <a class="button-small" target="_blank" href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Final
-                            Report</a>
-                    </li>
-                    <li>
-                        <a class="button-small" target="_blank" href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Data
-                            Canvas</a>
-                    </li>
-                    <li>
-                        <a class="button-small" target="_blank"
-                            href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Website</a>
-                    </li>
-                </ul>
-            </section>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="toc" id="toc">
+          <h2>In this piece</h2>
+          <ul>
+            <li><a data-target="what_it_is" href="#what_it_is">What it is</a></li>
+            <li><a data-target="feedback_and_iteration" href="#feedback_and_iteration">
+                Feedback and
+                  iteration</a></li>
+            <li><a data-target="reflection" href="#reflection">Reflection</a></li>
+            <li><a data-target="check_it_out_yourself" href="#check_it_out_yourself">
+                Check it out
+                  yourself</a></li>
+          </ul>
+        </div>
+      </aside>
+      <div id="article">
+        <section class="wrapper-padding article-section" id="what_it_is">
+          <h2 class="heading-underline">What it is</h2>
+          <div class="explanation-wrapper">
+            <div>
+              <p class="summary-text">
+                Serendipity is a DIY physical and digital system where everyone in a large collaborative
+                  space can vote for music they want played and shared within that space. Three physical
+                  devices allow individuals to vote for a "vibe" (mood) of music. A random vibe is drawn from
+                  that voting pool, playing that type of music.
+              </p>
+              <p class="summary-text">
+                People can visit Serendipity's website to see what music is playing,
+                  and, if they like the song, quickly add it to their playlist.
+              </p>
+              <p class="summary-text">
+                As part of a three-person group, I designed and created the system of
+                  how it selects music in a fair manner, Serendipity’s web interface, and most of the Arduino
+                  code.
+              </p>
+            </div>
+            <div class="trailer subheading">
+              <h3 class="heading-underline">Watch the trailer here</h3>
+              <iframe allowfullscreen="" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="YouTube video player" src="https://www.youtube-nocookie.com/embed/DHk9P7hJ0ig?si=3ILLlr82pMtRjBcy" height="315" width="560"></iframe>
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="feedback_and_iteration">
+          <h2 class="heading-underline">Voting system imbalance</h2>
+          <div class="explanation-wrapper two-sections">
+            <div>
+              <div class="subheading">
+                <h3 class="heading-underline">Original voting system</h3><img alt="Winner-takes-all system" id="before_img" width="3604" height="998" src="../../img/design/serendipity/system1.webp">
+              </div>
+              <p>
+                Originally, we had a majority rules-based method of choosing vibes: the most popular vibe
+                  voted for would always be played.
+              </p>
+              <p>
+                A hands-on critique session with students and instructors helped us discover an imbalance in
+                  voting power. With this majority rules system, one’s taste in less popular vibes would never
+                  be heard.
+              </p>
+            </div>
+            <div>
+              <div class="subheading">
+                <h3 class="heading-underline">New voting system</h3><img alt="Lottery system" id="after_img" width="3604" height="998" src="../../img/design/serendipity/system2.webp">
+              </div>
+              <p>
+                After that critique session, I initiated a roundtable discussion to disseminate feedback and
+                  pitch new ideas. We decided that a lottery-style system created an equal playing field for
+                  individual voters while also balancing feasibility.
+              </p>
+              <p>
+                Now, the vibe would be drawn at random from the votes gathered. The majority vote will have
+                  the odds in their favour, but everyone’s vote now has a shot to be chosen.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="reflection">
+          <h2 class="heading-underline">Web interface features</h2>
+          <div class="explanation-wrapper">
+            <div>
+              <p>
+                I went on to implement the new voting system in our Arduino code and build the web
+                  interface.
+              </p>
+              <p>
+                The web interface’s original plan was to only show the state of the physical devices. This
+                  was
+                  pointless for everyone in the space when the devices already had state indicators. To
+                  incentivize
+                  visiting the website, I used Spotify, Tidal, and Deezer’s APIs to display song details. I
+                  also added
+                  Add to playlist links that allowed users to quickly add the song to their music streaming
+                  playlist.
+                  This gave non-voters a reason to interact with the system.
+              </p>
+            </div>
+            <div class="trailer subheading website-embed">
+              <h3 class="heading-underline">Website for Serendipity</h3>
+              <iframe title="Serendipity website" src="https://serendipity.maxnielsen.ca" height="315" width="560"></iframe><a class="button-small" target="_blank" href="https://serendipity.maxnielsen.ca">Visit website</a>
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="reflection">
+          <h2 class="heading-underline">Reflection</h2>
+          <p>
+            As the project progressed, it became apparent that workloads were unbalanced. I took on too many
+              tasks as my knowledge of web, interaction, and system design aligned with this course’s content. My
+              team members also stuck to their strengths in physical prototyping. Next time, I will focus on
+              developing new skills while acting as a mentor for others taking over my expected job. This way, we
+              can distribute tasks more evenly and foster better learning outcomes for each team member.
+          </p>
+        </section>
+      </div>
     </div>
-
-    <!-- Contact -->
-    <!-- <section id="connect" class="wrapper-padding">
-        <h2>Let's connect through:</h2>
-        <address>
-            <a href="mailto:contact@maxnielsen.ca" class="button-small">Email</a>
-            <a href="tel:7786364131" class="button-small">Phone</a>
-            <a href="https://www.linkedin.com/in/mnielsen-/" target="_blank" class="button-small">LinkedIn</a>
-        </address>
-    </section> -->
-
+    <!-- Footer-->
     <footer>
-        <p id="copyright">© Max Nielsen [insert current year here]</p>
-
-        <p class="footer-location">from Vancouver, Canada</p>
-
-        <div class="footer-links">
-            <!-- <a class="button-small" href="citations.html">Citations</a> -->
-            <a class="button-small" href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">GitHub</a>
-        </div>
+      <p id="copyright">&copy; Max Nielsen</p>
+      <div class="footer-links">
+        <p>A human generated website.</p>
+        <p>See it on <a href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">GitHub</a>.</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

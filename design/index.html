@@ -1,221 +1,145 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Max Nielsen's Portfolio</title>
-	<link rel="stylesheet" href="../css/main.css">
-	<link rel="stylesheet" href="../css/fonts.css">
-	<script src="../js/header.js" defer></script>
-	<!-- <script src="../js/footer.js" defer></script> -->
-	<script src="../js/line.js" defer></script>
-</head>
-
-<body>
-	<svg id="line"></svg>
-
-	<!-- Title and nav(?) -->
-	<header class="i-want-sticky-header">
-		<div>
-			<!-- <img src="img/logo.png" height="512" width="512"> -->
-			<a href="../index.html">
-				<h1>Max Nielsen</h1>
-			</a>
-		</div>
-
-		<a id="mobile-menu-link" href="#" class="button-small submenu-dropdown hide">
-			Menu
-			<img src="../img/icon/chevron.png" width="36" height="18" alt="Show menu">
-		</a>
-
-		<nav aria-label="Main">
-			<ul>
-				<li><a id="about-link" href="#about" class="button-small">About me</a></li>
-				<li>
-					<a id="nav-projects" href="#projects" class="button-small submenu-dropdown">Projects<img
-							src="../img/icon/chevron.png" width="36" height="18" alt="Show submenu"></a>
-					<ul class="dropdown" id="subnav-projects">
-						<li><a href="project/headliner.html" class="button-small button-dropdown">Transit Fare Map</a></li>
-						<li><a href="project/bc.html" class="button-small button-dropdown">BC Healthcare Hub</a></li>
-						<li><a href="project/serendipity.html" class="button-small button-dropdown">Serendipity</a></li>
-
-					</ul>
-				</li>
-				<li>
-					<a id="nav-connect" href="#connect" class="button-small submenu-dropdown">Let's connect<img
-							src="../img/icon/chevron.png" width="36" height="18" alt="Show submenu"></a>
-					<ul class="dropdown" id="subnav-connect">
-						<li><a href="mailto:contact@maxnielsen.ca" class="button-small button-dropdown">Email</a></li>
-						<li><a href="tel:7786364131" class="button-small button-dropdown">Phone</a></li>
-						<li><a href="https://www.linkedin.com/in/mnielsen-/"
-								class="button-small button-dropdown">LinkedIn</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-
-
-	</header>
-
-
-	<!-- Projects -->
-	<section id="projects" class="home-margin">
-		<h2 class="heading-underline">Projects</h2>
-		<!-- <div class="project-filters">
-			<p>Filter by:</p>
-			<a class="button-small" href="#projects">Websites/Apps</a>
-			<a class="button-small" href="#projects">UX Projects</a>
-			<a class="button-small" href="#projects">Other Design Projects</a>
-		</div> -->
-		<div class="project-cards">
-			<a class="project-card" href="project/headliner.html">
-				<img class="project-thumbnail" src="../img/design/headliner/user-journey.webp">
-
-				<div class="project-tags">
-					<p>April 2025 (13 weeks)</p>
-					<p>Group project</p>
-					<p>Design methods</p>
-				</div>
-				<div class="project-title">
-					<div class="project-title-combo">
-						<h3>Transit Fare Map</h3>
-						<div class="project-arrow">
-							<img src="../img/icon/arrow_red.svg" alt="Go to project" width="512" height="512">
-						</div>
-					</div>
-					<p>Making it easier for low-frequency transit riders to purchase tickets; in collaboration with
-						TransLink.</p>
-					<div class="project-hover">
-						<p>Explore project</p>
-						<img src="../img/icon/arrow-white.png" alt="Go to project" width="512" height="278">
-					</div>
-				</div>
-			</a>
-
-			<a class="project-card" href="project/bc.html">
-				<img class="project-thumbnail" src="../img/design/serendipity/design-context.webp">
-
-				<div class="project-tags">
-					<p>December 2024 (11 weeks)</p>
-					<p>Group project</p>
-					<p>System & app design</p>
-				</div>
-				<div class="project-title">
-					<div class="project-title-combo">
-						<h3>BC Healthcare Hub</h3>
-						<div class="project-arrow">
-							<img src="../img/icon/arrow_red.svg" alt="Go to project" width="512" height="512">
-						</div>
-					</div>
-					<p>An interactive system to help international students apply for provincial health
-						insurance.</p>
-					<div class="project-hover">
-						<p>Explore project</p>
-						<img src="../img/icon/arrow-white.png" alt="Go to project" width="512" height="278">
-					</div>
-				</div>
-			</a>
-
-			<a class="project-card" href="project/serendipity.html">
-				<img class="project-thumbnail" src="../img/design/serendipity/selector.webp">
-
-				<div class="project-tags">
-					<p>April 2024 (8 weeks)</p>
-					<p>Group project</p>
-					<p>System & website design</p>
-				</div>
-				<div class="project-title">
-					<div class="project-title-combo">
-						<h3>Serendipity</h3>
-						<div class="project-arrow">
-							<img src="../img/icon/arrow_red.svg" alt="Go to project" width="512" height="512">
-						</div>
-					</div>
-					<p>A shared listening experience for large student design spaces of the near future.</p>
-					<div class="project-hover">
-						<p>Explore project</p>
-						<img src="../img/icon/arrow-white.png" alt="Go to project" width="512" height="278">
-					</div>
-				</div>
-			</a>
-		</div>
-	</section>
-
-
-	<!-- About Me -->
-	<section class="home-margin" id="about">
-		<h2 class="heading-underline">About me: your next UX designer</h2>
-
-		<div class="about">
-			<section>
-				<p>
-					As a user experience (UX) designer, I enjoy designing physical interactive products which work in tandem with
-					digital systems and experiences. In contemporary UX design, I believe great
-					experiences emerge when tangible interaction seamlessly merges with digital complexity.
-				</p>
-
-				<p>
-					Iterative processes and user-centered design methods have driven my ideas and decisions while
-					studying at <a href="https://www.sfu.ca/siat.html#about-details" target="_blank" id="sfu"
-						class="in-text-popup">Simon Fraser University’s SIAT program</a>. Recently, attending <a
-						href="https://www.tue.nl/en/our-university/departments/industrial-design" target="_blank"
-						id="tue" class="in-text-popup">TU/e’s Industrial Design
-						exchange program</a> in The Netherlands introduced me to a unique learning and working
-					environment.
-					Their emphasis on active reflection and personal development helps me bring fresh perspectives to
-					projects today and refinements to my design process tomorrow.
-				</p>
-			</section>
-
-			<section id="about-details">
-				<h3 id="details-heading" class="heading-underline">Eindhoven University of Technology, The Netherlands
-				</h3>
-				<p id="details-subheading">5 month international exchange</p>
-				<div class="popup-content">
-					<img id="details-image" src="../img/tue.webp" width="1280" height="853"
-						alt="University campus building on a sunny day">
-					<div class="popup-content-links">
-						<div>
-							<h4 id="details-title">Projects from TU/e</h4>
-							<a id="details-project-1" class="button-small"
-								href="project/serendipity.html">Serendipity</a>
-							<a id="details-project-2" class="button-small"
-								href="project/serendipity.html">Serendipity</a>
-						</div>
-						<div>
-							<h4>Check out the program</h4>
-							<a id="details-program" class="button-small"
-								href="https://www.tue.nl/en/our-university/departments/industrial-design"
-								target="_blank">Industrial
-								Design</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		</div>
-	</section>
-
-	<!-- Contact -->
-	<section id="connect" class="wrapper-padding">
-		<h2>Let's connect through:</h2>
-		<address>
-			<a href="mailto:contact@maxnielsen.ca" class="button-small">Email</a>
-			<a href="tel:7786364131" class="button-small">Phone</a>
-			<a href="https://www.linkedin.com/in/mnielsen-/" target="_blank" class="button-small">LinkedIn</a>
-		</address>
-	</section>
-
-	<footer>
-		<p id="copyright">© Max Nielsen</p>
-
-
-		<div class="footer-links">
-			<p>A human generated website.</p>
-			<p>See it on <a href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">GitHub</a>.</p>
-		</div>
-	</footer>
-</body>
-
+<!DOCTYPE html>
+<html>
+  <!-- HTML Head-->
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Max Nielsen's Design Portfolio</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <script src="../js/header.js" defer=""></script>
+    <script src="../js/line.js" defer=""></script>
+  </head>
+  <body>
+    <!-- Header-->
+    <header class="i-want-sticky-header">
+      <div><a href="../index.html">
+          <h1>Max Nielsen</h1></a></div><a class="button-small submenu-dropdown hide" id="mobile-menu-link" href="#">Menu<img src="../img/icon/chevron.png" width="36" height="18" alt="Show menu"></a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a class="button-small" id="about-link" href="#about">About me</a></li>
+          <li><a class="button-small submenu-dropdown" id="nav-projects" href="#projects">Projects<img src="../img/icon/chevron.png" width="36" height="18" alt="Show submenu"></a>
+            <ul class="dropdown" id="subnav-projects">
+              <li><a class="button-small button-dropdown" href="project/headliner.html">Transit Fare Map</a></li>
+              <li><a class="button-small button-dropdown" href="project/bc.html">BC Healthcare Hub</a></li>
+              <li><a class="button-small button-dropdown" href="project/serendipity.html">Serendipity</a></li>
+            </ul>
+          </li>
+          <li><a class="button-small submenu-dropdown" id="nav-connect" href="#connect">Let&apos;s connect<img src="../img/icon/chevron.png" width="36" height="18" alt="Show submenu"></a>
+            <ul class="dropdown" id="subnav-connect">
+              <li><a class="button-small button-dropdown" href="mailto:contact@maxnielsen.ca">Email</a></li>
+              <li><a class="button-small button-dropdown" href="tel:7786364131">Phone</a></li>
+              <li><a class="button-small button-dropdown" href="https://www.linkedin.com/in/mnielsen-/">LinkedIn</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Projects-->
+    <section class="home-margin" id="projects">
+      <h2 class="heading-underline">Projects</h2>
+      <div class="project-cards"><a class="project-card" href="project/headliner.html"><img class="project-thumbnail" src="../img/design/headliner/user-journey.webp">
+          <div class="project-tags">
+            <p>April 2025 (13 weeks)</p>
+            <p>Group project</p>
+            <p>Design methods</p>
+          </div>
+          <div class="project-title">
+            <div class="project-title-combo">
+              <h3>Transit Fare Map</h3>
+              <div class="project-arrow"><img src="../img/icon/arrow_red.svg" alt="Go to project" width="512" height="512"></div>
+            </div>
+            <p>
+              Making it easier for low-frequency transit riders to purchase tickets; in collaboration with
+              TransLink.
+            </p>
+            <div class="project-hover">
+              <p>Explore project</p><img src="../img/icon/arrow-white.png" alt="Go to project" width="512" height="278">
+            </div>
+          </div></a><a class="project-card" href="project/serendipity.html"><img class="project-thumbnail" src="../img/design/serendipity/selector.webp">
+          <div class="project-tags">
+            <p>April 2024 (8 weeks)</p>
+            <p>Group project</p>
+            <p>System &amp; website design</p>
+          </div>
+          <div class="project-title">
+            <div class="project-title-combo">
+              <h3>Serendipity</h3>
+              <div class="project-arrow"><img src="../img/icon/arrow_red.svg" alt="Go to project" width="512" height="512"></div>
+            </div>
+            <p>A shared listening experience for large student design spaces of the near future.</p>
+            <div class="project-hover">
+              <p>Explore project</p><img src="../img/icon/arrow-white.png" alt="Go to project" width="512" height="278">
+            </div>
+          </div></a><a class="project-card" href="project/bc.html"><img class="project-thumbnail" src="../img/design/serendipity/design-context.webp">
+          <div class="project-tags">
+            <p>December 2024 (8 weeks)</p>
+            <p>Group project</p>
+            <p>System &amp; app design</p>
+          </div>
+          <div class="project-title">
+            <div class="project-title-combo">
+              <h3>BC Healthcare Hub</h3>
+              <div class="project-arrow"><img src="../img/icon/arrow_red.svg" alt="Go to project" width="512" height="512"></div>
+            </div>
+            <p>
+              An interactive system to help international students apply for provincial health
+              insurance.
+            </p>
+            <div class="project-hover">
+              <p>Explore project</p><img src="../img/icon/arrow-white.png" alt="Go to project" width="512" height="278">
+            </div>
+          </div></a></div>
+    </section>
+    <!-- About Me-->
+    <section class="home-margin" id="about">
+      <h2 class="heading-underline">About me: your next UX designer</h2>
+      <div class="about">
+        <section>
+          <p>
+            As a user experience (UX) designer, I enjoy designing physical interactive products which work in tandem with
+            digital systems and experiences. In contemporary UX design, I believe great
+            experiences emerge when tangible interaction seamlessly merges with digital complexity.
+          </p>
+          <p>
+            Iterative processes and user-centered design methods have driven my ideas and decisions while
+            studying at <a class="in-text-popup" id="sfu" href="https://www.sfu.ca/siat.html#about-details" target="_blank">Simon Fraser University&rsquo;s SIAT program</a>. Recently, attending <a class="in-text-popup" id="tue" href="https://www.tue.nl/en/our-university/departments/industrial-design" target="_blank">
+              TU/e&rsquo;s Industrial Design
+              exchange program</a> in The Netherlands introduced me to a unique learning and working
+            &#x9;&#x9;&#x9;&#x9;&#x9;environment.
+            &#x9;&#x9;&#x9;&#x9;&#x9;Their emphasis on active reflection and personal development helps me bring fresh perspectives to
+            &#x9;&#x9;&#x9;&#x9;&#x9;projects today and refinements to my design process tomorrow.
+          </p>
+        </section>
+        <section id="about-details">
+          <h3 class="heading-underline" id="details-heading">Eindhoven University of Technology, The Netherlands</h3>
+          <p id="details-subheading">5 month international exchange</p>
+          <div class="popup-content"><img id="details-image" src="../img/tue.webp" width="1280" height="853" alt="University campus building on a sunny day">
+            <div class="popup-content-links">
+              <div>
+                <h4 id="details-title">Projects from TU/e</h4><a class="button-small" id="details-project-1" href="project/serendipity.html">Serendipity</a><a class="button-small" id="details-project-2" href="project/serendipity.html">Serendipity</a>
+              </div>
+              <div>
+                <h4>Check out the program</h4><a class="button-small" id="details-program" href="https://www.tue.nl/en/our-university/departments/industrial-design" target="_blank">
+                  Industrial
+                  Design</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- Contact-->
+    <section class="wrapper-padding" id="connect">
+      <h2>Let&apos;s connect through:</h2>
+      <address><a class="button-small" href="mailto:contact@maxnielsen.ca">Email</a><a class="button-small" href="tel:7786364131">Phone</a><a class="button-small" href="https://www.linkedin.com/in/mnielsen-/" target="_blank">LinkedIn</a></address>
+    </section>
+    <!-- Footer-->
+    <footer>
+      <p id="copyright">&copy; Max Nielsen</p>
+      <div class="footer-links">
+        <p>A human generated website.</p>
+        <p>See it on <a href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">GitHub</a>.</p>
+      </div>
+    </footer>
+  </body>
 </html>

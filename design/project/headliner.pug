@@ -1,0 +1,420 @@
+include ../mixins/head.pug
+doctype html
+html(lang="en")
+  // HTML Head
+  +project_head('Transit Fare Map - Max Nielsen')
+
+  body
+    // Header
+    include includes/header
+
+
+    // Title and nav(?)
+    picture.project-hero-img.serendipity-hero-img
+      source(
+        srcset="../../img/design/headliner/user-journey.webp" 
+        media="(min-width: 58.125rem)"
+        )
+      source(
+        srcset="../../img/design/headliner/user-journey.webp" 
+        media="(max-width: 58.125rem)"
+        )
+      img(src="../../img/design/headliner/user-journey.webp")
+    //
+      <hgroup class="project-hero-title" id="">
+       <h1 id="title">Serendipity</h1>
+       <p class="tagline">A shared listening experience for large student design spaces of the near future.</p>
+       </hgroup>
+    // About Me
+    .two-col
+      aside(id="table_of_contents")
+        // <hgroup class="title-wrapper">
+        h1(id="table_of_contents_title") Transit Fare Map
+        p.tagline Making it easier for low-frequency transit riders to purchase zone-based tickets.
+        // </hgroup>
+        // <div class="article-details">
+        div(id="project_details")
+          .project-details.details-border
+            .h-btn
+              h2.details-title(id="project_details_title") Project details
+              a.button-tiny.button-small.button-toggle(
+                data-hide-text="Hide" 
+                data-show-text="Show" 
+                id="project_details_toggle"
+                ) Hide
+            .project-details-wrapper(id="project_details_wrapper")
+              .project-for.project-detail-item
+                h3 Group project for
+                a.button-tiny(
+                  href="https://www.sfu.ca/outlines.html?2025/spring/iat/333/d200" 
+                  target="_blank"
+                  )
+                  | IAT333
+                  |   - Interactive Design Methods
+              .project-detail-item
+                h3 Timeframe
+                p Januray to April 2025 (13 weeks)
+              .project-detail-item
+                h3 Project focus
+                ul.smaller-list-indent
+                  li Practicing design methods
+                  li UX/Interaction design
+                  li Experiential prototyping
+              .project-detail-item
+                h3 Tools used
+                ul.smaller-list-indent
+                  li Figma
+                  li Miro
+              .project-detail-item
+                h3 The team
+                ul.smaller-list-indent
+                  li
+                    a.button-tiny(
+                      target="_blank" 
+                      href="https://www.linkedin.com/in/mikael-greenwood-5b0654216/"
+                      )
+                      | Mikael
+                      |   Greenwood
+                  li
+                    a.button-tiny(
+                      target="_blank" 
+                      href="https://www.linkedin.com/in/elizabeth-liz-liao/"
+                      ) Elizabeth Liao
+                  li
+                    a.button-tiny(
+                      target="_blank" 
+                      href="https://www.linkedin.com/in/irina-ng-035a4b251/"
+                      ) Irina Ng
+              .project-detail-item
+                h3 What I did
+                p
+                  | Besides learning design methods, I focused on crafting presentations grounded in
+                  |   storytelling and hosting
+                  |   participatory design workshops with stakeholders.
+        #toc.toc
+          h2 In this piece
+          ul
+            li
+              a(
+                data-target="what_it_is" 
+                href="#what_it_is"
+                ) What it is
+            li
+              a(
+                data-target="what_i_learned" 
+                href="#what_i_learned"
+                ) What I learned
+            li
+              a(
+                data-target="choosing_our_design_direction" 
+                href="#choosing_our_design_direction"
+                )
+                | Choosing
+                |   our design direction
+            li
+              a(
+                data-target="final_thoughts" 
+                href="#final_thoughts"
+                ) Final thoughts
+            li
+              a(
+                data-target="check_it_out_yourself" 
+                href="#check_it_out_yourself"
+                ) Check it out
+      #article
+        section.wrapper-padding.article-section(id="what_it_is")
+          h2.heading-underline What it is
+          .explanation-wrapper
+            div
+              p.summary-text
+                | We designed an interactive transit fare map that replaces the existing map on
+                |   TransLink’s
+                |   SkyTrain (LRT) ticket machines.
+              p.summary-text
+                | Its goal is to reduce confusion about the zone-based fare system amongst
+                |   new and inexperienced riders. Our map displays the zone system based on the time of day and
+                |   the fare riders need to purchase to get to their destination. It also visualizes where riders can travel when
+                |   selecting a specific ticket from the machine.
+            .trailer.subheading
+              h3.heading-underline Watch Elijah's journey
+              iframe(
+                allowfullscreen="" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                title="YouTube video player" 
+                src="https://www.youtube-nocookie.com/embed/5sqQ1lEkkEU?si=F0OeZWmyZ0hWUE-r" 
+                height="315" 
+                width="560"
+                )
+        section.wrapper-padding.article-section(id="what_i_learned")
+          h2.heading-underline What I learned
+          .explanation-wrapper
+            div
+              p
+                | We didn't know that this map would end up as the project's solution. Our team of four
+                |   learned and applied various design methods to understand how transit riders use SkyTrain
+                |   station entrances, which informed and led us to design the map.
+              p
+                | Outside of
+                |   developing hard skills, I focused on crafting presentations grounded in storytelling and
+                |   hosting
+                |   participatory design workshops with stakeholders.
+            .subheading
+              h3.heading-underline A SkyTrain station where we interviewed riders
+              img(
+                alt="Lottery system" 
+                width="2600" 
+                height="1733" 
+                src="../../img/design/headliner/inlet-station-outside.webp"
+                )
+          div(id="wil_1")
+            .project-details.details-border
+              .h-btn
+                div
+                  h2.details-title Working on my hard skills
+                a.button-tiny.button-small.button-toggle(
+                  data-hide-text="Read less" 
+                  data-show-text="Read more" 
+                  id="wil_1_toggle"
+                  ) Read less
+              .project-details-wrapper.explanation-wrapper(id="project_details_wrapper")
+                .para-spacing
+                  p
+                    | Our early success of conducting ethnography, analyzing its qualitative data, and
+                    |   narrowing our scope put us on a stable path towards our final design concept.
+                  //
+                    <p>Because of TransLink’s size, we focused our research at SkyTrain station entrances.
+                     We
+                     learned how SkyTrain entrances are a part of a riders transit journey, why riders
+                     used
+                     certain methods of payment over others, and how they used ticket machines.
+                     </p>
+                  p
+                    | I interviewed two transit users and three transit staff. With a total of 14
+                    |   different
+                    |   perspectives, we
+                    |   found 27 very specific themes from our interview data through the use of thematic
+                    |   analysis.
+                  p
+                    | I felt the need to ensure we designed in a broader scope, so I advocated for a
+                    |   few more rounds of thematic analysis by explaining that broader themes could help
+                    |   us keep an open perspective on
+                    |   potential solutions. I got buy-in from the team and we burned the midnight oil to
+                    |   end up with three final insights after two more rounds of analysis and running our
+                    |   themes through a decision matrix.
+                  p
+                    | The rich insights we gained from this process ensured our personas and user journeys
+                    |   were backed
+                    |   by reliable data. Choosing to focus on a few specific
+                    |   issues also helped us feel grounded in the design process.
+                .trailer.subheading.figma-embed
+                  h3.heading-underline View our ethongraphic process
+                  iframe(
+                    allowfullscreen="" 
+                    src="https://embed.figma.com/proto/QBcDhBK7SP7SKkt1H2FT1F/Interactive-Zone-Map---Example-Slides?page-id=0%3A1&node-id=1-314&viewport=-1302%2C509%2C0.2&scaling=scale-down-width&content-scaling=fixed&embed-host=share" 
+                    height="450" 
+                    width="800"
+                    )
+
+          div(id="wil_2")
+            .project-details.details-border
+              .h-btn
+                div
+                  h2.details-title(id="project_details_title") Hosting stakeholder workshops
+                a.button-tiny.button-small.button-toggle(
+                  data-hide-text="Read less" 
+                  data-show-text="Read more" 
+                  id="wil_2_toggle"
+                  ) Read less
+              .project-details-wrapper.explanation-wrapper(id="project_details_wrapper")
+                .para-spacing
+                  // <p>I’ve never had experience hosting workshops or interviewing users.</p>
+                  //
+                    <p>We used some brainstorming workshop material content from a previous workshop I hosted
+                     within our team. We talked about and used what we felt worked well in that session and
+                     some other activities from our class’s readings on participatory workshops. We then
+                     created questions and activities that align with specific goals we created. As we only
+                     had so much time with our participants (especially with TransLink employees), we
+                     narrowed down our questions and activities through deep discussion and priority
+                     matrices.
+                     </p>
+                  p
+                    | I’ve never had experience hosting workshops. As a first timer,
+                    |   there’s bound to be beginner's luck but also messiness.
+                  p
+                    | The first
+                    |   participatory workshop
+                    |   was a resounding success. Participants were
+                    |   comfortable with one another and we found insights (i.e. safety and accessibility)
+                    |   that we hadn't considered previously. However, after the workshop, one participant
+                    |   felt like I gave them
+                    |   too many options to complete the tasks; that I should
+                    |   know
+                    q
+                      | what is going to provide the most helpful responses for [our]
+                      |   project.
+                    | As a team, we iterated on our instructions, all the way down to
+                    |   what writing utensils everyone was using.
+                  p
+                    | Luck wore off in the second workshop. Participants weren’t as
+                    |   engaged and we missed the mark on making them comfortable. There was a tension in
+                    |   the
+                    |   room
+                    |   that never went away. Reflecting on that workshop, I should have had a backup plan
+                    |   and
+                    |   intervened to help improve the
+                    |   atmosphere rather than just powering through the workshop materials.
+                  //
+                    <p>
+                     Our final participatory workshop was with TransLink. Tailoring the content to fit
+                     the medium of the workshop, the attendees, and our 30-minute time limit paid off as
+                     the employees were very engaged and involved throughout the meeting. The attendees
+                     also showed up to our final presentation.
+                     </p>
+                  //
+                    <p>
+                     The format and questions of the workshops gave us great insights into
+                     riders and TransLink’s design philosophy. The medium allowed us to connect on a greater
+                     level to the participants than a typical interview and gave us greater insights into
+                     what riders value about taking transit.
+                     </p>
+                .trailer.subheading.figma-embed
+                  h3.heading-underline In-person workshop drawings
+                  img(
+                    alt="Workshop notes and drawings on a table" 
+                    id="after_img" 
+                    width="2600" 
+                    height="1733" 
+                    src="../../img/design/headliner/workshop.webp"
+                    )
+          div(id="wil_3")
+            .project-details.details-border
+              .h-btn
+                div
+                  h2.details-title(id="project_details_title")
+                    | Bringing users’ voices into the
+                    |   business world
+                a.button-tiny.button-small.button-toggle(
+                  data-hide-text="Read less" 
+                  data-show-text="Read more" 
+                  id="wil_3_toggle"
+                  ) Read less
+              .project-details-wrapper.explanation-wrapper(id="project_details_wrapper")
+                .para-spacing
+                  p
+                    | Expectations of our results felt high: we were undergraduates that had never
+                    |   collaborated with professional designers before.
+                  p
+                    | One part of a design ethnographer’s job is to
+                    q
+                      | bring the voices and lives of the
+                      |   end
+                      |   user
+                      |   or consumer out of the home and into the business world
+                    | (
+                    a(
+                      target="_blank" 
+                      href="https://doi.org/10.1111/j.1948-7169.1999.tb00274.x"
+                      )
+                      | Design
+                      |   Ethnography
+                    | ).
+                  p
+                    | We needed to understand that buy-in is an important facet in design. Without
+                    |   it, projects get canned. For us, buy-in was making the collaboration worthwhile for
+                    |   TransLink. Some of it was done through sheer hard work, but the other half involved
+                    |   strategic presenting of our results.
+                  p
+                    | I took multiple steps to create rich presentations for TransLink. The final
+                    |   presentation
+                    |   was the culmination of all of these efforts:
+                  ul.fancy-list.smaller-list-indent
+                    li I revised our in-class presentation to align with TransLink's shared knowledge.
+                    li We changed terminology to be more familiar and professional with TransLink.
+                    li
+                      | I used persona-driven stories in combination with clear imagery to give context
+                      |   to
+                      |   riders' issues.
+                    li
+                      | I utilized Figma’s powerful prototyping tools to integrate our mockup
+                      |   into our slides to clearly articulate how our design works.
+                  p
+                    | The combination of the points above led us to have a succinct, professional, and
+                    |   visually engaging final presentation based in ethnographic data.
+                .trailer.subheading.figma-embed
+                  h3.heading-underline Project timeline summarized for TransLink
+                  img(
+                    alt="Workshop notes and drawings on a table" 
+                    id="after_img" 
+                    width="2600" 
+                    height="969" 
+                    src="../../img/design/headliner/timeline.webp"
+                    )
+        section.wrapper-padding.article-section(id="choosing_our_design_direction")
+          h2.heading-underline Choosing our design direction
+          .explanation-wrapper
+            div
+              p
+                | Through a brainstorming workshop, we conceived three concepts that addressed
+                |   different needs of transit riders. One concept proposed a redesigned ticket machine
+                |   interface as many riders expressed frustration using its current design.
+              p
+                | TransLink gave us the green light to work on this concept but we were hesitant to pursue a
+                |   redesign. A successful redesign would cater towards the many
+                |   different transit riders that use the machine, increasing our design scope and affording
+                |   us limited time to cater to each group of riders.
+              p
+              p
+                | Comparitevely, we focused on new riders in our map concept as we noticed they
+                |   were the main group looking at and using the transit map above the ticket machine.
+                |   Other riders will still use the map, but we were more confident in our ethnographic data and
+                |   our ability to design for a specific group of people as opposed to every type of transit
+                |   rider. This, of course, is the concept we moved forward with.
+              //
+                <p>In the end, we agreed with our TransLink contact to pursue our concept of creating this
+                 transit map.</p>
+            .subheading
+              h3.heading-underline SkyTrain ticket machines
+              img.img-vertical(
+                alt="Lottery system" 
+                width="1733" 
+                height="2600" 
+                src="../../img/design/headliner/compass-vending-machine.webp"
+                )
+        section.wrapper-padding.article-section(id="final_thoughts")
+          h2.heading-underline Final thoughts
+          p
+            | The project was a success in the eyes of SFU, TransLink, and our team. I felt like we were on
+            |   cruise control throughout the project: there was very little course correction or other
+            |   setbacks that typically arise in student projects.
+          p
+            | If we were to continue this project, I would iterate on the design using insights grounded in design
+            |   evaluation.
+            |   How do other transit riders react to this map? Does it still make sense in their perspective, or
+            |   have we catered
+            |   too much to the new rider?
+        section.wrapper-padding.article-section(id="check_it_out_yourself")
+          h2.heading-underline Check it out
+          .explanation-wrapper
+            .trailer.subheading.figma-embed
+              h3.heading-underline View the presentation
+              iframe(
+                allowfullscreen="" 
+                src="https://embed.figma.com/proto/QBcDhBK7SP7SKkt1H2FT1F/Interactive-Zone-Map---Example-Slides?page-id=55%3A15&node-id=55-16032&viewport=40%2C623%2C0.04&scaling=scale-down-width&content-scaling=fixed&embed-host=share" 
+                height="450" 
+                width="800"
+                )
+              a.button-small(
+                target="_blank" 
+                href="../../file/design/headliner/Transit Fare Map - Slide Deck.pdf"
+                ) Download static slide deck
+            .trailer.subheading.figma-embed
+              h3.heading-underline Experience the design
+              iframe(
+                allowfullscreen="" 
+                src="https://embed.figma.com/proto/iF3ZzZsEO5GDvDjqWbJCWL/Interactive-Zone-Map---Experiential-Prototype?page-id=1987%3A423624&node-id=2006-279122&viewport=277%2C527%2C0.09&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2006%3A279122&embed-host=share" 
+                height="450" 
+                width="800"
+                )
+    // Footer
+    include includes/footer
