@@ -230,6 +230,12 @@ header nav .submenu-dropdown.button-hover img {
     max-height: 81.5vh;
 }
 
+.project-hero-img.bc-hero-img img {
+    object-position: top;
+    max-height: 81.5vh;
+    padding: 0 2.5rem;
+}
+
 .project-hero-title {
     /* position: absolute; */
     /* top: auto;
@@ -333,7 +339,7 @@ nav li a:focus+.dropdown,
     border: 0.0625rem solid var(--c-link);
     font-weight: 400;
     padding: 0.25rem 1rem;
-    animation: bold_text 0.5s backwards;
+    animation: bold_text 0s backwards;
     transition-duration: 0.5s;
     line-height: 1.25rem;
 
@@ -347,7 +353,7 @@ nav li a:focus+.dropdown,
     border: 0.0625rem solid var(--c-link);
     font-weight: 400;
     padding: 0.125rem 0.5rem;
-    animation: bold_text 0.5s backwards;
+    animation: bold_text 0s backwards;
     transition-duration: 0.5s;
     line-height: 1.25rem;
 
@@ -1103,6 +1109,8 @@ li:last-of-type {
     padding: 0 0.5rem;
     margin-bottom: -0.75rem !important;
     position: relative;
+    text-align: right;
+    max-width: 85%;
 }
 
 .subheading a {
@@ -1760,6 +1768,11 @@ iframe {
     .explanation-wrapper> :not(:last-child) {
         padding-bottom: 1rem;
     }
+
+    .project-hero-img.bc-hero-img img {
+        max-height: 87.5vh;
+        margin-top: 1.25rem;
+    }
 }
 
 @media screen and (min-width: 50rem) {
@@ -1847,6 +1860,10 @@ iframe {
     .footer-links a {
         border-color: var(--c-bg-light) !important;
         color: var(--c-bg-light);
+    }
+
+    .project-hero-img.bc-hero-img img {
+        padding: 0 1.75rem;
     }
 
     .dropdown {
@@ -2026,6 +2043,11 @@ iframe {
         margin: 0 0.75rem;
     }
 
+    .project-hero-img.bc-hero-img img {
+        padding: 0 0.75rem;
+        
+    }
+
     .project-tags {
         margin: 0.75rem 0.75rem 0 auto;
     }
@@ -2085,6 +2107,7 @@ iframe {
 
     .two-col {
         padding: 0.75rem;
+        margin-top: 0;
     }
 
 
