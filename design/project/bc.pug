@@ -1,0 +1,222 @@
+include ../mixins/head.pug
+doctype html
+html(lang="en")
+	// HTML Head
+	+project_head('BC Healthcare Hub - Max Nielsen')
+
+	body
+		// Header
+		include includes/header
+
+		// Title and nav(?)
+		picture.project-hero-img.bc-hero-img
+			source(
+				srcset="../../img/design/bc/headliner.webp" 
+				media="(min-width: 58.125rem)"
+				)
+			source(
+				srcset="../../img/design/bc/full_application.webp" 
+				media="(max-width: 58.125rem)"
+				)
+			img(src="../../img/design/bc/intro.webp")
+		//
+			<hgroup class="project-hero-title" id="">
+				<h1 id="title">Serendipity</h1>
+				<p class="tagline">A shared listening experience for large student design spaces of the near future.</p>
+				</hgroup>
+		// About Me
+		.two-col
+			aside(id="table_of_contents")
+				// <hgroup class="title-wrapper">
+				h1(id="table_of_contents_title") BC Healthcare Hub
+				p.tagline
+					| A mobile application prototype that supports learning about and using British Columbia's
+					|	healthcare system.
+				// </hgroup>
+				// <div class="article-details">
+				div(id="project_details")
+					.project-details.details-border
+						.h-btn
+							h2.details-title(id="project_details_title") Project details
+							a.button-tiny.button-small.button-toggle(
+								data-hide-text="Hide" 
+								data-show-text="Show" 
+								id="project_details_toggle"
+								) Hide
+						.project-details-wrapper(id="project_details_wrapper")
+							.project-for.project-detail-item
+								h3 Group project for
+								a.button-tiny(
+									href="https://www.sfu.ca/outlines.html?2024/fall/iat/334/d100" 
+									target="_blank"
+									)
+									| IAT 334
+									|   - Interface Design
+							.project-detail-item
+								h3 Timeframe
+								p December 2024 (8 weeks)
+							.project-detail-item
+								h3 Project focus
+								ul.smaller-list-indent
+									li Mobile app design &amp; prototyping
+									li System design
+							.project-detail-item
+								h3 Tools used
+								ul.smaller-list-indent
+									li ProtoPie
+									li Figma
+							.project-detail-item
+								h3 The team
+								ul.smaller-list-indent
+									li
+										a.button-tiny(
+											target="_blank" 
+											href="https://www.linkedin.com/in/elizabeth-liz-liao/"
+											) Elizabeth Liao
+									li
+										a.button-tiny(
+											target="_blank" 
+											href="https://www.linkedin.com/in/irina-ng-035a4b251/"
+											) Irina Ng
+							.project-detail-item
+								h3 What I did
+								p
+									| I designed the system of the main MSP form, conducted thematic analysis on user study data, and developed the prototype's interactions in ProtoPie.
+				#toc.toc
+					h2 In this piece
+					ul
+						li
+							a(
+								data-target="what_it_is" 
+								href="#what_it_is"
+								) What it is
+						li
+							a(
+								data-target="qualitative_interviews" 
+								href="#qualitative_interviews"
+								)
+								| The issue with qualitative interviews
+						li
+							a(
+								data-target="thematic_analysis" 
+								href="#thematic_analysis"
+								) Thematic analysis
+						li
+							a(
+								data-target="reflection" 
+								href="#reflection"
+								)
+								| Reflection
+						li
+							a(
+								data-target="check_it_out" 
+								href="#check_it_out"
+								)
+								| Check it out
+				//
+					<div class="project-for project-detail-item project-deliverables">
+						<h2>Deliverables</h2>
+						<a class="button-small" target="_blank"
+						href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Trailer</a>
+						<a class="button-small" target="_blank" href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Final
+						Report</a>
+						<a class="button-small" target="_blank" href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Data
+						Canvas</a>
+						<a class="button-small" target="_blank"
+						href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Website</a>
+						</div>
+			#article
+				section.wrapper-padding.article-section(id="what_it_is")
+					h2.heading-underline What it is
+					.explanation-wrapper
+						div
+							p.summary-text
+								| The BC Healthcare Hub is a mobile application prototype that supports learning about and using British Columbia's healthcare system.
+							p.summary-text
+								| Our goal for this project was to ideate, design, and create a fully interactive prototype for international students arriving to BC.
+							p.summary-text
+								| Content and visual design, system logic, and user testing were all expected
+								|   of us. Highlights of my work included developing the underlying interface system of the MSP form,
+								|   conducting thematic analysis on user study data, and creating most of the application in ProtoPie.
+						.subheading
+							h3.heading-underline Final design
+							img(
+								alt="Winner-takes-all system" 
+								width="2560" 
+								height="2464" 
+								src="../../img/design/bc/final_interface.webp"
+								)
+				section.wrapper-padding.article-section(id="qualitative_interviews")
+					h2.heading-underline The issue with qualitative interviews
+					.explanation-wrapper
+						div
+							p
+								| Three quarters through the project, user testing was conducted with our first prototype. After my
+								|    teammates conducted the user study, we had several pages of interview notes that contained tangents,
+								|    overly general remarks, and other fluff. We needed to get to the juicy, tangible praise and
+								|    criticism that interviewees provided so we can understand the state of our prototype. I was tasked
+								|    to return valuable, actionable insights from the study’s qualitative interview notes.
+							p
+								| I chose to use thematic analysis as we wanted to identify common issues users had with the app and
+								|    understand them as high-level problems within our design strategies of the app. Thematic analysis’s
+								|    benefits of coding, theming, and defining problems helped in our goals.
+						.subheading
+							h3.heading-underline Notes from user testing interviews
+							img(
+								alt="Screenshots of document notes from user testing interviews" 
+								width="2560" 
+								height="2210" 
+								src="../../img/design/bc/user_testing_documents.webp"
+								)
+				section#thematic_analysis.wrapper-padding.article-section
+					h2.heading-underline Thematic analysis
+					.explanation-wrapper
+						div
+							p
+								| I began to copy the raw interview notes to a Figma document, chopping multi-topic sentences into
+								|    single topic snippets and grouping similar quotes together, coding the information. I then
+								|    abstracted the data into separate themes of the application’s systems and design. This
+								|    did not yield any significant insights as each theme encompassed too many data points, resulting in
+								|    overly generalized outcomes. However, I found that many of the children of each theme shared
+								|    underlying similarities of visual design, content design and strategy, and system logic. So, I took
+								|    the initial sections and broke them down into these smaller categories.
+
+						.subheading
+							h3.heading-underline Two iterations of thematic analysis theming
+							img(
+								alt="Screenshot of digital sticky notes grouped together by a lot of themes" 
+								width="2560" 
+								height="2210" 
+								src="../../img/design/bc/thematic-analysis.webp"
+								)
+				section#reflection.wrapper-padding.article-section
+					h2.heading-underline Reflection
+					p
+						| This revealed some interesting outcomes: some themes were very specific (for example, warning and error
+						|   icons and colours) while others were very generalized (e.g. UI design). This level of detail of the themes
+						|   showed us the most common issues that were brought up and allowed us to prioritize certain issues. Finally,
+						|   to visualize this in a more cohesive manner, I placed these themes them into a Venn diagram of design,
+						|   system, and content. This allowed us to communicate our issues clearly in the weekly presentation
+						|   and outline solutions we will use to address each of these themes.
+					p
+						| The outcome of the thematic analysis helped us streamline what iterations needed to be prioritized leading
+						|  up to the deadline of the project.
+				section.wrapper-padding.article-section(id="check_it_out")
+					h2.heading-underline Check it out
+					.explanation-wrapper
+						.trailer.subheading.figma-embed
+							h3.heading-underline View the presentation
+							iframe(
+								allowfullscreen="" 
+								src="https://embed.figma.com/proto/xbyXBa8LHb7pnpdTC0oVcH/BC-Healthcare-Hub-Slide-Deck?page-id=0%3A1&node-id=1-78&viewport=40%2C600%2C0.09&scaling=scale-down-width&content-scaling=fixed&embed-host=share" 
+								height="450" 
+								width="800"
+								)
+							a.button-small(
+								target="_blank" 
+								href="../../file/design/bc/BC Healthcare Hub - Slide Deck.pdf"
+								) Download static slide deck
+						.trailer.subheading.figma-embed
+						
+		// Footer
+		include includes/footer

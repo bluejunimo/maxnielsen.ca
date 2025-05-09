@@ -1,193 +1,221 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- HTML Head-->
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>BC Healthcare Hub - Max Nielsen</title>
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="../../css/fonts.css">
-    <script src="../../js/header.js" defer></script>
-    <!-- <script src="../../js/back_home.js" defer></script> -->
-</head>
-
-<body>
-    <!-- Title and nav(?) -->
+    <link rel="stylesheet" href="../../css/main.css"/>
+    <script src="../../js/header.js" defer=""></script>
+    <script src="../../js/toc.js" defer=""></script>
+  </head>
+  <body>
+    <!-- Header-->
     <header id="menu-header">
-        <div>
-            <!-- <img src="img/logo.png" height="512" width="512"> -->
-            <a href="../index.html">
-                <h1>Max Nielsen</h1>
-            </a>
-        </div>
-
-        <a id="mobile-menu-link" href="#" class="button-small submenu-dropdown hide">
-            Menu
-            <img src="../../img/icon/chevron.png" width="36" height="18" alt="Show menu">
-        </a>
-
-        <nav aria-label="Main">
-            <ul>
-                <li><a id="about-link" href="../index.html#about" class="button-small">About me</a></li>
-                <li>
-                    <a id="nav-projects" href="../index.html#projects"
-                        class="button-small submenu-dropdown">Projects<img src="../../img/icon/chevron.png" width="36"
-                            height="18" alt="Show submenu"></a>
-                    <ul class="dropdown" id="subnav-projects">
-                        <li><a href="serendipity.html" class="button-small button-dropdown">Serendipity</a></li>
-                        <li><a href="bc.html" class="button-small button-dropdown">BC Healthcare Hub</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a id="nav-connect" href="#connect" class="button-small submenu-dropdown">Let's
-                        connect<img src="../../img/icon/chevron.png" width="36" height="18" alt="Show submenu"></a>
-                    <ul class="dropdown" id="subnav-connect">
-                        <li><a href="mailto:contact@maxnielsen.ca" class="button-small button-dropdown">Email</a></li>
-                        <li><a href="tel:7786364131" class="button-small button-dropdown">Phone</a></li>
-                        <li><a href="https://www.linkedin.com/in/mnielsen-/"
-                                class="button-small button-dropdown">LinkedIn</a></li>
-                    </ul>
-                </li>
+      <div><a href="../index.html">
+          <h1>Max Nielsen</h1></a></div><a class="button-small submenu-dropdown hide" id="mobile-menu-link" href="#">Menu<img alt="Show menu" height="18" width="36" src="../../img/icon/chevron.png"></a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a class="button-small" id="about-link" href="../index.html#about">About me</a></li>
+          <li><a class="button-small submenu-dropdown" id="nav-projects" href="../index.html#projects">Projects<img alt="Show submenu" height="18" width="36" src="../../img/icon/chevron.png"></a>
+            <ul class="dropdown" id="subnav-projects">
+              <li><a class="button-small button-dropdown" href="headliner.html">Transit Fare Map</a></li>
+              <li><a class="button-small button-dropdown" href="serendipity.html">Serendipity</a></li>
+              <li><a class="button-small button-dropdown" href="bc.html">BC Healthcare Hub</a></li>
             </ul>
-        </nav>
-
-
+          </li>
+          <li><a class="button-small submenu-dropdown" id="nav-connect" href="#connect">Let's connect<img alt="Show submenu" height="18" width="36" src="../../img/icon/chevron.png"></a>
+            <ul class="dropdown" id="subnav-connect">
+              <li><a class="button-small button-dropdown" href="mailto:contact@maxnielsen.ca">Email</a></li>
+              <li><a class="button-small button-dropdown" href="tel:7786364131">Phone</a></li>
+              <li><a class="button-small button-dropdown" href="https://www.linkedin.com/in/mnielsen-/">LinkedIn</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </header>
-
-    <!-- Title and nav(?) -->
-
-    <!-- IMAGE and title and description -->
-        <picture class="project-hero-img">
-            <source media="(min-width: 58.125rem)" srcset="../../img/design/bc/intro_t.webp" />
-            <source media="(max-width: 58.125rem)" srcset="../../img/design/bc/application_t.webp" />
-            <img src="../../img/design/bc/intro.webp" />
-        </picture>
-
-        <hgroup class="project-hero-title i-want-sticky-header" id="">
-            <h1>BC Healthcare Hub</h1>
-            <p class="tagline">A mobile application prototype that supports learning about and using British Columbia's
-                healthcare system.</p>
-        </hgroup>
-
-        <!-- <a href="../index.html" class="back-home" id="back_home">to the top</a> -->
-
-    <!-- About Me -->
-
-
-    <section class="wrapper-padding">
-        <h2 class="heading-underline">What it is</h2>
-
-        <div class="explanation-wrapper">
-            <div>
-                <p>
-                    The BC Healthcare Hub is a mobile application prototype that supports learning about and using
-                    British Columbia's healthcare system. This was part of IAT 334 – Interface Design; a final group
-                    project with the goal to ideate, design, and create a fully interactive prototype for international
-                    students arriving to BC. Content and visual design, system logic, and user testing were all expected
-                    of us. Highlights of my work included developing the underlying interface system of the MSP form,
-                    conducting thematic analysis on user study data, and creating most of the application in ProtoPie.
-                </p>
-            </div>
-
-            <div class="trailer">
-                <h3 class="heading-underline">Final Design</h3>
-                <img src="../../img/design/bc/final_interface.webp" height="2464" width="2560"
-                    alt="Interface of the BC Healthcare Hub mobile app">
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="wrapper-padding">
-        <h2 class="heading-underline">The issue with qualitative interviews</h2>
-        <div class="explanation-wrapper">
-            <div>
-                <p>
-                    Three quarters through the project, user testing was conducted with our first prototype. After my
-                    teammates conducted the user study, we had several pages of interview notes that contained tangents,
-                    overly general remarks, and other fluff. We needed to get to the juicy, tangible praise and
-                    criticism that interviewees provided so we can understand the state of our prototype. I was tasked
-                    to return valuable, actionable insights from the study’s qualitative interview notes.
-                </p>
-
-                <p>
-                    I chose to use thematic analysis as we wanted to identify common issues users had with the app and
-                    understand them as high-level problems within our design strategies of the app. Thematic analysis’s
-                    benefits of coding, theming, and defining problems helped in our goals.
-                </p>
-            </div>
-            <div class="trailer">
-                <h3 class="heading-underline">Notes from user testing interviews</h3>
-                <img src="../../img/design/bc/user_testing_documents.webp" height="2210" width="2560"
-                    alt="Screenshots of document notes from user testing interviews">
-            </div>
-        </div>
-    </section>
-
-    <section class="wrapper-padding">
-        <h2 class="heading-underline">My solution of thematic analysis</h2>
-        <div class="explanation-wrapper">
-            <div>
-                <p>
-                    I began to copy the raw interview notes to a Figma document, chopping multi-topic sentences into
-                    single topic snippets and grouping similar quotes together, coding the information. I then
-                    abstracted the data into separate themes of the application’s systems and design. This
-                    did not yield any significant insights as each theme encompassed too many data points, resulting in
-                    overly generalized outcomes. However, I found that many of the children of each theme shared
-                    underlying similarities of visual design, content design and strategy, and system logic. So, I took
-                    the initial sections and broke them down into these smaller categories.
-                </p>
-            </div>
-            <div class="selection-system">
-                <h3 class="heading-underline">Two iterations of thematic analysis theming</h3>
-                <div class="images-together">
-                    <img src="../../img/design/bc/thematic_analysis_1st_round.webp" height="1984" width="2560"
-                        alt="Screenshot of digital sticky notes grouped together by a few themes">
-                    <img src="../../img/design/bc/thematic_analysis_2nd_round.webp" height="2528" width="2560"
-                        alt="Screenshot of digital sticky notes grouped together by a lot of themes">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="wrapper-padding">
-        <h2 class="heading-underline">Reflection</h2>
-
-        <p>
-            This revealed some interesting outcomes: some themes were very specific (for example, warning and error
-            icons and colours) while others were very generalized (e.g. UI design). This level of detail of the themes
-            showed us the most common issues that were brought up and allowed us to prioritize certain issues. Finally,
-            to visualize this in a more cohesive manner, I placed these themes them into a Venn diagram of design,
-            system, and content. This allowed us to communicate our issues clearly in the weekly presentation
-            and outline solutions we will use to address each of these themes.
-
-            The outcome of the thematic analysis helped us streamline what iterations needed to be prioritized leading
-            up to the deadline of the project.
+    <!-- Title and nav(?)-->
+    <picture class="project-hero-img bc-hero-img">
+      <source srcset="../../img/design/bc/headliner.webp" media="(min-width: 58.125rem)">
+      <source srcset="../../img/design/bc/full_application.webp" media="(max-width: 58.125rem)"><img src="../../img/design/bc/intro.webp">
+    </picture>
+    <!--
+    <hgroup class="project-hero-title" id="">
+    	<h1 id="title">Serendipity</h1>
+    	<p class="tagline">A shared listening experience for large student design spaces of the near future.</p>
+    	</hgroup>
+    -->
+    <!-- About Me-->
+    <div class="two-col">
+      <aside id="table_of_contents">
+        <!-- <hgroup class="title-wrapper">-->
+        <h1 id="table_of_contents_title">BC Healthcare Hub</h1>
+        <p class="tagline">
+          A mobile application prototype that supports learning about and using British Columbia's
+          	healthcare system.
         </p>
-
-    </section>
-
-    <!-- Contact -->
-    <section id="connect" class="wrapper-padding">
-        <h2>Let's connect through:</h2>
-        <address>
-            <a href="mailto:contact@maxnielsen.ca" class="button-small">Email</a>
-            <a href="tel:7786364131" class="button-small">Phone</a>
-            <a href="https://www.linkedin.com/in/mnielsen-/" target="_blank" class="button-small">LinkedIn</a>
-        </address>
-    </section>
-
-    <footer>
-        <p id="copyright">© Max Nielsen [insert current year here]</p>
-
-        <p class="footer-location">from Vancouver, Canada</p>
-
-        <div class="footer-links">
-            <!-- <a class="button-small" href="../citations.html">Citations</a> -->
-            <a class="button-small" href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">GitHub</a>
+        <!-- </hgroup>-->
+        <!-- <div class="article-details">-->
+        <div id="project_details">
+          <div class="project-details details-border">
+            <div class="h-btn">
+              <h2 class="details-title" id="project_details_title">Project details</h2><a class="button-tiny button-small button-toggle" data-hide-text="Hide" data-show-text="Show" id="project_details_toggle">Hide</a>
+            </div>
+            <div class="project-details-wrapper" id="project_details_wrapper">
+              <div class="project-for project-detail-item">
+                <h3>Group project for</h3><a class="button-tiny" href="https://www.sfu.ca/outlines.html?2024/fall/iat/334/d100" target="_blank">
+                  IAT 334
+                    - Interface Design</a>
+              </div>
+              <div class="project-detail-item">
+                <h3>Timeframe</h3>
+                <p>December 2024 (8 weeks)</p>
+              </div>
+              <div class="project-detail-item">
+                <h3>Project focus</h3>
+                <ul class="smaller-list-indent">
+                  <li>Mobile app design &amp; prototyping</li>
+                  <li>System design</li>
+                </ul>
+              </div>
+              <div class="project-detail-item">
+                <h3>Tools used</h3>
+                <ul class="smaller-list-indent">
+                  <li>ProtoPie</li>
+                  <li>Figma</li>
+                </ul>
+              </div>
+              <div class="project-detail-item">
+                <h3>The team</h3>
+                <ul class="smaller-list-indent">
+                  <li><a class="button-tiny" target="_blank" href="https://www.linkedin.com/in/elizabeth-liz-liao/">Elizabeth Liao</a></li>
+                  <li><a class="button-tiny" target="_blank" href="https://www.linkedin.com/in/irina-ng-035a4b251/">Irina Ng</a></li>
+                </ul>
+              </div>
+              <div class="project-detail-item">
+                <h3>What I did</h3>
+                <p>I designed the system of the main MSP form, conducted thematic analysis on user study data, and developed the prototype's interactions in ProtoPie.</p>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="toc" id="toc">
+          <h2>In this piece</h2>
+          <ul>
+            <li><a data-target="what_it_is" href="#what_it_is">What it is</a></li>
+            <li><a data-target="qualitative_interviews" href="#qualitative_interviews">The issue with qualitative interviews</a></li>
+            <li><a data-target="thematic_analysis" href="#thematic_analysis">Thematic analysis</a></li>
+            <li><a data-target="reflection" href="#reflection">Reflection</a></li>
+            <li><a data-target="check_it_out" href="#check_it_out">Check it out</a></li>
+          </ul>
+        </div>
+        <!--
+        <div class="project-for project-detail-item project-deliverables">
+        	<h2>Deliverables</h2>
+        	<a class="button-small" target="_blank"
+        	href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Trailer</a>
+        	<a class="button-small" target="_blank" href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Final
+        	Report</a>
+        	<a class="button-small" target="_blank" href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Data
+        	Canvas</a>
+        	<a class="button-small" target="_blank"
+        	href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Website</a>
+        	</div>
+        -->
+      </aside>
+      <div id="article">
+        <section class="wrapper-padding article-section" id="what_it_is">
+          <h2 class="heading-underline">What it is</h2>
+          <div class="explanation-wrapper">
+            <div>
+              <p class="summary-text">The BC Healthcare Hub is a mobile application prototype that supports learning about and using British Columbia's healthcare system.</p>
+              <p class="summary-text">Our goal for this project was to ideate, design, and create a fully interactive prototype for international students arriving to BC.</p>
+              <p class="summary-text">
+                Content and visual design, system logic, and user testing were all expected
+                  of us. Highlights of my work included developing the underlying interface system of the MSP form,
+                  conducting thematic analysis on user study data, and creating most of the application in ProtoPie.
+              </p>
+            </div>
+            <div class="subheading">
+              <h3 class="heading-underline">Final design</h3><img alt="Winner-takes-all system" width="2560" height="2464" src="../../img/design/bc/final_interface.webp">
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="qualitative_interviews">
+          <h2 class="heading-underline">The issue with qualitative interviews</h2>
+          <div class="explanation-wrapper">
+            <div>
+              <p>
+                Three quarters through the project, user testing was conducted with our first prototype. After my
+                   teammates conducted the user study, we had several pages of interview notes that contained tangents,
+                   overly general remarks, and other fluff. We needed to get to the juicy, tangible praise and
+                   criticism that interviewees provided so we can understand the state of our prototype. I was tasked
+                   to return valuable, actionable insights from the study’s qualitative interview notes.
+              </p>
+              <p>
+                I chose to use thematic analysis as we wanted to identify common issues users had with the app and
+                   understand them as high-level problems within our design strategies of the app. Thematic analysis’s
+                   benefits of coding, theming, and defining problems helped in our goals.
+              </p>
+            </div>
+            <div class="subheading">
+              <h3 class="heading-underline">Notes from user testing interviews</h3><img alt="Screenshots of document notes from user testing interviews" width="2560" height="2210" src="../../img/design/bc/user_testing_documents.webp">
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="thematic_analysis">
+          <h2 class="heading-underline">Thematic analysis</h2>
+          <div class="explanation-wrapper">
+            <div>
+              <p>
+                I began to copy the raw interview notes to a Figma document, chopping multi-topic sentences into
+                   single topic snippets and grouping similar quotes together, coding the information. I then
+                   abstracted the data into separate themes of the application’s systems and design. This
+                   did not yield any significant insights as each theme encompassed too many data points, resulting in
+                   overly generalized outcomes. However, I found that many of the children of each theme shared
+                   underlying similarities of visual design, content design and strategy, and system logic. So, I took
+                   the initial sections and broke them down into these smaller categories.
+              </p>
+            </div>
+            <div class="subheading">
+              <h3 class="heading-underline">Two iterations of thematic analysis theming</h3><img alt="Screenshot of digital sticky notes grouped together by a lot of themes" width="2560" height="2210" src="../../img/design/bc/thematic-analysis.webp">
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="reflection">
+          <h2 class="heading-underline">Reflection</h2>
+          <p>
+            This revealed some interesting outcomes: some themes were very specific (for example, warning and error
+              icons and colours) while others were very generalized (e.g. UI design). This level of detail of the themes
+              showed us the most common issues that were brought up and allowed us to prioritize certain issues. Finally,
+              to visualize this in a more cohesive manner, I placed these themes them into a Venn diagram of design,
+              system, and content. This allowed us to communicate our issues clearly in the weekly presentation
+              and outline solutions we will use to address each of these themes.
+          </p>
+          <p>
+            The outcome of the thematic analysis helped us streamline what iterations needed to be prioritized leading
+             up to the deadline of the project.
+          </p>
+        </section>
+        <section class="wrapper-padding article-section" id="check_it_out">
+          <h2 class="heading-underline">Check it out</h2>
+          <div class="explanation-wrapper">
+            <div class="trailer subheading figma-embed">
+              <h3 class="heading-underline">View the presentation</h3>
+              <iframe allowfullscreen="" src="https://embed.figma.com/proto/xbyXBa8LHb7pnpdTC0oVcH/BC-Healthcare-Hub-Slide-Deck?page-id=0%3A1&amp;node-id=1-78&amp;viewport=40%2C600%2C0.09&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;embed-host=share" height="450" width="800"></iframe><a class="button-small" target="_blank" href="../../file/design/bc/BC Healthcare Hub - Slide Deck.pdf">Download static slide deck</a>
+            </div>
+            <div class="trailer subheading figma-embed"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Footer-->
+    <footer>
+      <p id="copyright">&copy; Max Nielsen</p>
+      <div class="footer-links">
+        <p>A human generated website.</p>
+        <p>See it on <a href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">GitHub</a>.</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

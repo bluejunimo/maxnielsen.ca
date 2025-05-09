@@ -27,8 +27,12 @@ if (!mobile_breakpoint.matches) {
 }
 sticky_header_element.classList.add('sticky-header');
 
-copyright_element.textContent = "© Max Nielsen " + year;
-
+if (year.toString() == "2025") {
+    copyright_element.textContent = "© Max Nielsen " + year;
+}
+else {
+    copyright_element.textContent = "© Max Nielsen travelling to the year of " + year;
+}
 
 // https://stackoverflow.com/a/8318629
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown

@@ -1,0 +1,17 @@
+mixin index_head(page_title)
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        title= page_title
+        link(rel='stylesheet' href='../css/main.css')
+        script(src='../js/header.js' defer='')
+        script(src='../js/line.js' defer='')
+
+mixin project_head(page_title)
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        title= page_title
+        link(rel='stylesheet' href='../../css/main.css')
+        script(src='../../js/header.js' defer='')
+        script(src='../../js/toc.js' defer='')

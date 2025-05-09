@@ -7,7 +7,7 @@ var heading_element = document.querySelector('#details-heading');
 var subheading_element = document.querySelector('#details-subheading');
 var title_element = document.querySelector('#details-title');
 var project_1_element = document.querySelector('#details-project-1');
-// var project_2_element = document.querySelector('#details-project-2');
+var project_2_element = document.querySelector('#details-project-2');
 var program_element = document.querySelector('#details-program');
 var image_element = document.querySelector('#details-image');
 var wrapper_element = document.querySelector('#about-details');
@@ -21,8 +21,11 @@ var tue_subheading_text = "5 month international exchange";
 var sfu_title_text = "Projects from SFU";
 var tue_title_text = "Projects from TU/e";
 
-var sfu_project_1_text = "BC Healthcare Hub";
-var sfu_project_1_link = "project/bc.html";
+var sfu_project_1_text = "Transit Fare Map";
+var sfu_project_1_link = "project/headliner.html";
+
+var sfu_project_2_text = "BC Healthcare Hub";
+var sfu_project_2_link = "project/bc.html";
 
 var tue_project_1_text = "Serendipity";
 var tue_project_1_link = "project/serendipity.html";
@@ -53,17 +56,17 @@ var isSFU_ = false;
 // https://stackoverflow.com/a/58468957
 function drawLine(isSFU, switching) {
      
-    // Clear any existing lines
-    if((clicked) && !switching) {
-        lineContainer.innerHTML = '';
-        visible = false;
-        console.log("not working");
-        wrapper_element.classList.add('hide');
-        return;
-    }
+    // // Clear any existing lines
+    // if((clicked) && !switching) {
+    //     lineContainer.innerHTML = '';
+    //     visible = false;
+    //     console.log("not working");
+    //     wrapper_element.classList.add('hide');
+    //     return;
+    // }
     
-    visible = true;
-    wrapper_element.classList.remove('hide');
+    // visible = true;
+    // wrapper_element.classList.remove('hide');
 
     return;
     setTimeout(function() {
@@ -140,7 +143,9 @@ function updateContent(isSFU) {
         title_element.textContent = sfu_title_text;
         project_1_element.textContent = sfu_project_1_text;
         project_1_element.href = sfu_project_1_link;
-        // project_2_element.classList.add('hide');
+        project_2_element.href = sfu_project_2_link;
+        project_2_element.textContent = sfu_project_2_text;
+        project_2_element.classList.remove('hide');
         program_element.textContent = sfu_program_text;
         program_element.href = sfu_program_link;
 
@@ -151,10 +156,8 @@ function updateContent(isSFU) {
         subheading_element.textContent = tue_subheading_text;
         title_element.textContent = tue_title_text;
         project_1_element.textContent = tue_project_1_text;
-        // `project_2`_element.textContent = tue_project_2_text;
+        project_2_element.classList.add('hide');
         project_1_element.href = tue_project_1_link;
-        // project_2_element.href = tue_project_1_link;
-        // project_2_element.classList.remove('hide');
         program_element.textContent = tue_program_text;
         program_element.href = tue_program_link;
 

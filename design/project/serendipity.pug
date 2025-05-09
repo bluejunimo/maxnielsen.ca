@@ -1,0 +1,211 @@
+include ../mixins/head.pug
+doctype html
+html(lang="en")
+  // HTML Head
+  +project_head('Serendipity - Max Nielsen')
+  
+  body
+    // Header
+    include includes/header
+    
+    // Title and nav(?)
+    picture.project-hero-img.serendipity-hero-img
+      source(
+        srcset="../../img/design/serendipity/design-context.webp" 
+        media="(min-width: 58.125rem)"
+        )
+      source(
+        srcset="../../img/design/serendipity/selector.webp" 
+        media="(max-width: 58.125rem)"
+        )
+      img(src="../../img/design/serendipity/selector.webp")
+
+    // About Me
+    .two-col
+      aside(id="table_of_contents")
+        h1(id="table_of_contents_title") Serendipity
+        p.tagline
+          | A shared listening experience for large student design spaces of the near
+          |   future.
+        div(id="project_details")
+          .project-details.details-border
+            .h-btn
+              h2.details-title(id="project_details_title") Project details
+              a.button-tiny.button-small.button-toggle(
+                data-hide-text="Hide" 
+                data-show-text="Show" 
+                id="project_details_toggle"
+                ) Hide
+            .project-details-wrapper(id="project_details_wrapper")
+              .project-for.project-detail-item
+                h3 Group project for
+                a.button-tiny(
+                  href="https://tue.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=DBSU10&collegejaar=2023" 
+                  target="_blank"
+                  )
+                  | DBSU10
+                  |   - Designing Connected Experiences
+              .project-detail-item
+                h3 Timeframe
+                p April 2024 (8 weeks)
+              .project-detail-item
+                h3 Project focus
+                ul.smaller-list-indent
+                  li Physical prototyping
+                  li DIY networked electronics
+                  li Interaction/system design
+              .project-detail-item
+                h3 Tools used
+                ul.smaller-list-indent
+                  li HTML/CSS/JS
+                  li Music steaming service APIs
+                  li Arduino electronics
+              .project-detail-item
+                h3 The team
+                ul.smaller-list-indent
+                  li
+                    a.button-tiny(
+                      target="_blank" 
+                      href="https://www.linkedin.com/in/maarten-van-der-hart-b420a5167/"
+                      ) Maarten van der Hart
+                  li
+                    a.button-tiny(
+                      target="_blank" 
+                      href="https://www.linkedin.com/in/stan-wijnen-1594981ab/"
+                      ) Stan Wijnen
+              .project-detail-item
+                h3 What I did
+                p
+                  | I designed and created the system of how it selects music in a fair manner, Serendipity’s
+                  |   web interface, and most of the Arduino code.
+        #toc.toc
+          h2 In this piece
+          ul
+            li
+              a(
+                data-target="what_it_is" 
+                href="#what_it_is"
+                ) What it is
+            li
+              a(
+                data-target="feedback_and_iteration" 
+                href="#feedback_and_iteration"
+                )
+                | Feedback and
+                |   iteration
+            li
+              a(
+                data-target="reflection" 
+                href="#reflection"
+                ) Reflection
+            li
+              a(
+                data-target="check_it_out_yourself" 
+                href="#check_it_out_yourself"
+                )
+                | Check it out
+                |   yourself
+      #article
+        section.wrapper-padding.article-section(id="what_it_is")
+          h2.heading-underline What it is
+          .explanation-wrapper
+            div
+              p.summary-text
+                | Serendipity is a DIY physical and digital system where everyone in a large collaborative
+                |   space can vote for music they want played and shared within that space. Three physical
+                |   devices allow individuals to vote for a "vibe" (mood) of music. A random vibe is drawn from
+                |   that voting pool, playing that type of music.
+              p.summary-text
+                | People can visit Serendipity's website to see what music is playing,
+                |   and, if they like the song, quickly add it to their playlist.
+              p.summary-text
+                | As part of a three-person group, I designed and created the system of
+                |   how it selects music in a fair manner, Serendipity’s web interface, and most of the Arduino
+                |   code.
+            .trailer.subheading
+              h3.heading-underline Watch the trailer here
+              iframe(
+                allowfullscreen="" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                title="YouTube video player" 
+                src="https://www.youtube-nocookie.com/embed/DHk9P7hJ0ig?si=3ILLlr82pMtRjBcy" 
+                height="315" 
+                width="560"
+                )
+        section.wrapper-padding.article-section(id="feedback_and_iteration")
+          h2.heading-underline Voting system imbalance
+          .explanation-wrapper.two-sections
+            div
+              .subheading
+                h3.heading-underline Original voting system
+                img(
+                  alt="Winner-takes-all system" 
+                  id="before_img" 
+                  width="3604" 
+                  height="998" 
+                  src="../../img/design/serendipity/system1.webp"
+                  )
+              p
+                | Originally, we had a majority rules-based method of choosing vibes: the most popular vibe
+                |   voted for would always be played.
+              p
+                | A hands-on critique session with students and instructors helped us discover an imbalance in
+                |   voting power. With this majority rules system, one’s taste in less popular vibes would never
+                |   be heard.
+            div
+              .subheading
+                h3.heading-underline New voting system
+                img(
+                  alt="Lottery system" 
+                  id="after_img" 
+                  width="3604" 
+                  height="998" 
+                  src="../../img/design/serendipity/system2.webp"
+                  )
+              p
+                | After that critique session, I initiated a roundtable discussion to disseminate feedback and
+                |   pitch new ideas. We decided that a lottery-style system created an equal playing field for
+                |   individual voters while also balancing feasibility.
+              p
+                | Now, the vibe would be drawn at random from the votes gathered. The majority vote will have
+                |   the odds in their favour, but everyone’s vote now has a shot to be chosen.
+        section#reflection.wrapper-padding.article-section
+          h2.heading-underline Web interface features
+          .explanation-wrapper
+            div
+              p
+                | I went on to implement the new voting system in our Arduino code and build the web
+                |   interface.
+              p
+                | The web interface’s original plan was to only show the state of the physical devices. This
+                |   was
+                |   pointless for everyone in the space when the devices already had state indicators. To
+                |   incentivize
+                |   visiting the website, I used Spotify, Tidal, and Deezer’s APIs to display song details. I
+                |   also added
+                |   Add to playlist links that allowed users to quickly add the song to their music streaming
+                |   playlist.
+                |   This gave non-voters a reason to interact with the system.
+            .trailer.subheading.website-embed
+              h3.heading-underline Website for Serendipity
+              iframe(
+                title="Serendipity website" 
+                src="https://serendipity.maxnielsen.ca" 
+                height="315" 
+                width="560"
+                )
+              a.button-small(
+                target="_blank" 
+                href="https://serendipity.maxnielsen.ca"
+                ) Visit website
+        section#reflection.wrapper-padding.article-section
+          h2.heading-underline Reflection
+          p
+            | As the project progressed, it became apparent that workloads were unbalanced. I took on too many
+            |   tasks as my knowledge of web, interaction, and system design aligned with this course’s content. My
+            |   team members also stuck to their strengths in physical prototyping. Next time, I will focus on
+            |   developing new skills while acting as a mentor for others taking over my expected job. This way, we
+            |   can distribute tasks more evenly and foster better learning outcomes for each team member.
+    // Footer
+    include includes/footer

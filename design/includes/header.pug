@@ -1,0 +1,36 @@
+header.i-want-sticky-header
+
+    div
+        a(href='../index.html')
+            h1 Max Nielsen
+
+    a#mobile-menu-link.button-small.submenu-dropdown.hide(href='#')
+        | Menu
+        img(src='../img/icon/chevron.png' width='36' height='18' alt='Show menu')
+
+    nav(aria-label='Main')
+        ul
+            li
+                a#about-link.button-small(href='#about') About me
+            li
+                a#nav-projects.button-small.submenu-dropdown(href='#projects')
+                    | Projects
+                    img(src='../img/icon/chevron.png' width='36' height='18' alt='Show submenu')
+                ul#subnav-projects.dropdown
+                    li
+                        a.button-small.button-dropdown(href='project/headliner.html') Transit Fare Map
+                    li
+                        a.button-small.button-dropdown(href='project/bc.html') BC Healthcare Hub
+                    li
+                        a.button-small.button-dropdown(href='project/serendipity.html') Serendipity
+            li
+                a#nav-connect.button-small.submenu-dropdown(href='#connect')
+                    | Let&apos;s connect
+                    img(src='../img/icon/chevron.png' width='36' height='18' alt='Show submenu')
+                ul#subnav-connect.dropdown
+                    li
+                        a.button-small.button-dropdown(href='mailto:contact@maxnielsen.ca') Email
+                    li
+                        a.button-small.button-dropdown(href='tel:7786364131') Phone
+                    li
+                        a.button-small.button-dropdown(href='https://www.linkedin.com/in/mnielsen-/') LinkedIn

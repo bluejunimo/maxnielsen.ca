@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Headliner Redesign - Max Nielsen</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <script src="../../js/header.js" defer></script>
+    <!-- <script src="../../js/back_home.js" defer></script> -->
+    <script src="../../js/toc.js" defer></script>
+
+</head>
+
+<body>
+    <!-- Title and nav(?) -->
+    <header id="menu-header">
+        <div>
+            <!-- <img src="img/logo.png" height="512" width="512"> -->
+            <a href="../index.html">
+                <h1>Max Nielsen</h1>
+            </a>
+        </div>
+
+        <a id="mobile-menu-link" href="#" class="button-small submenu-dropdown hide">
+            Menu
+            <img src="../../img/icon/chevron.png" width="36" height="18" alt="Show menu">
+        </a>
+
+        <nav aria-label="Main">
+            <ul>
+                <li><a id="about-link" href="../index.html#about" class="button-small">About me</a></li>
+                <li>
+                    <a id="nav-projects" href="../index.html#projects"
+                        class="button-small submenu-dropdown">Projects<img src="../../img/icon/chevron.png" width="36"
+                            height="18" alt="Show submenu"></a>
+                    <ul class="dropdown" id="subnav-projects">
+                        <li><a href="serendipity.html" class="button-small button-dropdown">Serendipity</a></li>
+                        <li><a href="bc.html" class="button-small button-dropdown">BC Healthcare Hub</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="nav-connect" href="#connect" class="button-small submenu-dropdown">Let's connect<img
+                            src="../../img/icon/chevron.png" width="36" height="18" alt="Show submenu"></a>
+                    <ul class="dropdown" id="subnav-connect">
+                        <li><a href="mailto:contact@maxnielsen.ca" class="button-small button-dropdown">Email</a></li>
+                        <li><a href="tel:7786364131" class="button-small button-dropdown">Phone</a></li>
+                        <li><a href="https://www.linkedin.com/in/mnielsen-/"
+                                class="button-small button-dropdown">LinkedIn</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <!-- Title and nav(?) -->
+
+    <picture class="project-hero-img serendipity-hero-img">
+        <source media="(min-width: 58.125rem)" srcset="../../img/design/headliner/user-journey.webp" />
+        <source media="(max-width: 58.125rem)" srcset="../../img/design/headliner/user-journey.webp" />
+        <img src="../../img/design/headliner/user-journey.webp" />
+    </picture>
+
+    <!-- <hgroup class="project-hero-title" id="">
+        <h1 id="title">Serendipity</h1>
+        <p class="tagline">A shared listening experience for large student design spaces of the near future.</p>
+    </hgroup> -->
+
+
+    <!-- About Me -->
+    <div class="two-col">
+        <aside id="table_of_contents">
+            <!-- <hgroup class="title-wrapper"> -->
+            <h1 id="table_of_contents_title" class="">Transit Fare Map</h1>
+            <p class="tagline">Making it easier for low-frequency transit riders to purchase zone-based tickets.</p>
+            <!-- </hgroup> -->
+            <!-- <div class="article-details"> -->
+            <div id="project_details">
+                <div class="project-details details-border">
+                    <div class="h-btn">
+                        <h2 id="project_details_title" class="details-title">Project details</h2>
+                        <a id="project_details_toggle" class="button-tiny button-small button-toggle"
+                            data-show-text="Show" data-hide-text="Hide">Hide</a>
+                    </div>
+                    <div id="project_details_wrapper" class="project-details-wrapper">
+                        <div class="project-for project-detail-item">
+                            <h3>Group project for</h3>
+                            <a class="button-tiny" target="_blank"
+                                href="https://www.sfu.ca/outlines.html?2025/spring/iat/333/d200">IAT333
+                                - Interactive Design Methods</a>
+                        </div>
+
+                        <div class="project-detail-item">
+                            <h3>Timeframe</h3>
+                            <p>Januray to April 2025 (13 weeks)</p>
+                        </div>
+
+                        <div class="project-detail-item">
+                            <h3>Project focus</h3>
+                            <ul class="smaller-list-indent">
+                                <li>Practicing design methods</li>
+                                <li>UX/Interaction design</li>
+                                <li>Experiential prototyping</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail-item">
+                            <h3>Tools used</h3>
+                            <ul class="smaller-list-indent">
+                                <li>Figma</li>
+                                <li>Miro</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail-item">
+                            <h3>The team</h3>
+                            <ul class="smaller-list-indent">
+                                <li><a href="https://www.linkedin.com/in/mikael-greenwood-5b0654216/" target="_blank"
+                                        class="button-tiny">Mikael
+                                        Greenwood</a></li>
+                                <li><a href="https://www.linkedin.com/in/elizabeth-liz-liao/" target="_blank"
+                                        class="button-tiny">Elizabeth Liao</a>
+                                </li>
+                                <li><a href="https://www.linkedin.com/in/irina-ng-035a4b251/" target="_blank"
+                                        class="button-tiny">Irina Ng</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail-item">
+                            <h3>What I did</h3>
+                            <p>Besides learning design methods, I focused on crafting presentations grounded in
+                                storytelling and hosting
+                                participatory design workshops with stakeholders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toc" id="toc">
+                <h2>In this piece</h2>
+                <ul>
+                    <li>
+                        <a href="#what_it_is" data-target="what_it_is">What it is</a>
+                    </li>
+                    <li>
+                        <a href="#what_i_learned" data-target="what_i_learned">What I learned</a>
+                    </li>
+                    <li>
+                        <a href="#choosing_our_design_direction" data-target="choosing_our_design_direction">Choosing
+                            our design direction</a>
+                    </li>
+                    <li>
+                        <a href="#final_thoughts" data-target="final_thoughts">Final thoughts</a>
+                    </li>
+                    <li>
+                        <a href="#check_it_out_yourself" data-target="check_it_out_yourself">Check it out</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div id="article">
+            <section class="wrapper-padding article-section" id="what_it_is">
+                <h2 class="heading-underline">What it is</h2>
+
+                <div class="explanation-wrapper">
+                    <div>
+                        <p class="summary-text">
+                            We designed an interactive transit fare map that replaces the existing map (headliner) on
+                            TransLink’s
+                            SkyTrain (LRT) ticket machines.
+                        </p>
+                        <p class="summary-text">Its goal is to reduce confusion about the zone-based fare system amongst
+                            new and inexperienced riders. Our map displays the zone system based on the time of day and
+                            the fare riders need to purchase to get to their destination. It also visualizes where riders can travel when
+                            selecting a specific ticket from the machine.</p>
+                    </div>
+
+                    <div class="trailer subheading">
+                        <h3 class="heading-underline">Watch Elijah's journey</h3>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube-nocookie.com/embed/DHk9P7hJ0ig?si=3ILLlr82pMtRjBcy"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="wrapper-padding article-section" id="what_i_learned">
+                <h2 class="heading-underline">What I learned</h2>
+                <div class="explanation-wrapper">
+                    <div>
+                        <p>
+                            We didn't know that this map would end up as the project's solution. Our team of four
+                            learned and applied various design methods to understand how transit riders use SkyTrain
+                            station entrances, which informed and led us to design the map.</p>
+                        <p>Outside of
+                            developing hard skills, I focused on crafting presentations grounded in storytelling and
+                            hosting
+                            participatory design workshops with stakeholders.
+                        </p>
+                    </div>
+                    <div class="subheading">
+                        <h3 class="heading-underline">A SkyTrain station where we interviewed riders</h3>
+                        <img src="../../img/design/headliner/inlet-station-outside.webp" height="1733" width="2600"
+                            alt="Lottery system" class="">
+                    </div>
+                </div>
+
+                <div id="wil_1">
+                    <div class="project-details details-border">
+                        <div class="h-btn">
+                            <div>
+                                <h2 class="details-title">Working on my hard skills</h2>
+                            </div>
+                            <a id="wil_1_toggle" class="button-tiny button-small button-toggle"
+                                data-show-text="Read more" data-hide-text="Read less">Read less</a>
+                        </div>
+                        <div id="project_details_wrapper" class="project-details-wrapper explanation-wrapper">
+                            <div class="para-spacing">
+                                <p>Our early success of conducting ethnography, analyzing its qualitative data, and
+                                    narrowing our scope put us on a stable path towards our final design concept.
+                                </p>
+                                <!-- <p>Because of TransLink’s size, we focused our research at SkyTrain station entrances.
+                                    We
+                                    learned how SkyTrain entrances are a part of a riders transit journey, why riders
+                                    used
+                                    certain methods of payment over others, and how they used ticket machines.
+                                </p> -->
+                                <p>
+                                    I interviewed two transit users and three transit staff. With a total of 14
+                                    different
+                                    perspectives, we
+                                    found 27 very specific themes from our interview data through the use of thematic
+                                    analysis.
+                                </p>
+                                <p>
+                                    I felt the need to ensure we designed in a broader scope, so I advocated for a
+                                    few more rounds of thematic analysis by explaining that broader themes could help
+                                    us keep an open perspective on
+                                    potential solutions. I got buy-in from the team and we burned the midnight oil to
+                                    end up with three final insights after two more rounds of analysis and running our
+                                    themes through a decision matrix.
+                                </p>
+
+                                <p>
+                                    The rich insights we gained from this process ensured our personas and user journeys
+                                    were backed
+                                    by reliable data. Choosing to focus on a few specific
+                                    issues also helped us feel grounded in the design process.
+                                </p>
+                            </div>
+                            <div class="trailer subheading figma-embed">
+                                <h3 class="heading-underline">View our ethongraphic process</h3>
+                                <iframe width="800" height="450"
+                                    src="https://embed.figma.com/proto/QBcDhBK7SP7SKkt1H2FT1F/Interactive-Zone-Map---Example-Slides?page-id=0%3A1&node-id=1-452&viewport=86%2C447%2C0.1&scaling=scale-down-width&content-scaling=fixed&embed-host=share"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="wil_2">
+                    <div class="project-details details-border">
+                        <div class="h-btn">
+                            <div>
+                                <h2 id="project_details_title" class="details-title">Hosting stakeholder workshops</h2>
+                            </div>
+                            <a id="wil_2_toggle" class="button-tiny button-small button-toggle"
+                                data-show-text="Read more" data-hide-text="Read less">Read less</a>
+                        </div>
+                        <div id="project_details_wrapper" class="project-details-wrapper explanation-wrapper">
+                            <div class="para-spacing">
+                                <!-- <p>I’ve never had experience hosting workshops or interviewing users.</p> -->
+
+                                <!-- <p>We used some brainstorming workshop material content from a previous workshop I hosted
+                                within our team. We talked about and used what we felt worked well in that session and
+                                some other activities from our class’s readings on participatory workshops. We then
+                                created questions and activities that align with specific goals we created. As we only
+                                had so much time with our participants (especially with TransLink employees), we
+                                narrowed down our questions and activities through deep discussion and priority
+                                matrices.
+                            </p> -->
+                                <p>
+                                    I’ve never had experience hosting workshops. As a first timer,
+                                    there’s bound to be beginner's luck but also messiness.
+                                </p>
+                                <p>The first
+                                    participatory workshop
+                                    was a resounding success. Participants were
+                                    comfortable with one another and we found insights (i.e. safety and accessibility)
+                                    that we hadn't considered previously. However, after the workshop, one participant
+                                    felt like I gave them
+                                    too many options to complete the tasks; that I should
+                                    know <q>what is going to provide the most helpful responses for [our]
+                                    project.</q> As a team, we iterated on our instructions, all the way down to
+                                    what writing utensils everyone was using.
+                                </p>
+                                <p>
+                                    Luck wore off in the second workshop. Participants weren’t as
+                                    engaged and we missed the mark on making them comfortable. There was a tension in
+                                    the
+                                    room
+                                    that never went away. Reflecting on that workshop, I should have had a backup plan
+                                    and
+                                    intervened to help improve the
+                                    atmosphere rather than just powering through the workshop materials.
+                                </p>
+                                <!-- <p>
+                                    Our final participatory workshop was with TransLink. Tailoring the content to fit
+                                    the medium of the workshop, the attendees, and our 30-minute time limit paid off as
+                                    the employees were very engaged and involved throughout the meeting. The attendees
+                                    also showed up to our final presentation.
+                                </p> -->
+                                <!-- <p>
+                                The format and questions of the workshops gave us great insights into
+                                riders and TransLink’s design philosophy. The medium allowed us to connect on a greater
+                                level to the participants than a typical interview and gave us greater insights into
+                                what riders value about taking transit.
+                            </p> -->
+                            </div>
+
+                            <div class="trailer subheading figma-embed">
+                                <h3 class="heading-underline">In-person workshop drawings</h3>
+                                <img src="../../img/design/headliner/workshop.webp" height="1733" width="2600"
+                                    id="after_img" alt="Workshop notes and drawings on a table">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="wil_3">
+                    <div class="project-details details-border">
+                        <div class="h-btn">
+                            <div>
+                                <h2 id="project_details_title" class="details-title">Bringing users’ voices into the
+                                    business world</h2>
+                            </div>
+                            <a id="wil_3_toggle" class="button-tiny button-small button-toggle"
+                                data-show-text="Read more" data-hide-text="Read less">Read less</a>
+                        </div>
+                        <div id="project_details_wrapper" class="project-details-wrapper explanation-wrapper">
+                            <div class="para-spacing">
+                                <p>Expectations of our results felt high: we were undergraduates that had never
+                                    collaborated with professional designers before.
+                                </p>
+                                <p>One part of a design ethnographer’s job is to <q>bring the voices and lives of the
+                                        end
+                                        user
+                                        or consumer out of the home and into the business world</q> (<a
+                                        href="https://doi.org/10.1111/j.1948-7169.1999.tb00274.x" target="_blank">Design
+                                        Ethnography</a>).
+                                </p>
+                                <p>
+                                    We needed to understand that buy-in is an important facet in design. Without
+                                    it, projects get canned. For us, buy-in was making the collaboration worthwhile for
+                                    TransLink. Some of it was done through sheer hard work, but the other half involved
+                                    strategic presenting of our results.
+                                </p>
+                                <p>
+                                    I took multiple steps to create rich presentations for TransLink. The final
+                                    presentation
+                                    was the culmination of all of these efforts:
+                                </p>
+                                <ul class="fancy-list smaller-list-indent">
+                                    <li>I revised our in-class presentation to align with TransLink's shared knowledge.
+                                    </li>
+                                    <li>We changed terminology to be more familiar and professional with TransLink.</li>
+                                    <li>I used persona-driven stories in combination with clear imagery to give context
+                                        to
+                                        riders' issues.</li>
+                                    <li>I utilized Figma’s powerful prototyping tools to integrate our mockup
+                                        into our slides to clearly articulate how our design works.</li>
+                                </ul>
+                                <p>
+                                    The combination of the points above led us to have a succinct, professional, and
+                                    visually engaging final presentation based in ethnographic data.
+                                </p>
+                            </div>
+                            <div class="trailer subheading figma-embed">
+                                <h3 class="heading-underline">Project timeline summarized for TransLink</h3>
+                                <img src="../../img/design/headliner/timeline.webp" height="969" width="2600"
+                                    id="after_img" alt="Workshop notes and drawings on a table">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+
+            <section class="wrapper-padding article-section" id="choosing_our_design_direction">
+                <h2 class="heading-underline">Choosing our design direction</h2>
+                <div class="explanation-wrapper">
+                    <div>
+
+                        <p>
+                            Through a brainstorming workshop, we conceived three concepts that addressed
+                            different needs of transit riders. One concept proposed a redesigned ticket machine
+                            interface as many riders expressed frustration using its current design.
+                        </p>
+
+                        <p>TransLink gave us the green light to work on this concept but we were hesitant to pursue a
+                            redesign. A successful redesign would cater towards the many
+                            different transit riders that use the machine, increasing our design scope and affording
+                            us limited time to cater to each group of riders.
+                        <p>
+
+                        <p>Comparitevely, we focused on new riders in our map concept as we noticed they
+                            were the main group looking at and using the transit map above the ticket machine.
+                            Other riders will still use the map, but we were more confident in our ethnographic data and
+                            our ability to design for a specific group of people as opposed to every type of transit
+                            rider. This, of course, is the concept we moved forward with.</p>
+                        <!-- 
+                        <p>In the end, we agreed with our TransLink contact to pursue our concept of creating this
+                            transit map.</p> -->
+                    </div>
+
+                    <div class="subheading">
+                        <h3 class="heading-underline">SkyTrain ticket machines</h3>
+                        <img src="../../img/design/headliner/compass-vending-machine.webp" height="2600" width="1733"
+                            class="img-vertical" alt="Lottery system">
+                    </div>
+
+            </section>
+
+            <section class="wrapper-padding article-section" id="final_thoughts">
+                <h2 class="heading-underline">Final thoughts</h2>
+
+                <p>
+                    The project was a success in the eyes of SFU, TransLink, and our team. I felt like we were on
+                    cruise control throughout the project: there was very little course correction or other
+                    setbacks that typically arise in student projects.
+                </p>
+
+                <p>
+                    If we were to continue this project, I would iterate on the design using insights grounded in design
+                    evaluation.
+                    How do other transit riders react to this map? Does it still make sense in their perspective, or
+                    have we catered
+                    too much to the new rider?
+                </p>
+
+            </section>
+
+            <section class="wrapper-padding article-section" id="check_it_out_yourself">
+                <h2 class="heading-underline">Check it out</h2>
+                <div class="explanation-wrapper">
+                    <div class="trailer subheading figma-embed">
+                        <h3 class="heading-underline">View the presentation</h3>
+                        <iframe width="800" height="450"
+                            src="https://embed.figma.com/proto/QBcDhBK7SP7SKkt1H2FT1F/Interactive-Zone-Map---Example-Slides?page-id=55%3A15&node-id=55-16032&viewport=40%2C623%2C0.04&scaling=scale-down-width&content-scaling=fixed&embed-host=share"
+                            allowfullscreen></iframe>
+                        <a class="button-small" href="../../file/design/headliner/Transit Fare Map - Slide Deck.pdf"
+                            target="_blank">Download static slide deck</a>
+                    </div>
+                    <div class="trailer subheading figma-embed">
+                        <h3 class="heading-underline">Experience the design</h3>
+                        <iframe width="800" height="450"
+                            src="https://embed.figma.com/proto/iF3ZzZsEO5GDvDjqWbJCWL/Interactive-Zone-Map---Experiential-Prototype?page-id=1987%3A423624&node-id=2006-279122&viewport=277%2C527%2C0.09&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2006%3A279122&embed-host=share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <!-- <section id="connect" class="wrapper-padding">
+        <h2>Let's connect through:</h2>
+        <address>
+            <a href="mailto:contact@maxnielsen.ca" class="button-small">Email</a>
+            <a href="tel:7786364131" class="button-small">Phone</a>
+            <a href="https://www.linkedin.com/in/mnielsen-/" target="_blank" class="button-small">LinkedIn</a>
+        </address>
+    </section> -->
+
+    <footer>
+        <p id="copyright">© Max Nielsen [insert current year here]</p>
+
+        <p class="footer-location">from Vancouver, Canada</p>
+
+        <div class="footer-links">
+            <!-- <a class="button-small" href="citations.html">Citations</a> -->
+            <a class="button-small" href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">GitHub</a>
+        </div>
+    </footer>
+</body>
+
+</html>
