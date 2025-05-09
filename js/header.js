@@ -25,7 +25,10 @@ if (!mobile_breakpoint.matches) {
     mobile_menu_element.classList.remove('hide');
     nav_element.classList.add('hide');
 }
-sticky_header_element.classList.add('sticky-header');
+
+if (sticky_header_element != null) {
+    sticky_header_element.classList.add('sticky-header');
+}
 
 if (year.toString() == "2025") {
     copyright_element.textContent = "© Max Nielsen " + year;
