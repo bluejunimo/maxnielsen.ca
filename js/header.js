@@ -26,7 +26,7 @@ if (!mobile_breakpoint.matches) {
     nav_element.classList.add('hide');
 }
 
-if (sticky_header_element) {
+if (sticky_header_element != null) {
     sticky_header_element.classList.add('sticky-header');
 }
 
