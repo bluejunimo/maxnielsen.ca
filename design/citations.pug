@@ -1,0 +1,90 @@
+include mixins/head.pug
+
+doctype html
+html
+	// HTML Head
+	+index_head("Citations - Max Nielsen")
+
+	body
+
+		// Header
+		include includes/header
+
+		picture.project-hero-img.serendipity-hero-img
+			source(
+				srcset="../../img/design/citation/process.webp" 
+				media="(min-width: 58.125rem)"
+				)
+			source(
+				srcset="../../img/design/citation/process.webp" 
+				media="(max-width: 58.125rem)"
+				)
+			img(src="../../img/design/citation/process.webp")
+
+		// About Me
+		.two-col
+			aside(id="table_of_contents").remove-height
+				// <hgroup class="title-wrapper">
+				h1(id="table_of_contents_title") Citations
+				p.tagline
+					| Sources of content that I did not make myself.
+		
+				#toc.toc
+					h2 Types of content
+					ul
+						li
+							a(
+								data-target="fonts" 
+								href="#fonts"
+								) Fonts
+						li
+							a(
+								data-target="images" 
+								href="#images"
+								) Images
+						//- li
+						//- 	a(
+						//- 		data-target="services" 
+						//- 		href="#services"
+						//- 		) Services
+			div
+				// Fonts
+				section.wrapper-padding.article-section(id="fonts").wrapper-padding-vertical
+					h2.heading-underline Fonts
+					ul.citations
+						li
+							| Google Fonts. (Font Marketplace). (2019).
+							strong  Livvic [Font]
+							| . Retrieved
+							|   from
+							a(href="https://fonts.google.com/specimen/Livvic")  fonts.google.com
+							| .
+						li
+							| Fontshare. (Font Marketplace). (2021).
+							strong  Synonym [Font]
+							| . Retrieved
+							|   from
+							a(href="https://www.fontshare.com/fonts/synonym")  fontshare.com
+							| .
+
+
+				// Images
+				section.wrapper-padding.article-section(id="images").wrapper-padding-vertical
+					h2.heading-underline Images
+					ul.citations
+						li
+							| Simon Fraser University. (University). (2021).
+							strong  SFU's Surrey Campus [Image]
+							| . Retrieved
+							|   from
+							a(href="https://www.sfu.ca/surrey/news-and-events/news-all/research/quantum-algorithms-institute-receives--2-2m-boost-from-canadian-.html")  sfu.ca
+							| .
+						li
+							| Villamedia. (News Organization). (2024).
+							strong  De Campus van de Technische Universiteit Eindhoven [Font]
+							| . Retrieved
+							|   from
+							a(href="https://www.villamedia.nl/artikel/universiteitsblad-van-tu-eindhoven-slaat-nieuwe-weg-in-na-lang-conflict-stukken-hoeven-niet-leuk-te-zijn-voor-de-universiteit-ze-moeten-wel-overtuigen")  villamedia.nl
+							| .
+		// Footer
+		include includes/footer
