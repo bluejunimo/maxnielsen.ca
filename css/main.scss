@@ -1385,6 +1385,10 @@ footer p {
     margin: 0 !important;
 }
 
+.remove-height {
+    height: auto !important;
+}
+
 iframe {
     border: none;
 }
@@ -1392,7 +1396,7 @@ iframe {
 .citations {
     list-style-type: none;
     padding-left: 0;
-    width: max-content;
+
 }
 
 .wrapper-padding {
