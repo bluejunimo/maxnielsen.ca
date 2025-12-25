@@ -1,0 +1,247 @@
+@import 'fonts.scss';
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+
+    --c-bg-dark: #000000;
+    --c-bg-light: #f9f6f6;
+    --c-bg-light-95: rgba(249, 246, 246, 0.95);
+    --c-bg-light-90: rgba(249, 246, 246, 0.9);
+    --c-bg-light-85: rgba(249, 246, 246, 0.85);
+    --c-bg-light-80: rgba(249, 246, 246, 0.8);
+    --c-bg-light-70: rgba(249, 246, 246, 0.7);
+    --c-link: #8b1c00;
+    --c-link-change: #360c00;
+
+    /* --c-outline: #11de41; */
+    --c-outline: rgba(0, 0, 0, 0);
+
+    --c-invis: rgba(0, 0, 0, 0);
+
+    --i-margin: 2rem;
+}
+
+* {
+    transition-property: color, border, background-color, padding, transform, margin, opacity, height, text-decoration-color, width, font-weight;
+    transition-duration: 0.35s;
+}
+
+:hover,
+:focus {
+    transition-property: color, border, background-color, padding, transform, margin, opacity, height, text-decoration-color, width, font-size, font-weight;
+    transition-duration: 0.25s;
+}
+
+:focus {
+    outline: 0.125rem var(--c-link-change);
+    outline-offset: 0.125rem;
+}
+
+::selection {
+    color: var(--c-bg-light);
+    background-color: var(--c-link);
+}
+
+html {
+    background-color: var(--c-bg-light);
+}
+
+h1,
+.h1 {
+    margin: 0;
+    font-family: "Synonym", Aptos, sans-serif;
+    font-weight: 550;
+    font-size: 3rem;
+    line-height: 120%;
+}
+
+h2 {
+    margin: 0;
+    font-family: "Livvic", Lato, sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+
+    margin-bottom: 1rem !important;
+}
+
+h3 {
+    margin: 0;
+    font-family: "Livvic", Lato, sans-serif;
+    font-weight: 300;
+    font-size: 1.15rem;
+
+
+    margin-bottom: 0.5rem !important;
+}
+
+h4 {
+    margin: 0;
+    font-family: "Livvic", Lato, sans-serif;
+    font-weight: 600;
+
+    margin-bottom: 0.5rem !important;
+}
+
+h4:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 1rem;
+    max-width: 35rem;
+}
+
+p q {
+    font-style: italic;
+}
+
+a {
+    color: var(--c-link);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--c-link-change);
+}
+
+p a:hover,
+p a:focus {
+    color: var(--c-bg-light);
+    background-color: var(--c-link);
+    text-decoration: underline;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+body {
+    padding-top: 2.5rem;
+    margin: 0 auto;
+    font-family: "Synonym", Aptos, sans-serif;
+    max-width: 125rem;
+    min-height: 100vh;
+    position: relative;
+}
+
+body>section {
+    margin-bottom: 5rem !important;
+}
+
+strong {
+    font-weight: 550;
+}
+
+/* header */
+header {
+    z-index: 99;
+
+    background-color: var(--c-bg-light);
+
+    padding: 0.5rem 2.5rem 0.5rem 1.5rem;
+}
+
+
+/**
+ * Clicky Menus v1.5.2
+ */
+
+/**
+ * Initial state, hidden off screen
+ */
+ .clicky-menu ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	visibility: hidden; /*[1]*/
+}
+
+/* Contain position of submenu to parent list item. This is probably the 80% of the 80/20 use case */
+.clicky-menu > li {
+	position: relative;
+}
+
+/**
+ * No JS fallback
+ *
+ * Triggers menus on hover rather than click. Supports keyboard navigation in modern browsers.
+ */
+.clicky-menu.no-js li:hover > ul {
+	visibility: visible;
+    position: relative;
+}
+.clicky-menu.no-js li:focus-within > ul { /*[2]*/
+	visibility: visible;
+}
+
+/**
+ * Open/Close Menu Behavior with JS
+ */
+.clicky-menu ul[aria-hidden="false"] {
+	visibility: visible;
+}
+
+/* Prevent offscreen-submenus */
+.clicky-menu .sub-menu--right {
+	left: auto !important;
+	right: 0 !important;
+}
+
+/**
+ * Footnotes
+ *
+ * [1] Using visibility instead of display allows for easier transitions and animation of submenus
+ * [2] Must be a separate ruleset so that hover works in non-modern browsers
+ */
+
+
+//  NAV WEBSITE
+.nav-website {
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+}
+
+.clicky-menu .chevron {
+    width: 2rem;
+    height: auto;
+}
+
+nav.nav-website:has(a:hover) {
+    border: 1px var(--c-link-change) solid;
+}
+
+// top-level menu, for chevron
+.clicky-menu > li > a {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+// submenu list
+.clicky-menu > li > ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+// submenu item
+.clicky-menu > li > ul > li {
+    width: 100%;
+    border: 1px var(--c-link) solid;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

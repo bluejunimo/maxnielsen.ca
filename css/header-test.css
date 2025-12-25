@@ -1,0 +1,436 @@
+@charset "UTF-8";
+/**
+* @license
+*
+* Font Family: Synonym
+* Designed by: Hugo Dumont
+* URL: https://www.fontshare.com/fonts/synonym
+* © 2024 Indian Type Foundry
+*
+* Synonym Extralight 
+* Synonym Light 
+* Synonym Regular 
+* Synonym Medium 
+* Synonym Semibold 
+* Synonym Bold 
+* Synonym Variable (Variable font)
+
+*
+*/
+@font-face {
+  font-family: "Synonym";
+  src: url("../fonts/synonym/Synonym-Extralight.woff2") format("woff2"), url("../fonts/synonym/Synonym-Extralight.woff") format("woff"), url("../fonts/synonym/Synonym-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Synonym";
+  src: url("../fonts/synonym/Synonym-Light.woff2") format("woff2"), url("../fonts/synonym/Synonym-Light.woff") format("woff"), url("../fonts/synonym/Synonym-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Synonym";
+  src: url("../fonts/synonym/Synonym-Regular.woff2") format("woff2"), url("../fonts/synonym/Synonym-Regular.woff") format("woff"), url("../fonts/synonym/Synonym-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Synonym";
+  src: url("../fonts/synonym/Synonym-Medium.woff2") format("woff2"), url("../fonts/synonym/Synonym-Medium.woff") format("woff"), url("../fonts/synonym/Synonym-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Synonym";
+  src: url("../fonts/synonym/Synonym-Semibold.woff2") format("woff2"), url("../fonts/synonym/Synonym-Semibold.woff") format("woff"), url("../fonts/synonym/Synonym-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Synonym";
+  src: url("../fonts/synonym/Synonym-Bold.woff2") format("woff2"), url("../fonts/synonym/Synonym-Bold.woff") format("woff"), url("../fonts/synonym/Synonym-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+/* LIVVIC */
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-Thin.woff2") format("woff2"), url("../fonts/livvic/Livvic-Thin.woff") format("woff"), url("../fonts/livvic/Livvic-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-ExtraLight.woff2") format("woff2"), url("../fonts/livvic/Livvic-ExtraLight.woff") format("woff"), url("../fonts/livvic/Livvic-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-Light.woff2") format("woff2"), url("../fonts/livvic/Livvic-Light.woff") format("woff"), url("../fonts/livvic/Livvic-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-Regular.woff2") format("woff2"), url("../fonts/livvic/Livvic-Regular.woff") format("woff"), url("../fonts/livvic/Livvic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-Medium.woff2") format("woff2"), url("../fonts/livvic/Livvic-Medium.woff") format("woff"), url("../fonts/livvic/Livvic-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-SemiBold.woff2") format("woff2"), url("../fonts/livvic/Livvic-SemiBold.woff") format("woff"), url("../fonts/livvic/Livvic-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-Bold.woff2") format("woff2"), url("../fonts/livvic/Livvic-Bold.woff") format("woff"), url("../fonts/livvic/Livvic-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-ThinItalic.woff2") format("woff2"), url("../fonts/livvic/Livvic-ThinItalic.woff") format("woff"), url("../fonts/livvic/Livvic-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-ExtraLightItalic.woff2") format("woff2"), url("../fonts/livvic/Livvic-ExtraLightItalic.woff") format("woff"), url("../fonts/livvic/Livvic-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-LightItalic.woff2") format("woff2"), url("../fonts/livvic/Livvic-LightItalic.woff") format("woff"), url("../fonts/livvic/Livvic-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-Italic.woff2") format("woff2"), url("../fonts/livvic/Livvic-Italic.woff") format("woff"), url("../fonts/livvic/Livvic-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-MediumItalic.woff2") format("woff2"), url("../fonts/livvic/Livvic-MediumItalic.woff") format("woff"), url("../fonts/livvic/Livvic-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-SemiBoldItalic.woff2") format("woff2"), url("../fonts/livvic/Livvic-SemiBoldItalic.woff") format("woff"), url("../fonts/livvic/Livvic-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../fonts/livvic/Livvic-BoldItalic.woff2") format("woff2"), url("../fonts/livvic/Livvic-BoldItalic.woff") format("woff"), url("../fonts/livvic/Livvic-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 700.0;
+*
+* available axes:
+"wght" (range from 200.0 to 700.0
+*/
+/* @font-face {
+  font-family: "Synonym";
+  src: url("../fonts/synonym/Synonym-Variable.woff2") format("woff2"),
+    url("../fonts/synonym/Synonym-Variable.woff") format("woff"),
+    url("../fonts/synonym/Synonym-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+} */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  --c-bg-dark: #000000;
+  --c-bg-light: #f9f6f6;
+  --c-bg-light-95: rgba(249, 246, 246, 0.95);
+  --c-bg-light-90: rgba(249, 246, 246, 0.9);
+  --c-bg-light-85: rgba(249, 246, 246, 0.85);
+  --c-bg-light-80: rgba(249, 246, 246, 0.8);
+  --c-bg-light-70: rgba(249, 246, 246, 0.7);
+  --c-link: #8b1c00;
+  --c-link-change: #360c00;
+  /* --c-outline: #11de41; */
+  --c-outline: rgba(0, 0, 0, 0);
+  --c-invis: rgba(0, 0, 0, 0);
+  --i-margin: 2rem;
+}
+
+* {
+  -webkit-transition-property: color, border, background-color, padding, margin, opacity, height, text-decoration-color, width, font-weight, -webkit-transform;
+  transition-property: color, border, background-color, padding, margin, opacity, height, text-decoration-color, width, font-weight, -webkit-transform;
+  transition-property: color, border, background-color, padding, transform, margin, opacity, height, text-decoration-color, width, font-weight;
+  transition-property: color, border, background-color, padding, transform, margin, opacity, height, text-decoration-color, width, font-weight, -webkit-transform;
+  -webkit-transition-duration: 0.35s;
+          transition-duration: 0.35s;
+}
+
+:hover,
+:focus {
+  -webkit-transition-property: color, border, background-color, padding, margin, opacity, height, text-decoration-color, width, font-size, font-weight, -webkit-transform;
+  transition-property: color, border, background-color, padding, margin, opacity, height, text-decoration-color, width, font-size, font-weight, -webkit-transform;
+  transition-property: color, border, background-color, padding, transform, margin, opacity, height, text-decoration-color, width, font-size, font-weight;
+  transition-property: color, border, background-color, padding, transform, margin, opacity, height, text-decoration-color, width, font-size, font-weight, -webkit-transform;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+:focus {
+  outline: 0.125rem var(--c-link-change);
+  outline-offset: 0.125rem;
+}
+
+::-moz-selection {
+  color: var(--c-bg-light);
+  background-color: var(--c-link);
+}
+
+::selection {
+  color: var(--c-bg-light);
+  background-color: var(--c-link);
+}
+
+html {
+  background-color: var(--c-bg-light);
+}
+
+h1,
+.h1 {
+  margin: 0;
+  font-family: "Synonym", Aptos, sans-serif;
+  font-weight: 550;
+  font-size: 3rem;
+  line-height: 120%;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Livvic", Lato, sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1rem !important;
+}
+
+h3 {
+  margin: 0;
+  font-family: "Livvic", Lato, sans-serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem !important;
+}
+
+h4 {
+  margin: 0;
+  font-family: "Livvic", Lato, sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem !important;
+}
+
+h4:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 1rem;
+  max-width: 35rem;
+}
+
+p q {
+  font-style: italic;
+}
+
+a {
+  color: var(--c-link);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--c-link-change);
+}
+
+p a:hover,
+p a:focus {
+  color: var(--c-bg-light);
+  background-color: var(--c-link);
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body {
+  padding-top: 2.5rem;
+  margin: 0 auto;
+  font-family: "Synonym", Aptos, sans-serif;
+  max-width: 125rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+body > section {
+  margin-bottom: 5rem !important;
+}
+
+strong {
+  font-weight: 550;
+}
+
+/* header */
+header {
+  z-index: 99;
+  background-color: var(--c-bg-light);
+  padding: 0.5rem 2.5rem 0.5rem 1.5rem;
+}
+
+/**
+ * Clicky Menus v1.5.2
+ */
+/**
+ * Initial state, hidden off screen
+ */
+.clicky-menu ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  visibility: hidden; /*[1]*/
+}
+
+/* Contain position of submenu to parent list item. This is probably the 80% of the 80/20 use case */
+.clicky-menu > li {
+  position: relative;
+}
+
+/**
+ * No JS fallback
+ *
+ * Triggers menus on hover rather than click. Supports keyboard navigation in modern browsers.
+ */
+.clicky-menu.no-js li:hover > ul {
+  visibility: visible;
+  position: relative;
+}
+
+.clicky-menu.no-js li:focus-within > ul { /*[2]*/
+  visibility: visible;
+}
+
+/**
+ * Open/Close Menu Behavior with JS
+ */
+.clicky-menu ul[aria-hidden=false] {
+  visibility: visible;
+}
+
+/* Prevent offscreen-submenus */
+.clicky-menu .sub-menu--right {
+  left: auto !important;
+  right: 0 !important;
+}
+
+/**
+ * Footnotes
+ *
+ * [1] Using visibility instead of display allows for easier transitions and animation of submenus
+ * [2] Must be a separate ruleset so that hover works in non-modern browsers
+ */
+.nav-website {
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+}
+
+.clicky-menu .chevron {
+  width: 2rem;
+  height: auto;
+}
+
+nav.nav-website:has(a:hover) {
+  border: 1px var(--c-link-change) solid;
+}
+
+.clicky-menu > li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+.clicky-menu > li > ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  gap: 0.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.5rem;
+}
+
+.clicky-menu > li > ul > li {
+  width: 100%;
+  border: 1px var(--c-link) solid;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
