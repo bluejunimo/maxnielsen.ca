@@ -99,9 +99,14 @@ p q {
     font-style: italic;
 }
 
-a {
+a, button {
     color: var(--c-link);
     text-decoration: none;
+}
+
+button {
+    font-family: "Synonym", Aptos, sans-serif;
+    padding: 0;
 }
 
 a:hover,
@@ -246,7 +251,7 @@ header nav .submenu-dropdown.button-hover img {
  */
  .clicky-menu ul {
 	position: absolute;
-	top: 100%;
+	top: calc(100% - 0.0625rem);
 	left: 0;
 	visibility: hidden; /*[1]*/
 }
@@ -302,6 +307,35 @@ header nav .submenu-dropdown.button-hover img {
 
 
 //  NAV WEBSITE
+nav button {
+    background-color: none;
+    border: unset;
+    color: var(--c-link);
+}
+
+#nav-website button[aria-expanded="false"]:not(:hover) {
+    color: var(--c-link) !important;
+    text-decoration: none !important;
+}
+
+nav button[aria-expanded="false"]:not(:hover) svg path {
+    stroke: var(--c-link) !important;
+}
+
+nav button[aria-expanded="false"] svg {
+    transform: unset !important;
+}
+
+#nav-website button[aria-expanded="false"]:focus {
+    color: var(--c-link-change) !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 0.125rem !important;
+}
+
+#nav-website button[aria-expanded="false"]:focus svg path {
+    stroke: var(--c-link-change) !important;
+}
+
 #nav-website {
     padding: 0;
 }
@@ -322,7 +356,7 @@ header nav .submenu-dropdown.button-hover img {
 }
 
 // top-level menu, for chevron
-.clicky-menu > li > a {
+.clicky-menu > li > a, .clicky-menu > li > button {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -330,6 +364,10 @@ header nav .submenu-dropdown.button-hover img {
     top: 0;
     z-index: 11;
     background-color: var(--c-bg-light);
+}
+
+.clicky-menu > li > button[aria-expanded="false"]:focus {
+    color: var(--c-bg-light);
 }
 
 // standard submenu list
@@ -348,7 +386,7 @@ header nav .submenu-dropdown.button-hover img {
     // margin-top: calc(0.5rem - 2px);
 }
 
-.clicky-menu > li:hover:has(ul) > a, .clicky-menu > li:focus-within:has(ul) > a {
+.clicky-menu.no-js > li:hover:has(ul) > a, .clicky-menu.no-js > li:focus-within:has(ul) > a, #nav-design .clicky-menu > li:hover:has(ul) > button, #nav-design .clicky-menu > li:focus-within:has(ul) > button, .clicky-menu button[aria-expanded="true"] {
     // top: 0.5rem;
     // margin-bottom: 1px;
     border-bottom: none;
@@ -356,15 +394,18 @@ header nav .submenu-dropdown.button-hover img {
     position: relative;
 }
 
-
-#nav-website .clicky-menu > li:hover:has(ul) > a, #nav-website .clicky-menu > li:focus-within:has(ul) > a {
+#nav-website .clicky-menu.no-js > li:hover:has(ul) > a, #nav-website .clicky-menu.no-js > li:focus-within:has(ul) > a, #nav-website .clicky-menu > li:hover:has(ul) > button, #nav-website .clicky-menu > li:focus-within:has(ul) > button {
     height: auto !important;
     color: var(--c-link-change);
 }
 
-#nav-website .clicky-menu > li > a:focus {
+#nav-website .clicky-menu > li > a:focus, #nav-website .clicky-menu > li > button:focus, #nav-website .clicky-menu > li > button:hover {
     text-decoration: underline;
     text-decoration-thickness: 0.125rem;
+}
+
+#nav-website .clicky-menu > li > button:hover svg path {
+    stroke: var(--c-link-change);
 }
 
 //adjust header height to compensate
@@ -399,11 +440,11 @@ header nav .submenu-dropdown.button-hover img {
     top: 0.5rem;
 }
 
-.clicky-menu.no-js > li:has(ul):hover > a .chevron path, .clicky-menu > li:focus-within .chevron path {
+.clicky-menu.no-js > li:has(ul):hover > a .chevron path, .clicky-menu > li:focus-within .chevron path, .clicky-menu.no-js > li:has(ul):hover > button .chevron path {
     stroke: var(--c-link-change);
 }
 
-.clicky-menu.no-js > li:has(ul):hover > a .chevron, .clicky-menu li:focus-within .chevron {
+.clicky-menu.no-js > li:has(ul):hover > a .chevron, .clicky-menu.no-js li:focus-within .chevron, .clicky-menu button[aria-expanded="true"] .chevron {
     transform: rotateZ(180deg) rotateX(-180deg) scaleY(-1);
 }
 
@@ -466,13 +507,13 @@ header nav .submenu-dropdown.button-hover img {
     padding-top: 0.5rem;
 }
 
-nav a:has(svg) {
+nav a:has(svg), nav button:has(svg) {
     display: flex;
     flex-flow: row nowrap;
     gap: 0.33rem;
 }
 
-nav a svg {
+nav a svg, nav button svg {
     width: 1.25rem;
     height: auto;
     object-fit: contain;
@@ -668,6 +709,7 @@ input[type=radio]:checked+label:focus,
     /* padding-bottom: 2.75rem; */
     transition-duration: 0.3s;
 }
+
 
 .button-hover.submenu-dropdown-website {
     background-color: var(--c-bg-light);
@@ -1859,9 +1901,18 @@ iframe {
 
 /* <1200px */
 @media screen and (max-width: 75rem) {
+    body {
+        padding-top: 1rem;
+    }
+
     // NEW MENU
     .clicky-menu > li > .button-small {
-        width: 8.5rem;
+        min-width: 8.5rem;
+        width: 100%;
+    }
+
+    .clicky-menu > li > a, .clicky-menu > li > button {
+        gap: unset
     }
 
     .clicky-menu h1 {
@@ -2088,9 +2139,10 @@ iframe {
 // <900px
 @media screen and (max-width: 56.25rem) {
     
-    .clicky-menu.no-js li:hover > ul, .clicky-menu.no-js li:focus-within > ul { /*[2]*/
-        // position: relative;
+    #nav-website .clicky-menu li:has(button[aria-expanded="true"]) * { /*[2]*/
+        position: relative !important;
         // top: 0;
+        z-index: 999;
     }
 
     body {
@@ -2119,7 +2171,7 @@ iframe {
         font-size: 3rem;
     }
 
-    #nav-website li:hover *, #nav-website li:focus-within * {
+    #nav-website .clicky-menu.no-js li:hover *, #nav-website .clicky-menu.no-js li:focus-within * {
         position: relative;
         z-index: 999;
     }
@@ -2411,8 +2463,12 @@ iframe {
     // }
 
     .clicky-menu.no-js li:hover > ul, .clicky-menu.no-js li:focus-within > ul { /*[2]*/
-        position: relative;
+        position: relative !important;
         top: 0;
+    }
+
+    :not(#nav-website) .clicky-menu li:has(button[aria-expanded="true"]) ul {
+        position: relative;
     }
 
     #nav-design {
@@ -2560,12 +2616,17 @@ iframe {
         font-size: 1.5rem;
     }
 
+    #nav-website .clicky-menu li ul {
+        flex-flow: column;
+        padding: 0.5rem 0 !important;
+    }
+
     #nav-website .clicky-menu .chevron {
         width: 1.1rem;
         margin-top: 0.25rem;
     }
 
-    #nav-website .clicky-menu > li > a {
+    #nav-website .clicky-menu > li > a, #nav-website .clicky-menu > li > button {
         gap: 0.75rem;
     }
 }

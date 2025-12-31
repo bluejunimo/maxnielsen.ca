@@ -8,20 +8,24 @@
     <link rel="stylesheet" href="../../css/main.css"/>
     <script src="../../js/header.js" defer=""></script>
     <script src="../../js/toc.js" defer=""></script>
+    <script src="../../js/clicky-menu.js" defer=""></script>
     <link rel="shortcut icon" href="../../img/logo.svg" type="image/x-icon"/>
   </head>
   <body>
     <!-- Header-->
-    <header id="menu-header">
-      <nav class="nav-website" aria-label="Website Menu">
-        <ul class="clicky-menu no-js">
-          <li><a class="clicky-menu-dropdown" href="../../design/index.html">
-              <h1>Max Nielsen's Designs</h1><img class="chevron" src="../../img/icon/chevron-bold.svg" width="32" height="16" alt="Show submenu"></a>
+    <header>
+      <nav id="nav-website" aria-label="High-level website menu">
+        <ul class="clicky-menu no-js" id="website-menu">
+          <li><a class="clicky-menu-dropdown" href="../../design/index.html" aria-hidden="true">
+              <h1>Max Nielsen's Designs</h1>
+              <svg class="chevron" <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.94466 1.94456L17.9451 17.945L33.9455 1.94456" stroke="#8B1C00" stroke-width="5.5"></path>
+              </svg></a>
             <ul>
               <li id="link-item-design"><a href="../../design/index.html"> 
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
                     <path fill="#f9f6f6" fill-rule="evenodd" d="M7.577.141a1.26 1.26 0 0 0-1.818.89a6.6 6.6 0 0 0-.003 2.415a8.1 8.1 0 0 0-1.87 1.376c-.613.6-.481 1.624.292 2.031c.4.21.805.377 1.227.505L.256 12.507a.875.875 0 0 0 1.238 1.237l5.148-5.148q.192.63.505 1.226a1.266 1.266 0 0 0 2.031.293a8.1 8.1 0 0 0 1.377-1.871a6.6 6.6 0 0 0 2.414-.002a1.26 1.26 0 0 0 .89-1.818a8 8 0 0 0-1.382-1.919a6.9 6.9 0 0 0 .746-2.308A1.257 1.257 0 0 0 11.805.779a6.9 6.9 0 0 0-2.31.744A8 8 0 0 0 7.577.141m-.59 1.119l.003-.007l.002-.002h.007l.008.003a6.9 6.9 0 0 1 1.92 1.475a.625.625 0 0 0 .78.109c.744-.448 1.468-.713 2.266-.82h.007l.003.001v.001l.001.002v.007c-.108.796-.373 1.52-.822 2.264a.625.625 0 0 0 .11.78a6.9 6.9 0 0 1 1.475 1.92l.003.008v.008l-.002.002l-.007.002c-.785.145-1.545.118-2.38-.088a.625.625 0 0 0-.716.344a6.9 6.9 0 0 1-1.36 1.971l-.012.01H8.26l-.001-.001l-.002-.002l-.004-.007a5.8 5.8 0 0 1-.652-2.272a.625.625 0 0 0-.57-.571a5.8 5.8 0 0 1-2.28-.655v-.001l-.002-.005v-.008q0-.003.01-.013a6.9 6.9 0 0 1 1.971-1.36a.625.625 0 0 0 .344-.716c-.206-.835-.233-1.595-.087-2.38" clip-rule="evenodd"></path>
-                  </svg>Design</a></li>
+                  </svg>Design (current)</a></li>
               <li id="link-item-photography"><a href="../../photography/index.html"> 
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
                     <path fill="darkblue" fill-rule="evenodd" d="M4.257 1.154a.5.5 0 0 1 .438-.258h4.61a.5.5 0 0 1 .438.258l1.015 1.84l.344.029l.066.005a2.59 2.59 0 0 1 2.335 2.195c.128.863.247 1.78.247 2.724s-.12 1.861-.247 2.725a2.59 2.59 0 0 1-2.335 2.194c-1.369.118-2.764.238-4.168.238s-2.799-.12-4.168-.238a2.59 2.59 0 0 1-2.335-2.194C.369 9.808.25 8.892.25 7.947s.12-1.86.247-2.724a2.59 2.59 0 0 1 2.335-2.195l.08-.006l.33-.029zm5.356 6.498c0 1.673-.94 2.613-2.613 2.613c-1.672 0-2.613-.94-2.613-2.613c0-1.672.94-2.613 2.613-2.613c1.672 0 2.613.94 2.613 2.613" clip-rule="evenodd"></path>
@@ -29,18 +33,18 @@
             </ul>
           </li>
         </ul>
-      </nav><a class="button-small submenu-dropdown hide" id="mobile-menu-link" href="#">Menu<img alt="Show menu" height="18" width="36" src="../../img/icon/chevron.png"></a>
-      <nav aria-label="Main">
-        <ul>
+      </nav>
+      <nav id="nav-design" aria-label="Main menu">
+        <ul class="clicky-menu no-js" id="main-menu">
           <li><a class="button-small" id="about-link" href="../index.html#about">About me</a></li>
-          <li><a class="button-small submenu-dropdown" id="nav-projects" href="../index.html#projects">Projects<img alt="Show submenu" height="18" width="36" src="../../img/icon/chevron.png"></a>
+          <li><a class="button-small submenu-dropdown" id="nav-projects" href="../index.html#projects">Projects<img class="chevron" src="../../img/icon/chevron.png" width="36" height="18" alt="Show submenu"></a>
             <ul class="dropdown" id="subnav-projects">
               <li><a class="button-small button-dropdown" href="headliner.html">Transit Fare Map</a></li>
-              <li><a class="button-small button-dropdown" href="serendipity.html">Serendipity</a></li>
               <li><a class="button-small button-dropdown" href="bc.html">BC Healthcare Hub</a></li>
+              <li><a class="button-small button-dropdown" href="serendipity.html">Serendipity</a></li>
             </ul>
           </li>
-          <li><a class="button-small submenu-dropdown" id="nav-connect" href="#connect">Let's connect<img alt="Show submenu" height="18" width="36" src="../../img/icon/chevron.png"></a>
+          <li><a class="button-small submenu-dropdown" id="nav-connect" href="../index.html#connect">Contact<img class="chevron" src="../../img/icon/chevron.png" width="36" height="18" alt="Show submenu"></a>
             <ul class="dropdown" id="subnav-connect">
               <li><a class="button-small button-dropdown" href="mailto:max@maxnielsen.ca">Email</a></li>
               <li><a class="button-small button-dropdown" href="tel:7786364131">Phone</a></li>
@@ -141,7 +145,7 @@
               <p class="summary-text">
                 We designed an interactive transit fare map that replaces the existing map on
                   TransLink’s
-                  SkyTrain (LRT) ticket machines.
+                  SkyTrain ticket machines.
               </p>
               <p class="summary-text">
                 Its goal is to reduce confusion about the zone-based fare system amongst

@@ -215,18 +215,21 @@ window.addEventListener("scroll", () => {
     }
     else {
         sticky_header_element.classList.remove('sticky-header');
+        sticky_header_element.classList.remove("header-scrolled");
     }
 });
 
 
 window.addEventListener('resize', () => {
     if (!mobile_breakpoint.matches) {
-        mobile_menu_element.classList.remove('hide');
-        nav_element.classList.add('hide');
+        // mobile_menu_element.classList.remove('hide');
+        // nav_element.classList.add('hide');
     }
     else {
-        mobile_menu_element.classList.add('hide');
-        nav_element.classList.remove('hide');
-        nav_element.classList.remove('active');
+        // mobile_menu_element.classList.add('hide');
+        // nav_element.classList.remove('hide');
+        // nav_element.classList.remove('active');
+        sticky_header_element.classList.remove('sticky-header');
+        sticky_header_element.classList.remove("header-scrolled");
     }
 });

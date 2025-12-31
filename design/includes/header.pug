@@ -1,9 +1,9 @@
 header.i-want-sticky-header
 
     nav#nav-website(aria-label='Website Menu')
-        ul.clicky-menu.no-js
+        ul#website-menu.clicky-menu.no-js
             li
-                a(href='../design/index.html').clicky-menu-dropdown
+                a(href='../design/index.html' aria-hidden="true").clicky-menu-dropdown
                     h1 Max Nielsen's Designs
                     svg(<svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg").chevron
                         path(d="M1.94466 1.94456L17.9451 17.945L33.9455 1.94456" stroke="#8B1C00" stroke-width="5.5")
@@ -19,12 +19,8 @@ header.i-want-sticky-header
                                 path(fill="darkblue" fill-rule="evenodd" d="M4.257 1.154a.5.5 0 0 1 .438-.258h4.61a.5.5 0 0 1 .438.258l1.015 1.84l.344.029l.066.005a2.59 2.59 0 0 1 2.335 2.195c.128.863.247 1.78.247 2.724s-.12 1.861-.247 2.725a2.59 2.59 0 0 1-2.335 2.194c-1.369.118-2.764.238-4.168.238s-2.799-.12-4.168-.238a2.59 2.59 0 0 1-2.335-2.194C.369 9.808.25 8.892.25 7.947s.12-1.86.247-2.724a2.59 2.59 0 0 1 2.335-2.195l.08-.006l.33-.029zm5.356 6.498c0 1.673-.94 2.613-2.613 2.613c-1.672 0-2.613-.94-2.613-2.613c0-1.672.94-2.613 2.613-2.613c1.672 0 2.613.94 2.613 2.613" clip-rule="evenodd")
                             | Photography
 
-    //- a#mobile-menu-link.button-small.submenu-dropdown.hide(href='#')
-    //-     | Menu
-    //-     img(src='../img/icon/chevron.png' width='36' height='18' alt='Show menu')
-
     nav#nav-design(aria-label='Design Menu')
-        ul.clicky-menu.no-js
+        ul#main-menu.clicky-menu.no-js
             li
                 a#about-link.button-small(href='#about') About me
             li

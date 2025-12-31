@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="../css/main.css"/>
     <script src="../js/header.js" defer=""></script>
     <script src="../js/line.js" defer=""></script>
+    <script src="../js/clicky-menu.js" defer=""></script>
     <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon"/>
   </head>
   <body>
     <!-- Header-->
     <header class="i-want-sticky-header">
       <nav id="nav-website" aria-label="Website Menu">
-        <ul class="clicky-menu no-js">
-          <li><a class="clicky-menu-dropdown" href="../design/index.html">
+        <ul class="clicky-menu no-js" id="website-menu">
+          <li><a class="clicky-menu-dropdown" href="../design/index.html" aria-hidden="true">
               <h1>Max Nielsen's Designs</h1>
               <svg class="chevron" <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.94466 1.94456L17.9451 17.945L33.9455 1.94456" stroke="#8B1C00" stroke-width="5.5"></path>
@@ -34,7 +35,7 @@
         </ul>
       </nav>
       <nav id="nav-design" aria-label="Design Menu">
-        <ul class="clicky-menu no-js">
+        <ul class="clicky-menu no-js" id="main-menu">
           <li><a class="button-small" id="about-link" href="#about">About me</a></li>
           <li><a class="button-small submenu-dropdown" id="nav-projects" href="#projects">Projects<img class="chevron" src="../img/icon/chevron.png" width="36" height="18" alt="Show submenu"></a>
             <ul class="dropdown" id="subnav-projects">
