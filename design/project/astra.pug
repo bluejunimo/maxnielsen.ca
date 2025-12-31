@@ -9,7 +9,7 @@ html(lang="en")
 		include includes/header
 
 		// Title and nav(?)
-		picture.project-hero-img.bc-hero-img
+		picture.project-hero-img.serendipity-hero-img
 			source(
 				srcset="../../img/design/astra/menu.jpg" 
 				media="(min-width: 58.125rem)"
@@ -23,9 +23,9 @@ html(lang="en")
 		// About Me
 		.two-col
 			aside(id="table_of_contents")
-				h1(id="table_of_contents_title") Astra: A day in the life
+				h1(id="table_of_contents_title") Astra
 				p.tagline
-					| Artifacts from a futuristic moon colony monopoly.
+					| Everyday artifacts from a future moon colony monopoly.
 				div(id="project_details")
 					.project-details.details-border
 						.h-btn
@@ -43,10 +43,13 @@ html(lang="en")
 									target="_blank"
 									)
 									| Sparkjam 2025
-									|   - A design sprint
+									|   - A design jam
 							.project-detail-item
 								h3 Timeframe
 								p May 2025 (2 weeks)
+							.project-detail-item
+								h3 Award
+								p 3rd place finish and a mechanical keyboard :D
 							.project-detail-item
 								h3 Project focus
 								ul.smaller-list-indent
@@ -88,13 +91,13 @@ html(lang="en")
 							a(
 								data-target="what_it_is" 
 								href="#what_it_is"
-								) What it is/context
+								) What it is
 						li
 							a(
 								data-target="qualitative_interviews" 
 								href="#qualitative_interviews"
 								)
-								| The double diamond design process
+								| Narrative building
 						li
 							a(
 								data-target="thematic_analysis" 
@@ -104,7 +107,7 @@ html(lang="en")
 							a(
 								data-target="thematic_analysis" 
 								href="#thematic_analysis"
-								) Virtual testing
+								) Interface testing
 						li
 							a(
 								data-target="reflection" 
@@ -117,27 +120,20 @@ html(lang="en")
 								href="#check_it_out"
 								)
 								| Check it out
-				//
-					<div class="project-for project-detail-item project-deliverables">
-						<h2>Deliverables</h2>
-						<a class="button-small" target="_blank"
-						href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Trailer</a>
-						<a class="button-small" target="_blank" href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Final
-						Report</a>
-						<a class="button-small" target="_blank" href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Data
-						Canvas</a>
-						<a class="button-small" target="_blank"
-						href="https://www.youtube.com/watch?v=DHk9P7hJ0ig">Website</a>
-						</div>
 			#article
 				section.wrapper-padding.article-section(id="what_it_is")
 					h2.heading-underline What it is
 					.explanation-wrapper
 						div
 							p.summary-text
-								| The BC Healthcare Hub is a mobile application prototype that supports learning about and using British Columbia's healthcare system.
+								| For SparkJam (a 
+								dfn(aria-label="An event where people rapidly and collaboratively design in a restricted timeframe, creating a final product by the end. Similar to a hackathon, but for design.") design jam
+								| ), our team chose to center our project in the speculative design space. 
+								| We built a strong narrative foundation imagining a future lunar company “Astra” that has a monopoly on the moon. 
+								| From that future, we designed a set of physical objects (a restaurant menu and a credit card) and an augmented reality 
+								| interface that lunar citizens use everyday.
 							p.summary-text
-								| Our goal for this project was to ideate, design, and create a fully interactive prototype for international students arriving to BC.
+								| Our goal for this project was .
 							p.summary-text
 								| Content and visual design, system logic, and user testing were all expected
 								|   of us. Highlights of my work included developing the underlying interface system of the MSP form,

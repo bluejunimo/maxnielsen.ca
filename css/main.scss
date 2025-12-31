@@ -13,6 +13,7 @@
     --c-bg-light-80: rgba(249, 246, 246, 0.8);
     --c-bg-light-70: rgba(249, 246, 246, 0.7);
     --c-link: #8b1c00;
+    --c-link-80: #8b1c0099;
     --c-link-change: #360c00;
     --c-photography: darkblue;
 
@@ -107,6 +108,31 @@ a, button {
 button {
     font-family: "Synonym", Aptos, sans-serif;
     padding: 0;
+}
+
+abbr, dfn {
+    text-decoration-style: wavy !important;
+    text-decoration-color: var(--c-link-80) !important;
+    text-decoration-thickness: 0.0625rem !important;
+}
+
+dfn {
+    position: relative;
+}
+
+dfn[aria-label]:hover::after, dfn[aria-label]:focus::after {
+    content: attr(aria-label);
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    z-index: 100;
+    background-color: var(--c-bg-light);
+    border: var(--c-link) 0.0625rem solid;
+    font-size: 1rem;
+    width: 25rem;
+    padding: 0.5rem;
+    display: block;
+    box-shadow: 0.25rem 0.25rem var(--c-link);
 }
 
 a:hover,
