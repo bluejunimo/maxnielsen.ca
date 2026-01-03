@@ -4,159 +4,192 @@ var body_element = document.querySelector('body');
 var copyright_element = document.querySelector('#copyright');
 
 // https://stackoverflow.com/a/6002276
-var year = new Date().getFullYear();
+// var year = new Date().getFullYear();
 
-var nav_projects_element = document.querySelector('#nav-projects');
-var nav_connect_element = document.querySelector('#nav-connect');
-var subnav_projects_element = document.querySelector('#subnav-projects');
-var subnav_connect_element = document.querySelector('#subnav-connect');
+// var nav_projects_element = document.querySelector('#nav-projects');
+// var nav_connect_element = document.querySelector('#nav-connect');
+// var nav_website_element = document.querySelector('#nav-website');
+// var subnav_projects_element = document.querySelector('#subnav-projects');
+// var subnav_connect_element = document.querySelector('#subnav-connect');
+// var subnav_website_element = document.querySelector('#subnav-website');
 
 var mobile_menu_element = document.querySelector('#mobile-menu-link');
 var nav_element = document.querySelector('header nav');
 var sticky_header_element = document.querySelector('.i-want-sticky-header');
 var about_link = document.querySelector('#about-link');
 
-var mobile_breakpoint = window.matchMedia("(min-width: 50rem)");
+var mobile_breakpoint = window.matchMedia("(min-width: 56.25rem)");
 
 
-subnav_connect_element.classList.add('hide');
-subnav_projects_element.classList.add('hide');
-if (!mobile_breakpoint.matches) {
-    mobile_menu_element.classList.remove('hide');
-    nav_element.classList.add('hide');
-}
+// subnav_connect_element.classList.add('hide');
+// subnav_projects_element.classList.add('hide');
+// subnav_website_element.classList.add('hide');
+// if (!mobile_breakpoint.matches) {
+//     mobile_menu_element.classList.remove('hide');
+//     nav_element.classList.add('hide');
+// }
 
 if (sticky_header_element != null) {
     sticky_header_element.classList.add('sticky-header');
 }
 
-if (year.toString() == "2025") {
-    copyright_element.textContent = "© Max Nielsen " + year;
-}
-else {
-    copyright_element.textContent = "© Max Nielsen travelling to the year of " + year;
-}
+// if (year.toString() == "2025") {
+//     copyright_element.textContent = "© Max Nielsen " + year;
+// }
+// else {
+//     copyright_element.textContent = "© Max Nielsen travelling to the year of " + year;
+// }
 
 // https://stackoverflow.com/a/8318629
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
-nav_projects_element.addEventListener('mouseenter', () => {
-    if (mobile_breakpoint.matches) {
-        subnav_projects_element.classList.remove('hide');
-        nav_projects_element.classList.add('button-hover');
-    }
-});
+// nav_projects_element.addEventListener('mouseenter', () => {
+//     if (mobile_breakpoint.matches) {
+//         subnav_projects_element.classList.remove('hide');
+//         nav_projects_element.classList.add('button-hover');
+//     }
+// });
 
-nav_projects_element.addEventListener('mouseleave', () => {
-    // setTimeout(1000);
-    if (mobile_breakpoint.matches) {
-        if (!document.querySelector('#subnav-projects a:hover')) {
-            subnav_projects_element.classList.add('hide');
-            nav_projects_element.classList.remove('button-hover');
-        }
-    }
-});
+// nav_projects_element.addEventListener('mouseleave', () => {
+//     // setTimeout(1000);
+//     if (mobile_breakpoint.matches) {
+//         if (!document.querySelector('#subnav-projects a:hover')) {
+//             subnav_projects_element.classList.add('hide');
+//             nav_projects_element.classList.remove('button-hover');
+//         }
+//     }
+// });
 
-subnav_projects_element.addEventListener('mouseleave', () => {
-    // setTimeout(1000);
-    if (mobile_breakpoint.matches) {
-        if (!document.querySelector('#nav-projects:hover')) {
-            subnav_projects_element.classList.add('hide');
-            nav_projects_element.classList.remove('button-hover');
-        }
-    }
-});
+// subnav_projects_element.addEventListener('mouseleave', () => {
+//     // setTimeout(1000);
+//     if (mobile_breakpoint.matches) {
+//         if (!document.querySelector('#nav-projects:hover')) {
+//             subnav_projects_element.classList.add('hide');
+//             nav_projects_element.classList.remove('button-hover');
+//         }
+//     }
+// });
 
-nav_connect_element.addEventListener('mouseenter', () => {
-    if (mobile_breakpoint.matches) {
-        subnav_connect_element.classList.remove('hide');
-        nav_connect_element.classList.add('button-hover');
-    }
-});
+// nav_connect_element.addEventListener('mouseenter', () => {
+//     if (mobile_breakpoint.matches) {
+//         subnav_connect_element.classList.remove('hide');
+//         nav_connect_element.classList.add('button-hover');
+//     }
+// });
 
-nav_connect_element.addEventListener('mouseleave', () => {
-    // setTimeout(1000);
-    if (mobile_breakpoint.matches) {
-        if (!document.querySelector('#subnav-connect a:hover')) {
-            subnav_connect_element.classList.add('hide');
-            nav_connect_element.classList.remove('button-hover');
-        }
-    }
-});
+// nav_connect_element.addEventListener('mouseleave', () => {
+//     // setTimeout(1000);
+//     if (mobile_breakpoint.matches) {
+//         if (!document.querySelector('#subnav-connect a:hover')) {
+//             subnav_connect_element.classList.add('hide');
+//             nav_connect_element.classList.remove('button-hover');
+//         }
+//     }
+// });
 
-subnav_connect_element.addEventListener('mouseleave', () => {
-    // setTimeout(1000);
-    if (mobile_breakpoint.matches) {
-        if (!document.querySelector('#nav-connect:hover')) {
-            subnav_connect_element.classList.add('hide');
-            nav_connect_element.classList.remove('button-hover');
-        }
-    }
-});
+
+// subnav_connect_element.addEventListener('mouseleave', () => {
+//     // setTimeout(1000);
+//     if (mobile_breakpoint.matches) {
+//         if (!document.querySelector('#nav-connect:hover')) {
+//             subnav_connect_element.classList.add('hide');
+//             nav_connect_element.classList.remove('button-hover');
+//         }
+//     }
+// });
+
+// nav_website_element.addEventListener('mouseenter', () => {
+//     if (mobile_breakpoint.matches) {
+//         subnav_website_element.classList.remove('hide');
+//         nav_website_element.classList.add('button-hover');
+//     }
+// });
+
+// nav_website_element.addEventListener('mouseleave', () => {
+//     // setTimeout(1000);
+//     if (mobile_breakpoint.matches) {
+//         if (!document.querySelector('#subnav-website a:hover')) {
+//             subnav_website_element.classList.add('hide');
+//             nav_website_element.classList.remove('button-hover');
+//         }
+//     }
+// });
+
+// subnav_website_element.addEventListener('mouseleave', () => {
+//     // setTimeout(1000);
+//     if (mobile_breakpoint.matches) {
+//         if (!document.querySelector('#nav-website:hover')) {
+//             subnav_website_element.classList.add('hide');
+//             nav_website_element.classList.remove('button-hover');
+//         }
+//     }
+// });
+
+
 
 
 
 // MOBILE MENU
-mobile_menu_element.addEventListener('click', function (event) {
-    event.preventDefault();
-    nav_element.classList.toggle('active');
-    nav_element.classList.toggle('hide');
-    subnav_projects_element.classList.add('hide');
-    nav_projects_element.classList.remove('button-hover');
-    subnav_connect_element.classList.add('hide');
-    nav_connect_element.classList.remove('button-hover');
-});
+// mobile_menu_element.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     nav_element.classList.toggle('active');
+//     nav_element.classList.toggle('hide');
+//     subnav_projects_element.classList.add('hide');
+//     nav_projects_element.classList.remove('button-hover');
+//     subnav_connect_element.classList.add('hide');
+//     nav_connect_element.classList.remove('button-hover');
+// });
 
-nav_projects_element.addEventListener('click', function (event) {
-    if (!mobile_breakpoint.matches) {
-        event.preventDefault();
-        if (subnav_projects_element.classList.contains('hide')) {
-            subnav_projects_element.classList.remove('hide');
-            nav_projects_element.classList.add('button-hover');
-            subnav_connect_element.classList.add('hide');
-            nav_connect_element.classList.remove('button-hover');
-        }
-        else {
-            subnav_projects_element.classList.add('hide');
-            nav_projects_element.classList.remove('button-hover');
-        }
-    }
-});
+// nav_projects_element.addEventListener('click', function (event) {
+//     if (!mobile_breakpoint.matches) {
+//         event.preventDefault();
+//         if (subnav_projects_element.classList.contains('hide')) {
+//             subnav_projects_element.classList.remove('hide');
+//             nav_projects_element.classList.add('button-hover');
+//             subnav_connect_element.classList.add('hide');
+//             nav_connect_element.classList.remove('button-hover');
+//         }
+//         else {
+//             subnav_projects_element.classList.add('hide');
+//             nav_projects_element.classList.remove('button-hover');
+//         }
+//     }
+// });
 
-nav_connect_element.addEventListener('click', function (event) {
-    event.preventDefault();
-    if (subnav_connect_element.classList.contains('hide')) {
-        subnav_connect_element.classList.remove('hide');
-        nav_connect_element.classList.add('button-hover');
-        subnav_projects_element.classList.add('hide');
-        nav_projects_element.classList.remove('button-hover');
-    }
-    else {
-        subnav_connect_element.classList.add('hide');
-        nav_connect_element.classList.remove('button-hover');
-    }
-});
+// nav_connect_element.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     if (subnav_connect_element.classList.contains('hide')) {
+//         subnav_connect_element.classList.remove('hide');
+//         nav_connect_element.classList.add('button-hover');
+//         subnav_projects_element.classList.add('hide');
+//         nav_projects_element.classList.remove('button-hover');
+//     }
+//     else {
+//         subnav_connect_element.classList.add('hide');
+//         nav_connect_element.classList.remove('button-hover');
+//     }
+// });
 
-window.addEventListener('click', function (event) {
-    if (nav_element.classList.contains('active') && !nav_element.contains(event.target) && !mobile_menu_element.contains(event.target)) {
-        nav_element.classList.remove('active');
-        nav_element.classList.add('hide');
-        subnav_projects_element.classList.add('hide');
-        nav_projects_element.classList.remove('button-hover');
-        subnav_connect_element.classList.add('hide');
-        nav_connect_element.classList.remove('button-hover');
-    }
-});
+// window.addEventListener('click', function (event) {
+//     if (nav_element.classList.contains('active') && !nav_element.contains(event.target) && !mobile_menu_element.contains(event.target)) {
+//         nav_element.classList.remove('active');
+//         nav_element.classList.add('hide');
+//         subnav_projects_element.classList.add('hide');
+//         nav_projects_element.classList.remove('button-hover');
+//         subnav_connect_element.classList.add('hide');
+//         nav_connect_element.classList.remove('button-hover');
+//     }
+// });
 
-about_link.addEventListener('click', function (event) {
-    if (!mobile_breakpoint.matches) {
-        nav_element.classList.remove('active');
-        nav_element.classList.add('hide');
-        subnav_projects_element.classList.add('hide');
-        nav_projects_element.classList.remove('button-hover');
-        subnav_connect_element.classList.add('hide');
-        nav_connect_element.classList.remove('button-hover');
-    }
-});
+// about_link.addEventListener('click', function (event) {
+//     if (!mobile_breakpoint.matches) {
+//         nav_element.classList.remove('active');
+//         nav_element.classList.add('hide');
+//         subnav_projects_element.classList.add('hide');
+//         nav_projects_element.classList.remove('button-hover');
+//         subnav_connect_element.classList.add('hide');
+//         nav_connect_element.classList.remove('button-hover');
+//     }
+// });
 
 
 // // https://stackoverflow.com/a/73675287
@@ -174,20 +207,29 @@ about_link.addEventListener('click', function (event) {
 // https://stackoverflow.com/a/77004784
 const el = document.querySelector(".sticky-header");
 window.addEventListener("scroll", () => {
-    const stickyTop = parseInt(window.getComputedStyle(el).top);
-    const currentTop = el.getBoundingClientRect().top;
-    el.classList.toggle("header-scrolled", currentTop === stickyTop);
+    if (mobile_breakpoint.matches && sticky_header_element != null) {
+        sticky_header_element.classList.add('sticky-header');
+        const stickyTop = parseInt(window.getComputedStyle(el).top);
+        const currentTop = el.getBoundingClientRect().top;
+        el.classList.toggle("header-scrolled", currentTop === stickyTop);
+    }
+    else if(sticky_header_element != null) {
+        sticky_header_element.classList.remove('sticky-header');
+        sticky_header_element.classList.remove("header-scrolled");
+    }
 });
 
 
 window.addEventListener('resize', () => {
     if (!mobile_breakpoint.matches) {
-        mobile_menu_element.classList.remove('hide');
-        nav_element.classList.add('hide');
+        // mobile_menu_element.classList.remove('hide');
+        // nav_element.classList.add('hide');
     }
-    else {
-        mobile_menu_element.classList.add('hide');
-        nav_element.classList.remove('hide');
-        nav_element.classList.remove('active');
+    else if(sticky_header_element != null) {
+        // mobile_menu_element.classList.add('hide');
+        // nav_element.classList.remove('hide');
+        // nav_element.classList.remove('active');
+        sticky_header_element.classList.remove('sticky-header');
+        sticky_header_element.classList.remove("header-scrolled");
     }
 });

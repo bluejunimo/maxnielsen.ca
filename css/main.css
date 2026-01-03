@@ -187,7 +187,9 @@
   --c-bg-light-80: rgba(249, 246, 246, 0.8);
   --c-bg-light-70: rgba(249, 246, 246, 0.7);
   --c-link: #8b1c00;
+  --c-link-80: #8b1c0099;
   --c-link-change: #360c00;
+  --c-photography: darkblue;
   /* --c-outline: #11de41; */
   --c-outline: rgba(0, 0, 0, 0);
   --c-invis: rgba(0, 0, 0, 0);
@@ -195,13 +197,13 @@
 }
 
 * {
-  transition-property: color, border, background-color, padding, transform, margin, opacity, height, text-decoration-color, width, font-weight;
+  transition-property: color, border, background-color, padding, transform, margin, opacity, height, text-decoration-color, width;
   transition-duration: 0.35s;
 }
 
 :hover,
 :focus {
-  transition-property: color, border, background-color, padding, transform, margin, opacity, height, text-decoration-color, width, font-size, font-weight;
+  transition-property: color, border, background-color, padding, transform, margin, opacity, height, text-decoration-color, width, font-size;
   transition-duration: 0.25s;
 }
 
@@ -265,9 +267,61 @@ p q {
   font-style: italic;
 }
 
-a {
+a, button {
   color: var(--c-link);
   text-decoration: none;
+}
+
+button {
+  font-family: "Synonym", Aptos, sans-serif;
+  padding: 0;
+}
+
+abbr, dfn {
+  text-decoration-style: wavy !important;
+  text-decoration-color: var(--c-link-80) !important;
+  text-decoration-line: underline;
+}
+
+dfn {
+  position: relative;
+}
+
+dfn[aria-label]:hover::after, dfn[aria-label]:focus::after {
+  content: attr(aria-label);
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  z-index: 100;
+  background-color: var(--c-bg-light);
+  border: var(--c-link) 0.0625rem solid;
+  font-size: 1rem;
+  width: 25rem;
+  padding: 0.5rem;
+  display: block;
+  box-shadow: 0.25rem 0.25rem var(--c-link);
+}
+
+.pullquote {
+  position: relative;
+  padding: 2.5rem !important;
+}
+
+.pullquote::before {
+  content: "";
+  width: 0;
+  height: calc(100% - 5rem);
+  top: 2.5rem;
+  left: 2.5rem;
+  position: absolute;
+  border-left: solid var(--c-link) 0.125rem;
+}
+
+.pullquote p {
+  font-style: italic;
+  font-family: "Livvic", Lato, sans-serif;
+  font-size: 1.15rem !important;
+  padding-left: 1.25rem;
 }
 
 a:hover,
@@ -310,11 +364,11 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   z-index: 99;
   position: relative;
   background-color: var(--c-bg-light);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   /* margin-bottom: 5rem; */
 }
 
@@ -345,10 +399,17 @@ header:has(#nav-projects:hover, #nav-projects:focus) {
   border-bottom: #000 0.0625rem solid;
 }
 
-.submenu-dropdown {
+nav .button-small {
+  width: 11.25rem;
+  height: 3rem;
   display: flex;
-  flex-flow: row nowrap;
   align-items: center;
+  font-size: 1rem;
+}
+
+.submenu-dropdown {
+  flex-flow: row nowrap;
+  justify-content: space-between;
   gap: 0.75rem;
 }
 
@@ -378,6 +439,285 @@ header:has(nav.active) > .submenu-dropdown:focus {
 header:has(nav.active) > .submenu-dropdown img,
 header nav .submenu-dropdown.button-hover img {
   transform: rotateZ(180deg);
+}
+
+.submenu-dropdown-website img {
+  filter: none;
+  width: 2rem;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+.submenu-dropdown-website {
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/**
+ * Clicky Menus v1.5.2
+ */
+/**
+ * Initial state, hidden off screen
+ */
+.clicky-menu ul {
+  position: absolute;
+  top: calc(100% - 0.0625rem);
+  left: 0;
+  visibility: hidden; /*[1]*/
+}
+
+/* Contain position of submenu to parent list item. This is probably the 80% of the 80/20 use case */
+.clicky-menu > li {
+  position: relative;
+  background-color: var(--c-bg-light);
+}
+
+/**
+ * No JS fallback
+ *
+ * Triggers menus on hover rather than click. Supports keyboard navigation in modern browsers.
+ */
+.clicky-menu.no-js li:hover > ul {
+  visibility: visible;
+  margin-top: -1px;
+}
+
+#nav-website .clicky-menu.no-js li:hover > ul, #nav-website .clicky-menu.no-js li:focus-within > ul {
+  margin: 0 !important;
+}
+
+.clicky-menu.no-js li > ul > li:hover {
+  cursor: pointer;
+}
+
+.clicky-menu.no-js li:focus-within > ul { /*[2]*/
+  visibility: visible;
+  margin-top: -1px;
+}
+
+/**
+ * Open/Close Menu Behavior with JS
+ */
+.clicky-menu ul[aria-hidden=false] {
+  visibility: visible;
+}
+
+/* Prevent offscreen-submenus */
+.clicky-menu .sub-menu--right {
+  left: auto !important;
+  right: 0 !important;
+}
+
+/**
+ * Footnotes
+ *
+ * [1] Using visibility instead of display allows for easier transitions and animation of submenus
+ * [2] Must be a separate ruleset so that hover works in non-modern browsers
+ */
+nav button {
+  background-color: none;
+  border: unset;
+  color: var(--c-link);
+}
+
+#nav-website button[aria-expanded=false]:not(:hover) {
+  color: var(--c-link) !important;
+  text-decoration: none !important;
+}
+
+nav button[aria-expanded=false]:not(:hover) svg path {
+  stroke: var(--c-link) !important;
+}
+
+nav button[aria-expanded=false] svg {
+  transform: unset !important;
+}
+
+#nav-website button[aria-expanded=false]:focus {
+  color: var(--c-link-change) !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 0.125rem !important;
+}
+
+#nav-website button[aria-expanded=false]:focus svg path {
+  stroke: var(--c-link-change) !important;
+}
+
+#nav-website {
+  padding: 0;
+}
+
+#nav-website > ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.clicky-menu .chevron {
+  width: 1.25rem;
+  height: auto;
+}
+
+#nav-website .clicky-menu .chevron {
+  width: 2rem;
+  margin-top: 0.5rem;
+}
+
+.clicky-menu > li > a, .clicky-menu > li > button {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  top: 0;
+  z-index: 11;
+  background-color: var(--c-bg-light);
+}
+
+.clicky-menu > li > button[aria-expanded=false]:focus {
+  color: var(--c-bg-light);
+}
+
+.clicky-menu > li > ul {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: left;
+  width: 13.5rem;
+  padding: 0.5rem 0.5rem 0.75rem 1.75rem;
+  border: 1px var(--c-link) solid;
+  background-color: var(--c-bg-light);
+  z-index: 10;
+}
+
+.clicky-menu.no-js > li:hover:has(ul) > a, .clicky-menu.no-js > li:focus-within:has(ul) > a, #nav-design .clicky-menu > li:hover:has(ul) > button, #nav-design .clicky-menu > li:focus-within:has(ul) > button, .clicky-menu button[aria-expanded=true] {
+  border-bottom: none;
+  height: 3.5rem;
+  position: relative;
+}
+
+#nav-website .clicky-menu.no-js > li:hover:has(ul) > a, #nav-website .clicky-menu.no-js > li:focus-within:has(ul) > a, #nav-website .clicky-menu > li:hover:has(ul) > button, #nav-website .clicky-menu > li:focus-within:has(ul) > button {
+  height: auto !important;
+  color: var(--c-link-change);
+}
+
+#nav-website .clicky-menu > li > a:focus, #nav-website .clicky-menu > li > button:focus, #nav-website .clicky-menu > li > button:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.125rem;
+}
+
+#nav-website .clicky-menu > li > button:hover svg path {
+  stroke: var(--c-link-change);
+}
+
+#nav-website .clicky-menu > li > ul {
+  padding: 0.5rem !important;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+#nav-website .clicky-menu > li > ul > li > a {
+  justify-content: center;
+  border: 1px solid var(--c-link);
+}
+
+:not(#nav-website) > .clicky-menu > li > ul::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: calc(100% - 1.25rem);
+  border-left: solid 2px var(--c-link);
+  left: 1.25rem;
+  top: 0.5rem;
+}
+
+.clicky-menu.no-js > li:has(ul):hover > a .chevron path, .clicky-menu > li:focus-within .chevron path, .clicky-menu.no-js > li:has(ul):hover > button .chevron path {
+  stroke: var(--c-link-change);
+}
+
+.clicky-menu.no-js > li:has(ul):hover > a .chevron, .clicky-menu.no-js li:focus-within .chevron, .clicky-menu button[aria-expanded=true] .chevron {
+  transform: rotateZ(180deg) rotateX(-180deg) scaleY(-1);
+}
+
+.clicky-menu > li > ul > li {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clicky-menu > li > ul > li > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: none;
+  color: var(--c-link);
+}
+
+#link-item-design {
+  background-color: var(--c-link);
+}
+
+#link-item-design a {
+  color: var(--c-bg-light);
+}
+
+#link-item-photography a {
+  color: var(--c-photography);
+  border-color: var(--c-photography) !important;
+}
+
+#link-item-photography {
+  background-color: var(--c-bg-light);
+}
+
+.clicky-menu > li > ul > li:hover > a, .clicky-menu > li > ul > li:focus-within > a {
+  color: var(--c-bg-light) !important;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#link-item-design:hover, #link-item-design:focus-within {
+  background-color: var(--c-link-change);
+}
+
+#link-item-photography:hover, #link-item-photography:focus-within {
+  background-color: var(--c-photography);
+}
+
+#nav-design {
+  height: 4rem;
+  display: flex;
+  align-items: start;
+  padding-top: 0.5rem;
+}
+
+nav a:has(svg), nav button:has(svg) {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.33rem;
+}
+
+nav a svg, nav button svg {
+  width: 1.25rem;
+  height: auto;
+  object-fit: contain;
+}
+
+#link-item-photography:hover svg path, #link-item-photography:focus-within svg path, #link-item-design:hover svg path, #link-item-design:focus-within svg path {
+  fill: #f9f6f6;
+}
+
+#subnav-connect {
+  width: fit-content !important;
 }
 
 /* HERO SECTION */
@@ -429,9 +769,9 @@ nav ul {
 nav > ul {
   display: flex;
   flex-flow: row wrap;
-  align-items: baseline;
+  align-items: start;
   gap: 0.5rem;
-  height: revert-layer;
+  margin: 0;
 }
 
 nav li {
@@ -441,9 +781,7 @@ nav li {
 /* dropdown */
 .dropdown {
   position: absolute;
-  z-index: 100;
   right: 0;
-  margin-top: 1rem;
   background-color: var(--c-link-change);
   color: var(--c-bg-light);
   min-width: 100%;
@@ -468,8 +806,6 @@ nav > ul > li {
 nav li:has(.dropdown) ul a:focus {
     padding: 1rem !important;
 } */
-nav li:has(.dropdown) > a:hover,
-nav li:has(.dropdown) > a:focus,
 .button-hover {
   padding-bottom: 1rem !important;
 }
@@ -482,7 +818,7 @@ nav li a:focus + .dropdown,
 
 .dropdown li a:hover,
 .dropdown li a:focus {
-  background-color: var(--c-link);
+  background-color: var(--c-link-change);
 }
 
 .button-small {
@@ -547,6 +883,11 @@ input[type=radio]:checked + label:focus,
   animation: bold_text 0.3s forwards;
   /* padding-bottom: 2.75rem; */
   transition-duration: 0.3s;
+}
+
+.button-hover.submenu-dropdown-website {
+  background-color: var(--c-bg-light);
+  border: none;
 }
 
 .about {
@@ -1238,6 +1579,7 @@ li:last-of-type {
   position: relative;
   text-align: right;
   max-width: 85%;
+  z-index: 1;
 }
 
 .subheading a {
@@ -1256,11 +1598,17 @@ li:last-of-type {
   aspect-ratio: 16/10.75;
 }
 
-.subheading img {
+.subheading img, .subheading .content-border, .subheading video {
   width: 100%;
   height: auto;
   border: solid 0.075rem var(--c-link);
   padding: 1.25rem;
+}
+
+.multiple-media {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
 }
 
 .img-2by1 {
@@ -1272,7 +1620,7 @@ li:last-of-type {
   min-width: 20rem;
 }
 
-.subheading:has(img) {
+.subheading:has(img), .subheading:has(video) {
   margin-bottom: 1.25rem;
 }
 
@@ -1665,6 +2013,30 @@ iframe {
 }
 /* <1200px */
 @media screen and (max-width: 75rem) {
+  body {
+    padding-top: 1rem;
+  }
+  .clicky-menu > li > .button-small {
+    min-width: 8.5rem;
+    width: 100%;
+  }
+  .clicky-menu > li > a, .clicky-menu > li > button {
+    gap: unset;
+  }
+  .clicky-menu h1 {
+    font-size: 2rem;
+  }
+  #nav-website .clicky-menu .chevron {
+    width: 1.25rem;
+  }
+  #nav-website .clicky-menu-dropdown {
+    gap: 1rem;
+  }
+  #nav-website {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+  }
   /* HERO TEMPLATE */
   .project-hero-title h1 {
     font-size: 2.25rem;
@@ -1822,13 +2194,48 @@ iframe {
     margin-top: 1.25rem;
   }
 }
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 56.25rem) {
   #mobile-menu-link {
     display: none;
   }
 }
-/* <800px */
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 56.25rem) {
+  #nav-website .clicky-menu li:has(button[aria-expanded=true]) * { /*[2]*/
+    position: relative !important;
+    z-index: 999;
+  }
+  body {
+    padding-top: 1rem;
+  }
+  :not(#nav-website) > .clicky-menu > li > ul::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: calc(100% - 1.25rem);
+    border-left: solid 2px var(--c-link);
+    left: 1.25rem;
+    top: 0.5rem;
+  }
+  #nav-website {
+    height: fit-content;
+  }
+  #nav-website h1 {
+    font-size: 3rem;
+  }
+  #nav-website .clicky-menu.no-js li:hover *, #nav-website .clicky-menu.no-js li:focus-within * {
+    position: relative;
+    z-index: 999;
+  }
+  #nav-website .clicky-menu .chevron {
+    width: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  #nav-design, #nav-design > ul > li, #nav-design > ul > li > a {
+    width: 100%;
+  }
+  #nav-design > ul {
+    flex-flow: row nowrap;
+  }
   /* HEADER */
   nav li:has(.dropdown) > a:hover,
   nav li:has(.dropdown) > a:focus,
@@ -1837,7 +2244,8 @@ iframe {
   }
   header {
     padding: 0.5rem 1rem;
-    flex-flow: row wrap;
+    flex-flow: column;
+    gap: 1rem;
     position: relative;
   }
   .submenu-dropdown {
@@ -1847,26 +2255,9 @@ iframe {
   header:has(nav.active) > #mobile-menu-link {
     padding-bottom: 2rem;
   }
-  header nav .submenu-dropdown img {
-    filter: invert(99%) sepia(31%) saturate(20%) hue-rotate(311deg) brightness(104%) contrast(101%);
-  }
   header:has(nav.active) > .submenu-dropdown {
     padding-bottom: 1.5rem;
-    color: var(--c-bg-light);
     font-weight: 550 !important;
-  }
-  header:has(nav.active) a:hover,
-  header:has(nav.active) a:focus,
-  .footer-links a:hover,
-  .footer-links a:focus {
-    background-color: var(--c-link);
-  }
-  header:has(nav.active) > .submenu-dropdown img {
-    filter: invert(99%) sepia(31%) saturate(20%) hue-rotate(311deg) brightness(104%) contrast(101%);
-  }
-  header nav {
-    flex-basis: 100%;
-    background-color: var(--c-link-change);
   }
   header nav.active {
     display: block;
@@ -1876,7 +2267,6 @@ iframe {
     height: fit-content;
     top: 4.15rem;
     left: 0;
-    background-color: var(--c-link-change);
     padding: 0 1rem;
     z-index: 100;
   }
@@ -1885,13 +2275,7 @@ iframe {
     gap: 0.5rem;
   }
   header nav > ul {
-    flex-flow: column;
-    align-items: end;
-  }
-  header nav > ul > li > a,
-  .footer-links a {
-    border-color: var(--c-bg-light) !important;
-    color: var(--c-bg-light);
+    width: 100%;
   }
   .project-hero-img.bc-hero-img img {
     padding: 0 1.75rem;
@@ -1916,6 +2300,22 @@ iframe {
     gap: 1rem;
     justify-content: space-between;
   }
+  .home-margin {
+    margin: 0 1.25rem;
+  }
+  .project-tags {
+    flex-flow: column;
+    gap: 0.25rem;
+  }
+  .project-title h3 {
+    line-height: 110%;
+  }
+  .project-title-combo {
+    height: fit-content;
+  }
+}
+/* <800px */
+@media screen and (max-width: 50rem) {
   .project-wrapper {
     grid-template-rows: auto auto 1fr;
     height: 70rem;
@@ -1941,21 +2341,8 @@ iframe {
     border: none;
     padding: 0.5rem 1rem 2rem 1.5rem;
   }
-  .home-margin {
-    margin: 0 1.25rem;
-  }
   .project-title {
     /* padding: 0.5rem 1rem 0.5rem 1.5rem !important; */
-  }
-  .project-tags {
-    flex-flow: column;
-    gap: 0.25rem;
-  }
-  .project-title-combo {
-    height: fit-content;
-  }
-  .project-title h3 {
-    line-height: 110%;
   }
   .wrapper-padding {
     margin: 0;
@@ -2018,8 +2405,32 @@ iframe {
     max-height: 36rem;
   }
 }
+@media screen and (max-width: 37.5rem) {
+  #nav-website h1 {
+    font-size: 2rem;
+  }
+  #nav-website .clicky-menu .chevron {
+    width: 1.25rem;
+  }
+}
 /* <500px */
 @media screen and (max-width: 31.25rem) {
+  .clicky-menu.no-js li:hover > ul, .clicky-menu.no-js li:focus-within > ul { /*[2]*/
+    position: relative !important;
+    top: 0;
+  }
+  :not(#nav-website) .clicky-menu li:has(button[aria-expanded=true]) ul {
+    position: relative;
+  }
+  #nav-design {
+    height: fit-content;
+  }
+  #nav-design > ul {
+    flex-flow: column !important;
+  }
+  header {
+    gap: 0.5rem;
+  }
   header h1,
   .h1 {
     font-size: 2rem;
@@ -2098,7 +2509,9 @@ iframe {
     gap: 0;
   }
   .trailer iframe,
-  .subheading img {
+  .subheading img,
+  .subheading .content-border,
+  .subheading video {
     padding: 0.75rem;
   }
   .project-details-wrapper .subheading h3 {
@@ -2108,7 +2521,9 @@ iframe {
     margin-bottom: 0.25rem !important;
   }
   .project-details-wrapper .trailer iframe,
-  .project-details-wrapper .subheading img {
+  .project-details-wrapper .subheading img,
+  .project-details-wrapper .subheading .content-border,
+  .project-details-wrapper .subheading video {
     padding: 0;
   }
   .article-section p,
@@ -2118,6 +2533,22 @@ iframe {
   .website-embed iframe {
     height: 40rem;
     width: 100%;
+  }
+}
+@media screen and (max-width: 25rem) {
+  #nav-website h1 {
+    font-size: 1.5rem;
+  }
+  #nav-website .clicky-menu li ul {
+    flex-flow: column;
+    padding: 0.5rem 0 !important;
+  }
+  #nav-website .clicky-menu .chevron {
+    width: 1.1rem;
+    margin-top: 0.25rem;
+  }
+  #nav-website .clicky-menu > li > a, #nav-website .clicky-menu > li > button {
+    gap: 0.75rem;
   }
 }
 @media screen and (max-width: 21.875rem) {

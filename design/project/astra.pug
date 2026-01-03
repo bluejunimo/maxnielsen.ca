@@ -1,0 +1,219 @@
+include ../mixins/head.pug
+doctype html
+html(lang="en")
+	// HTML Head
+	+project_head('Astra - Max Nielsen')
+
+	body
+		// Header
+		include includes/header
+
+		// Title and nav(?)
+		picture.project-hero-img.serendipity-hero-img
+			source(
+				srcset="../../img/design/astra/menu.webp" 
+				media="(min-width: 58.125rem)"
+				)
+			source(
+				srcset="../../img/design/astra/menu.webp" 
+				media="(max-width: 58.125rem)"
+				)
+			img(src="../../img/design/astra/menu.webp")
+		
+		// About Me
+		.two-col
+			aside(id="table_of_contents")
+				h1(id="table_of_contents_title") Astra
+				p.tagline
+					| An AR interface and everyday artifacts from a future moon colony monopoly.
+				div(id="project_details")
+					.project-details.details-border
+						.h-btn
+							h2.details-title(id="project_details_title") Project details
+							a.button-tiny.button-small.button-toggle(
+								data-hide-text="Hide" 
+								data-show-text="Show" 
+								id="project_details_toggle"
+								) Hide
+						.project-details-wrapper(id="project_details_wrapper")
+							.project-for.project-detail-item
+								h3 Group project for
+								a.button-tiny(
+									href="https://sparkjam.design/" 
+									target="_blank"
+									)
+									| Sparkjam 2025
+									|   - A design jam
+							.project-detail-item
+								h3 Timeframe
+								p May 2025 (2 weeks)
+							.project-detail-item
+								h3 Award
+								p 3rd place finish and a mechanical keyboard :D
+							.project-detail-item
+								h3 Project focus
+								ul.smaller-list-indent
+									li Speculative design &amp; storytelling
+									li Physical prototyping
+									li AR interface design
+							.project-detail-item
+								h3 Tools used
+								ul.smaller-list-indent
+									li Figma
+									li Occulus Quest
+							.project-detail-item
+								h3 The team
+								ul.smaller-list-indent
+									li
+										a.button-tiny(
+											target="_blank" 
+											href="https://www.linkedin.com/in/irina-ng-035a4b251/"
+											) Irina Ng
+									li
+										a.button-tiny(
+											target="_blank" 
+											href="https://www.linkedin.com/in/sandra-cao-4741922b8/"
+											) Sandra Cao 
+									li
+										a.button-tiny(
+											target="_blank" 
+											href="https://www.linkedin.com/in/mikael-greenwood-5b0654216/"
+											)
+											| Mikael Greenwood
+							.project-detail-item
+								h3 What I did
+								p
+									| I collaborated with the team on the narrative foundation, made our physical artifacts, and used VR as a makeshift solution to test our AR interface.
+				#toc.toc
+					h2 In this piece
+					ul
+						li
+							a(
+								data-target="what_it_is" 
+								href="#what_it_is"
+								) What it is
+						li
+							a(
+								data-target="dont_rush_to_your_solution" 
+								href="#dont_rush_to_your_solution"
+								)
+								| Don't rush your solution
+						li
+							a(
+								data-target="physical_making" 
+								href="#physical_making"
+								) Physical making
+						li
+							a(
+								data-target="reflection" 
+								href="#reflection"
+								)
+								| More design jams please!
+						li
+							a(
+								data-target="check_it_out" 
+								href="#check_it_out"
+								)
+								| Check it out
+			#article
+				section.wrapper-padding.article-section(id="what_it_is")
+					h2.heading-underline What it is
+					.explanation-wrapper
+						div
+							p.summary-text
+								| For SparkJam (a 
+								dfn(aria-label="An event where people rapidly and collaboratively design in a restricted timeframe, creating a final product by the end. Similar to a hackathon, but for design.") design jam
+								| ), our team chose to center our project in the 
+								dfn(aria-label="In our case, speculative design explores worlds related to the implications of future technologies and how they intersect with humans and society.") speculative design
+								|  space. 
+								| We built a strong narrative foundation imagining a future lunar company “Astra” that has a monopoly on the moon. 
+								| From that future, we designed a set of physical objects (a restaurant menu and a credit card) and an augmented reality 
+								| interface that lunar citizens use everyday.
+						.trailer.subheading
+							h3.heading-underline Watch the video overview
+							iframe(
+								allowfullscreen="" 
+								referrerpolicy="strict-origin-when-cross-origin" 
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+								title="YouTube video player" 
+								src="https://www.youtube-nocookie.com/embed/gHf6N8hsczk?si=Rnmoqwr7p2jV_UKD" 
+								height="315" 
+								width="560"
+								)
+				section.wrapper-padding.article-section(id="dont_rush_to_your_solution")
+					h2.heading-underline Don't rush to your solution
+					.explanation-wrapper
+						div
+							p Our group chose the “futures track” of SparkJam as we were interested in designing for humans in space. A normal brainstorming session of ideas gave us starting ideas such as what future space mining gear or a space safari tour might look like. However, when we went to present them in a critique session, we realized they held little meaning to us and the world outside of it being linked to one or two current ideas. When we went to build out these worlds further, the design quickly got lost in it. We were stuck tackling this project from the wrong side: trying to design a solution for an empty world/future.
+							p This led me to finding the double diamond design process, a popular tool used to support design processes but adapted to speculative design. I pitched this to the team and we started going through the motions with a starting point of designing for lunar life. We talked about our personal ethics, new scientific innovations, lunar business ventures, and more. This kickstarted the double diamond’s first stage of “signal scanning”. From then on, I hosted the next few discussions for the other steps in the process. It took longer than we expected, but building a rich future world based on the present helped us get a lot farther with Astra’s design. I learned the simple and classic lesson that rushing to a solution, even if you’re a little time constrained, is not a good design decision.
+								
+						.subheading.multiple-media
+							div
+								h3.heading-underline 
+									| The double diamond of speculative design. From 
+									a(href="https://www.thefountaininstitute.com/blog/the-double-diamond-of-speculative-design" target="_blank") thefountaininstitute.com
+									| .
+								img(
+									alt="Double diamond design process" 
+									width="2560" 
+									height="2210" 
+									src="../../img/design/astra/double_diamond_spec_design_fountain_institute.webp"
+									)
+							div
+								h3.heading-underline Final narrative statement.
+								div.content-border.pullquote
+									p “Monopolistic lunar company "Astra" has colonized the moon and created "Paradise", a lunar colony, and a new currency system coined "Astra Points" to profit from low-income citizens. To ensure overconsumption doesn’t occur in space, individuals surpassing a points limit would lead to a work term.
+									p How might we form a new lunar societal currency to discreetly exploit Paradise residents through regulating the consumption of products to continue Astra’s monopolistic practices?”
+				section#physical_making.wrapper-padding.article-section
+					h2.heading-underline Physical making
+					.explanation-wrapper
+						div
+							p Our team was desperate to build something physical in SparkJam. We designed a menu and payment card to act as our artifacts from the world, creating physical-digital interactions between the artifacts and the AR interface.
+							p We took a trip to an arts store, exploring papers with varying thickness and transparency to help convey a sense of futurism and advanced technologies. I experimented with the drafting film we chose, balancing the artifact’s rigidity and transparency by glueing layers of the stuff together.
+							p Our main foci were on the material design and digital/physical interaction and less so on what those artifacts were. I echo one judge's sentiment towards our artifacts: that we should have considered creating more novel artifacts that would have aligned more with communicating Astra’s dystopian narrative and/or had more intentionality behind why they existed.
+
+						.subheading.multiple-media
+							div
+								h3.heading-underline Iterations of the credit card
+								img(
+									alt="Screenshot of digital sticky notes grouped together by a lot of themes" 
+									width="2560" 
+									height="2210" 
+									src="../../img/design/astra/physical-iterations.webp"
+									)
+							div
+								h3.heading-underline Physical/digital interaction
+								video(autoplay loop=1 playsinline=1 src="../../img/design/astra/artifacts.mp4" width="400" height="400" controls)
+
+				section#reflection.wrapper-padding.article-section
+					h2.heading-underline More design jams please!
+					p SparkJam opened me up to trying a lot of new things: speculative design and world building, physical prototyping, and designing augmented interfaces that interact with physical artifacts. Attending design jams give me the opportunity to try new passions and ideas in a safe space with a group of friends that all want to improve their design skills. It was a bonus that we received 3rd place in the competition. I look forward to attending SparkJam 2026!
+				section.wrapper-padding.article-section(id="check_it_out")
+					h2.heading-underline Check it out
+					.explanation-wrapper.figma-embed
+						.trailer.subheading
+							h3.heading-underline Watch the video
+							iframe(
+								allowfullscreen="" 
+								referrerpolicy="strict-origin-when-cross-origin" 
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+								title="YouTube video player" 
+								src="https://www.youtube-nocookie.com/embed/gHf6N8hsczk?si=Rnmoqwr7p2jV_UKD" 
+								height="315" 
+								width="560"
+								)
+						.trailer.subheading.figma-embed
+							h3.heading-underline View the process documentation
+							iframe(
+								allowfullscreen="" 
+								src="https://embed.figma.com/deck/zuIq18ExFKSHf2AddNg2uU/Astra-s-Process-Document?node-id=1-204&viewport=-112%2C-32%2C0.6&scaling=min-zoom&content-scaling=min-zoom&page-id=0%3A1&embed-host=share" 
+								height="450" 
+								width="800"
+								)
+							a.button-small(
+								target="_blank" 
+								href="../../file/design/astra/astra-process.pdf"
+								) Download static slide deck
+						
+		// Footer
+		include includes/footer
