@@ -121,7 +121,7 @@ dfn {
     position: relative;
 }
 
-dfn[aria-label]:hover::after, dfn[aria-label]:focus::after {
+dfn[aria-label]:hover::after {
     content: attr(aria-label);
     position: absolute;
     top: 2rem;
@@ -2506,6 +2506,10 @@ iframe {
     #nav-website .clicky-menu .chevron {
         width: 1.25rem;
     }
+
+    dfn[aria-label]:hover::after {
+        width: 12rem;
+    }
 }
 
 
@@ -2687,6 +2691,10 @@ iframe {
 
     #nav-website .clicky-menu > li > a, #nav-website .clicky-menu > li > button {
         gap: 0.75rem;
+    }
+
+    dfn[aria-label]:hover::after {
+        width: 7rem;
     }
 }
 
