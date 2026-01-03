@@ -4,7 +4,7 @@ var body_element = document.querySelector('body');
 var copyright_element = document.querySelector('#copyright');
 
 // https://stackoverflow.com/a/6002276
-var year = new Date().getFullYear();
+// var year = new Date().getFullYear();
 
 // var nav_projects_element = document.querySelector('#nav-projects');
 // var nav_connect_element = document.querySelector('#nav-connect');
@@ -33,12 +33,12 @@ if (sticky_header_element != null) {
     sticky_header_element.classList.add('sticky-header');
 }
 
-if (year.toString() == "2025") {
-    copyright_element.textContent = "© Max Nielsen " + year;
-}
-else {
-    copyright_element.textContent = "© Max Nielsen travelling to the year of " + year;
-}
+// if (year.toString() == "2025") {
+//     copyright_element.textContent = "© Max Nielsen " + year;
+// }
+// else {
+//     copyright_element.textContent = "© Max Nielsen travelling to the year of " + year;
+// }
 
 // https://stackoverflow.com/a/8318629
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
@@ -207,13 +207,13 @@ else {
 // https://stackoverflow.com/a/77004784
 const el = document.querySelector(".sticky-header");
 window.addEventListener("scroll", () => {
-    if (mobile_breakpoint.matches) {
+    if (mobile_breakpoint.matches && sticky_header_element != null) {
         sticky_header_element.classList.add('sticky-header');
         const stickyTop = parseInt(window.getComputedStyle(el).top);
         const currentTop = el.getBoundingClientRect().top;
         el.classList.toggle("header-scrolled", currentTop === stickyTop);
     }
-    else {
+    else if(sticky_header_element != null) {
         sticky_header_element.classList.remove('sticky-header');
         sticky_header_element.classList.remove("header-scrolled");
     }
@@ -225,7 +225,7 @@ window.addEventListener('resize', () => {
         // mobile_menu_element.classList.remove('hide');
         // nav_element.classList.add('hide');
     }
-    else {
+    else if(sticky_header_element != null) {
         // mobile_menu_element.classList.add('hide');
         // nav_element.classList.remove('hide');
         // nav_element.classList.remove('active');
