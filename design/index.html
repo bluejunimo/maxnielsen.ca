@@ -14,12 +14,12 @@
   </head>
   <body>
     <!-- Header-->
-    <header class="i-want-sticky-header">
+    <header class="i-want-sticky-header"><a class="skip-link" href="#main">Skip to main content</a><a class="skip-link" href="#footer">Skip to footer</a>
       <nav id="nav-website" aria-label="Website Menu">
         <ul class="clicky-menu no-js" id="website-menu">
-          <li><a class="clicky-menu-dropdown" href="../design/index.html" aria-hidden="true">
+          <li><a class="clicky-menu-dropdown" href="../design/index.html" aria-expanded="false">
               <h1>Max Nielsen's Designs</h1>
-              <svg class="chevron" <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="chevron" width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.94466 1.94456L17.9451 17.945L33.9455 1.94456" stroke="#8B1C00" stroke-width="5.5"></path>
               </svg></a>
             <ul>
@@ -57,8 +57,8 @@
       </nav>
     </header>
     <!-- Projects-->
-    <section class="home-margin" id="projects">
-      <h2 class="heading-underline">Projects</h2>
+    <section class="home-margin" id="main">
+      <h2 class="heading-underline" id="projects">Projects</h2>
       <div class="project-cards"><a class="project-card" href="project/headliner.html"><img class="project-thumbnail" src="../img/design/headliner/user-journey.webp" alt="Transit Fare Map">
           <div class="project-tags">
             <p>April 2025 (13 weeks)</p>
@@ -170,12 +170,17 @@
       <address><a class="button-small" href="mailto:max@maxnielsen.ca">Email</a><a class="button-small" href="tel:7786364131">Phone</a><a class="button-small" href="https://www.linkedin.com/in/mnielsen-/" target="_blank">LinkedIn</a></address>
     </section>
     <!-- Footer-->
-    <footer>
+    <footer tabindex="-1" id="footer">
       <p id="copyright">&copy; Max Nielsen</p>
-      <div class="footer-links">
-        <p>A human generated website.</p>
-        <p>See it on <a href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">GitHub</a>.</p>
-      </div>
+      <nav aria-label="Other links">
+        <ul>
+          <li><a href="https://maxnielsen.ca">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                <path fill="#f6f6f9" d="M4 19v-9q0-.475.213-.9t.587-.7l6-4.5q.525-.4 1.2-.4t1.2.4l6 4.5q.375.275.588.7T20 10v9q0 .825-.588 1.413T18 21h-3q-.425 0-.712-.288T14 20v-5q0-.425-.288-.712T13 14h-2q-.425 0-.712.288T10 15v5q0 .425-.288.713T9 21H6q-.825 0-1.412-.587T4 19"></path>
+              </svg>Go home (maxnielsen.ca)</a></li>
+          <li><a href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">View on GitHub</a></li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>

@@ -164,11 +164,12 @@ a:focus {
 }
 
 p a:hover,
-p a:focus {
+p a:focus,
+footer a:hover,
+footer a:focus {
     color: var(--c-bg-light);
     background-color: var(--c-link);
     text-decoration: underline;
-
 }
 
 img {
@@ -207,6 +208,32 @@ header {
 
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     /* margin-bottom: 5rem; */
+}
+
+.skip-link {
+    position: absolute;
+    top: -1.5rem;
+    left: -10000rem;
+    z-index: 999;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    text-decoration: underline !important;
+    background-color: var(--c-link-change);
+    font-weight: 600;
+    padding: 0.25rem 1rem;
+    line-height: 1.25rem;
+    color: var(--c-bg-light);
+}
+
+.skip-link:focus{
+    opacity: 1;
+    left: 0;
+    width: auto;
+    height: auto;
+    color: var(--c-bg-light) !important;
 }
 
 #menu-header {
@@ -394,7 +421,7 @@ nav button[aria-expanded="false"] svg {
     margin-bottom: 0;
 }
 
-.clicky-menu .chevron {
+.clicky-menu .chevron, footer a svg {
     width: 1.25rem;
     height: auto;
 }
@@ -1705,18 +1732,41 @@ form:has(input[type="submit"]:focus) {
 /* footer */
 footer {
     display: grid;
-    grid-template-columns: 1fr max-content 1fr;
+    grid-template-columns: 1fr;
     align-content: center;
+    justify-items: end;
 
     background-color: var(--c-link-change);
     color: var(--c-bg-light);
     padding: 2rem 2rem;
     margin: 0 0 auto 0;
+    row-gap: 0.25rem;
+}
+
+#footer:target {
+    outline: 0.125rem var(--c-bg-light) solid;
+    outline-offset: -0.75rem;
+}
+
+footer nav > ul {
+    gap: 1rem;
 }
 
 footer p {
     margin: auto 0;
     width: fit-content;
+}
+
+footer a {
+    color: var(--c-bg-light);
+    text-decoration: underline;
+}
+
+footer a:has(svg) {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.25rem;
+    align-items: center;
 }
 
 .footer-links {
@@ -1970,7 +2020,7 @@ iframe {
         gap: unset
     }
 
-    .clicky-menu h1 {
+    .clicky-menu h1, .clicky-menu .h1 {
         font-size: 2rem;
     }
 
@@ -1988,7 +2038,9 @@ iframe {
         align-items: center;
     }
 
-
+    .skip-link {
+        top: -0.5rem;
+    }
 
 
     /* HERO TEMPLATE */
@@ -2154,10 +2206,10 @@ iframe {
         flex: unset;
     } */
 
-    footer {
-        grid-template-columns: 1fr auto;
-        align-content: end;
-    }
+    // footer {
+    //     grid-template-columns: 1fr;
+    //     align-content: end;
+    // }
 
 }
 
@@ -2208,6 +2260,10 @@ iframe {
     //     padding-bottom: 0.5rem;
     // }
 
+    .skip-link {
+        top: -1rem;
+    }
+
     :not(#nav-website) > .clicky-menu > li > ul::before {
         content: "";
         position: absolute;
@@ -2222,7 +2278,7 @@ iframe {
         height: fit-content;
     }
 
-    #nav-website h1 {
+    #nav-website h1, #nav-website .h1 {
         font-size: 3rem;
     }
 
@@ -2451,10 +2507,10 @@ iframe {
     }
 
     /* FOOTER */
-    footer {
-        grid-template-columns: 1fr;
-        /* gap: 0.25rem; */
-    }
+    // footer {
+    //     grid-template-columns: 1fr;
+    //     /* gap: 0.25rem; */
+    // }
 
     footer .footer-links {
         order: 0;
@@ -2463,10 +2519,6 @@ iframe {
 
     .footer-location {
         order: 2;
-    }
-
-    #copyright {
-        margin: 0 auto;
     }
 
     .footer-location {
@@ -2499,7 +2551,7 @@ iframe {
 
 // <600px
 @media screen and (max-width: 37.5rem) {
-    #nav-website h1 {
+    #nav-website h1, #nav-website .h1 {
         font-size: 2rem;
     }
 
@@ -2543,7 +2595,7 @@ iframe {
     }
 
     header h1,
-    .h1 {
+    header .h1 {
         font-size: 2rem;
     }
 
@@ -2631,9 +2683,9 @@ iframe {
         grid-template-columns: 1fr;
     }
 
-    footer {
-        flex-flow: column;
-    }
+    // footer {
+    //     flex-flow: column;
+    // }
 
     .footer-links {
         flex-flow: column;
@@ -2675,7 +2727,7 @@ iframe {
 
 // <400px
 @media screen and (max-width: 25rem) {
-    #nav-website h1 {
+    #nav-website h1, #nav-website .h1 {
         font-size: 1.5rem;
     }
 
@@ -2693,8 +2745,10 @@ iframe {
         gap: 0.75rem;
     }
 
-    dfn[aria-label]:hover::after {
-        width: 7rem;
+    footer nav > ul {
+        display: grid;
+        justify-items: end;
+        row-gap: 0.5rem;
     }
 }
 
@@ -2703,7 +2757,7 @@ iframe {
 @media screen and (max-width: 21.875rem) {
 
     header h1,
-    .h1 {
+    header .h1 {
         font-size: 1.5rem;
     }
 

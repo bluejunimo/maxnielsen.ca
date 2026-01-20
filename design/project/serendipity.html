@@ -14,12 +14,12 @@
   </head>
   <body>
     <!-- Header-->
-    <header>
+    <header><a class="skip-link" href="#main">Skip to main content</a><a class="skip-link" href="#footer">Skip to footer</a>
       <nav id="nav-website" aria-label="High-level website menu">
         <ul class="clicky-menu no-js" id="website-menu">
-          <li><a class="clicky-menu-dropdown" href="../../design/index.html" aria-hidden="true">
-              <h1>Max Nielsen's Designs</h1>
-              <svg class="chevron" <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <li><a class="clicky-menu-dropdown" href="../../design/index.html" aria-expanded="false">
+              <p class="h1">Max Nielsen's Designs</p>
+              <svg class="chevron" width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.94466 1.94456L17.9451 17.945L33.9455 1.94456" stroke="#8B1C00" stroke-width="5.5"></path>
               </svg></a>
             <ul>
@@ -62,7 +62,7 @@
       <source srcset="../../img/design/serendipity/selector.webp" media="(max-width: 58.125rem)"><img src="../../img/design/serendipity/selector.webp">
     </picture>
     <!-- About Me-->
-    <div class="two-col">
+    <div class="two-col" id="main">
       <aside id="table_of_contents">
         <h1 id="table_of_contents_title">Serendipity</h1>
         <p class="tagline">
@@ -72,7 +72,7 @@
         <div id="project_details">
           <div class="project-details details-border">
             <div class="h-btn">
-              <h2 class="details-title" id="project_details_title">Project details</h2><a class="button-tiny button-small button-toggle" data-hide-text="Hide" data-show-text="Show" id="project_details_toggle">Hide</a>
+              <h2 class="details-title" id="project_details_title">Project details</h2><a class="button-tiny button-small button-toggle" data-hide-text="Hide" data-show-text="Show" id="project_details_toggle" href="#" aria-labelledby="project_details_toggle project_details" aria-expanded="true" aria-controls="project_details_wrapper">Hide</a>
             </div>
             <div class="project-details-wrapper" id="project_details_wrapper">
               <div class="project-for project-detail-item">
@@ -121,13 +121,9 @@
           <h2>In this piece</h2>
           <ul>
             <li><a data-target="what_it_is" href="#what_it_is">What it is</a></li>
-            <li><a data-target="feedback_and_iteration" href="#feedback_and_iteration">
-                Feedback and
-                  iteration</a></li>
+            <li><a data-target="voting_system_imbalance" href="#voting_system_imbalance">Voting system imbalance</a></li>
+            <li><a data-target="web_interface_features" href="#web_interface_features">Web interface features</a></li>
             <li><a data-target="reflection" href="#reflection">Reflection</a></li>
-            <li><a data-target="check_it_out_yourself" href="#check_it_out_yourself">
-                Check it out
-                  yourself</a></li>
           </ul>
         </div>
       </aside>
@@ -158,7 +154,7 @@
             </div>
           </div>
         </section>
-        <section class="wrapper-padding article-section" id="feedback_and_iteration">
+        <section class="wrapper-padding article-section" id="voting_system_imbalance">
           <h2 class="heading-underline">Voting system imbalance</h2>
           <div class="explanation-wrapper two-sections">
             <div>
@@ -191,7 +187,7 @@
             </div>
           </div>
         </section>
-        <section class="wrapper-padding article-section" id="reflection">
+        <section class="wrapper-padding article-section" id="web_interface_features">
           <h2 class="heading-underline">Web interface features</h2>
           <div class="explanation-wrapper">
             <div>
@@ -230,12 +226,17 @@
       </div>
     </div>
     <!-- Footer-->
-    <footer>
+    <footer tabindex="-1" id="footer">
       <p id="copyright">&copy; Max Nielsen</p>
-      <div class="footer-links">
-        <p>A human generated website.</p>
-        <p>See it on <a href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">GitHub</a>.</p>
-      </div>
+      <nav aria-label="Other links">
+        <ul>
+          <li><a href="https://maxnielsen.ca">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                <path fill="#f6f6f9" d="M4 19v-9q0-.475.213-.9t.587-.7l6-4.5q.525-.4 1.2-.4t1.2.4l6 4.5q.375.275.588.7T20 10v9q0 .825-.588 1.413T18 21h-3q-.425 0-.712-.288T14 20v-5q0-.425-.288-.712T13 14h-2q-.425 0-.712.288T10 15v5q0 .425-.288.713T9 21H6q-.825 0-1.412-.587T4 19"></path>
+              </svg>Go home (maxnielsen.ca)</a></li>
+          <li><a href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank">View on GitHub</a></li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>

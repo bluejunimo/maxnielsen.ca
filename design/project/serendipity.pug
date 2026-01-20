@@ -21,7 +21,7 @@ html(lang="en")
       img(src="../../img/design/serendipity/selector.webp")
 
     // About Me
-    .two-col
+    #main.two-col
       aside(id="table_of_contents")
         h1(id="table_of_contents_title") Serendipity
         p.tagline
@@ -35,7 +35,10 @@ html(lang="en")
                 data-hide-text="Hide" 
                 data-show-text="Show" 
                 id="project_details_toggle"
-                ) Hide
+                href="#"
+                aria-labelledby="project_details_toggle project_details"
+								aria-expanded="true"
+								aria-controls="project_details_wrapper") Hide
             .project-details-wrapper(id="project_details_wrapper")
               .project-for.project-detail-item
                 h3 Group project for
@@ -88,23 +91,21 @@ html(lang="en")
                 ) What it is
             li
               a(
-                data-target="feedback_and_iteration" 
-                href="#feedback_and_iteration"
+                data-target="voting_system_imbalance" 
+                href="#voting_system_imbalance"
                 )
-                | Feedback and
-                |   iteration
+                | Voting system imbalance
+            li
+              a(
+                data-target="web_interface_features" 
+                href="#web_interface_features"
+                )
+                | Web interface features
             li
               a(
                 data-target="reflection" 
                 href="#reflection"
                 ) Reflection
-            li
-              a(
-                data-target="check_it_out_yourself" 
-                href="#check_it_out_yourself"
-                )
-                | Check it out
-                |   yourself
       #article
         section.wrapper-padding.article-section(id="what_it_is")
           h2.heading-underline What it is
@@ -133,7 +134,7 @@ html(lang="en")
                 height="315" 
                 width="560"
                 )
-        section.wrapper-padding.article-section(id="feedback_and_iteration")
+        section.wrapper-padding.article-section(id="voting_system_imbalance")
           h2.heading-underline Voting system imbalance
           .explanation-wrapper.two-sections
             div
@@ -170,7 +171,7 @@ html(lang="en")
               p
                 | Now, the vibe would be drawn at random from the votes gathered. The majority vote will have
                 |   the odds in their favour, but everyone’s vote now has a shot to be chosen.
-        section#reflection.wrapper-padding.article-section
+        section.wrapper-padding.article-section(id="web_interface_features")
           h2.heading-underline Web interface features
           .explanation-wrapper
             div

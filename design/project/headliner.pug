@@ -26,7 +26,7 @@ html(lang="en")
        <p class="tagline">A shared listening experience for large student design spaces of the near future.</p>
        </hgroup>
     // About Me
-    .two-col
+    #main.two-col
       aside(id="table_of_contents")
         // <hgroup class="title-wrapper">
         h1(id="table_of_contents_title") Transit Fare Map
@@ -41,7 +41,10 @@ html(lang="en")
                 data-hide-text="Hide" 
                 data-show-text="Show" 
                 id="project_details_toggle"
-                ) Hide
+                href="#"
+                aria-labelledby="project_details_toggle project_details"
+								aria-expanded="true"
+								aria-controls="project_details_wrapper") Hide
             .project-details-wrapper(id="project_details_wrapper")
               .project-for.project-detail-item
                 h3 Group project for

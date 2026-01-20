@@ -1,11 +1,14 @@
 header.i-want-sticky-header
+    //- create a skip to main & footer here
+    a(href="#main").skip-link Skip to main content
+    a(href="#footer").skip-link Skip to footer
 
     nav#nav-website(aria-label='Website Menu')
         ul#website-menu.clicky-menu.no-js
             li
-                a(href='../design/index.html' aria-hidden="true").clicky-menu-dropdown
+                a(href='../design/index.html' aria-expanded="false").clicky-menu-dropdown
                     h1 Max Nielsen's Designs
-                    svg(<svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg").chevron
+                    svg(width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg").chevron
                         path(d="M1.94466 1.94456L17.9451 17.945L33.9455 1.94456" stroke="#8B1C00" stroke-width="5.5")
                 ul
                     li#link-item-design

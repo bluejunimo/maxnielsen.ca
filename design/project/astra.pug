@@ -21,7 +21,7 @@ html(lang="en")
 			img(src="../../img/design/astra/menu.webp")
 		
 		// About Me
-		.two-col
+		#main.two-col
 			aside(id="table_of_contents")
 				h1(id="table_of_contents_title") Astra
 				p.tagline
@@ -34,6 +34,10 @@ html(lang="en")
 								data-hide-text="Hide" 
 								data-show-text="Show" 
 								id="project_details_toggle"
+								href="#"
+								aria-labelledby="project_details_toggle project_details"
+								aria-expanded="true"
+								aria-controls="project_details_wrapper"
 								) Hide
 						.project-details-wrapper(id="project_details_wrapper")
 							.project-for.project-detail-item
