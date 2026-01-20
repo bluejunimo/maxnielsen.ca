@@ -9,12 +9,17 @@ const detail_panes = document.querySelectorAll(".project-details");
 
 detail_panes.forEach(detail_pane => {
 
-    detail_pane.querySelector(".button-toggle").addEventListener("click", function() {
+    detail_pane.querySelector(".button-toggle").addEventListener("click", function(event) {
+        // Disable original action'
+        event.preventDefault();
+
         // Hide contents
         if(!detail_pane.querySelector(".project-details-wrapper").classList.contains("hide")) {
             detail_pane.querySelector(".button-toggle").innerHTML = detail_pane.querySelector(".button-toggle").getAttribute("data-show-text");
             detail_pane.querySelector(".project-details-wrapper").classList.add("hide");
             detail_pane.querySelector(".details-title").classList.add("no-margin");
+            // set aria-expanded=false
+            detail_pane.querySelector(".button-toggle").setAttribute("aria-expanded", "false");
             console.log("closing.");
         }
         // Open contents
@@ -22,6 +27,8 @@ detail_panes.forEach(detail_pane => {
             detail_pane.querySelector(".button-toggle").innerHTML = detail_pane.querySelector(".button-toggle").getAttribute("data-hide-text");
             detail_pane.querySelector(".project-details-wrapper").classList.remove("hide");
             detail_pane.querySelector(".details-title").classList.remove("no-margin");
+            //set aria-expanded=true
+            detail_pane.querySelector(".button-toggle").setAttribute("aria-expanded", "true");
             console.log("opening...");
         }
 
@@ -30,6 +37,7 @@ detail_panes.forEach(detail_pane => {
     detail_pane.querySelector(".button-toggle").innerHTML = detail_pane.querySelector(".button-toggle").getAttribute("data-show-text");
     detail_pane.querySelector(".project-details-wrapper").classList.add("hide");
     detail_pane.querySelector(".details-title").classList.add("no-margin");
+    detail_pane.querySelector(".button-toggle").setAttribute("aria-expanded", "false");
     console.log("closing.");
 });
 
