@@ -230,7 +230,8 @@ h1,
   line-height: 120%;
 }
 
-h2 {
+h2,
+.h2 {
   margin: 0;
   font-family: "Livvic", Lato, sans-serif;
   font-weight: 600;
@@ -1342,7 +1343,7 @@ hgroup {
   gap: 0.5rem;
 }
 
-.h-btn h2 {
+.h-btn h2, .h-btn .h2 {
   text-wrap: balance;
 }
 
@@ -1510,7 +1511,6 @@ li:last-of-type {
 
 .project-hover img {
   display: block;
-  animation: side-to-side 4s infinite;
   height: 2rem;
 }
 
@@ -1698,12 +1698,12 @@ li:last-of-type {
 /* CONTACT INFO */
 #connect {
   margin-bottom: 2.5rem;
-  margin-top: auto;
+  margin-top: 2.5rem;
 }
 
 #connect * {
-  width: fit-content;
   margin: 0 auto;
+  text-align: center;
 }
 
 address {
@@ -1840,6 +1840,8 @@ footer {
 
 footer nav > ul {
   gap: 1rem;
+  justify-content: end;
+  row-gap: 0.5rem;
 }
 
 footer p {
@@ -1889,6 +1891,17 @@ footer a:has(svg) {
 
 .hide * {
   display: none !important;
+}
+
+.hide-visually {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .no-margin {
