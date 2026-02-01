@@ -1,7 +1,7 @@
 include mixins/head.pug
 
 doctype html
-html
+html(lang="en-ca")
 	// HTML Head
 	+index_head("Max Nielsen's Design Portfolio")
 
@@ -10,119 +10,124 @@ html
 		// Header
 		include includes/header
 
-		// Projects
-		section#main.home-margin
-			h2#projects.heading-underline Projects
-			.project-cards
-				a.project-card(href='project/headliner.html')
-					img.project-thumbnail(src='../img/design/headliner/user-journey.webp', alt="Transit Fare Map")
-					.project-tags
-						p April 2025 (13 weeks)
-						p Group project
-						p Design methods
-					.project-title
-						.project-title-combo
-							h3 Transit Fare Map
-							.project-arrow
-								img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
+		// Main content
+		main
+
+			// Projects
+			section.home-margin
+				h1#projects.h2.heading-underline Projects
+				.project-cards
+					a.project-card(href='project/headliner.html')
+						img.project-thumbnail(src='../img/design/headliner/user-journey.webp' alt="Proposed TransLink fare map taped over existing map on fare machine")
+						.project-tags
+							p April 2025 (13 weeks)
+							p Group project
+							p Design methods
+						.project-title
+							.project-title-combo
+								h3 Transit Fare Map
+								.project-arrow
+									img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
+							p
+								| Making it easier for low-frequency transit riders to purchase tickets; in collaboration with
+								| TransLink.
+							.project-hover
+								p Explore project
+								img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
+					a.project-card(href='project/astra.html')
+						img.project-thumbnail(src='../img/design/astra/menu.webp' alt="Person holding and looking at a blue, translucent menu of a lunar-themed burger restaurant")
+						.project-tags
+							p May 2025 (13 weeks)
+							p Design jam
+							p Speculative design
+						.project-title
+							.project-title-combo
+								h3 Astra
+								.project-arrow
+									img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
+							p
+								| An AR interface and everyday artifacts from a future moon colony monopoly.
+							.project-hover
+								p Explore project
+								img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
+					a.project-card(href='project/serendipity.html')
+						img.project-thumbnail(src='../img/design/serendipity/selector.webp' alt="Person pulling down red lever attached to small horizontal black bookshelf speaker")
+						.project-tags
+							p April 2024 (8 weeks)
+							p Group project
+							p System &amp; website design
+						.project-title
+							.project-title-combo
+								h3 Serendipity
+								.project-arrow
+									img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
+							p
+								| A shared listening experience for large student design spaces of the near future.
+							.project-hover
+								p Explore project
+								img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
+					a.project-card(href='project/bc.html')
+						img.project-thumbnail(src='../img/design/bc/mockup.webp' alt="Render of homepage of app with on iPhone reading: Welcome to the BC Healthcare Hub! Learning about the provincial healthcare system just got a lot easier")
+						.project-tags
+							p December 2024 (8 weeks)
+							p Group project
+							p System &amp; app design
+						.project-title
+							.project-title-combo
+								h3 BC Healthcare Hub
+								.project-arrow
+									img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
+							p
+								| An interactive system to help international students apply for provincial health
+								| insurance.
+							.project-hover
+								p Explore project
+								img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
+			// About Me
+			section#about.home-margin
+				h2.heading-underline About me
+				.about
+					section
 						p
-							| Making it easier for low-frequency transit riders to purchase tickets; in collaboration with
-							| TransLink.
-						.project-hover
-							p Explore project
-							img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
-				a.project-card(href='project/astra.html')
-					img.project-thumbnail(src='../img/design/astra/menu.webp', alt="Astra")
-					.project-tags
-						p May 2025 (13 weeks)
-						p Design jam
-						p Speculative design
-					.project-title
-						.project-title-combo
-							h3 Astra
-							.project-arrow
-								img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
+							| As a user experience (UX) designer, I enjoy designing physical interactive products which work in tandem with
+							| digital systems and experiences. In contemporary UX design, I believe great
+							| experiences emerge when tangible interaction seamlessly merges with digital complexity.
 						p
-							| An AR interface and everyday artifacts from a future moon colony monopoly.
-						.project-hover
-							p Explore project
-							img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
-				a.project-card(href='project/serendipity.html')
-					img.project-thumbnail(src='../img/design/serendipity/selector.webp')
-					.project-tags
-						p April 2024 (8 weeks)
-						p Group project
-						p System &amp; website design
-					.project-title
-						.project-title-combo
-							h3 Serendipity
-							.project-arrow
-								img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
-						p
-							| A shared listening experience for large student design spaces of the near future.
-						.project-hover
-							p Explore project
-							img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
-				a.project-card(href='project/bc.html')
-					img.project-thumbnail(src='../img/design/bc/mockup.webp')
-					.project-tags
-						p December 2024 (8 weeks)
-						p Group project
-						p System &amp; app design
-					.project-title
-						.project-title-combo
-							h3 BC Healthcare Hub
-							.project-arrow
-								img(src='../img/icon/arrow_red.svg' alt='Go to project' width='512' height='512')
-						p
-							| An interactive system to help international students apply for provincial health
-							| insurance.
-						.project-hover
-							p Explore project
-							img(src='../img/icon/arrow-white.png' alt='Go to project' width='512' height='278')
-		// About Me
-		section#about.home-margin
-			h2.heading-underline About me
-			.about
-				section
-					p
-						| As a user experience (UX) designer, I enjoy designing physical interactive products which work in tandem with
-						| digital systems and experiences. In contemporary UX design, I believe great
-						| experiences emerge when tangible interaction seamlessly merges with digital complexity.
-					p
-						| Iterative processes and user-centered design methods have driven my ideas and decisions while
-						| studying at 
-						a#sfu.in-text-popup(href='https://www.sfu.ca/siat.html#about-details' target='_blank') Simon Fraser University&rsquo;s School of Interactive Arts and Technology (SIAT) program
-						| . In 2024, attending 
-						a#tue.in-text-popup(href='https://www.tue.nl/en/our-university/departments/industrial-design' target='_blank')
-							| TU/e&rsquo;s Industrial Design
-							| exchange program
-						|  in The Netherlands introduced me to a unique learning and working environment.
-						| Their emphasis on active reflection and personal development helps me bring fresh perspectives to
-						| projects today and refinements to my design process tomorrow.
-				section#about-details
-					h3#details-heading.heading-underline
-						| Eindhoven University of Technology, The Netherlands
-					p#details-subheading 5 month international exchange
-					.popup-content
-						img#details-image(src='../img/tue.webp' width='1280' height='853' alt='University campus building on a sunny day')
-						.popup-content-links
-							div
-								h4#details-title Projects from TU/e
-								a#details-project-1.button-small(href='project/serendipity.html') Serendipity
-								a#details-project-2.button-small(href='project/serendipity.html') Serendipity
-							div
-								h4 Check out the program
-								a#details-program.button-small(href='https://www.tue.nl/en/our-university/departments/industrial-design' target='_blank')
-									| Industrial
-									| Design
-		// Contact
-		section#connect.wrapper-padding
-			h2 Let&apos;s connect through:
-			address
-				a.button-small(href='mailto:max@maxnielsen.ca') Email
-				a.button-small(href='tel:7786364131') Phone
-				a.button-small(href='https://www.linkedin.com/in/mnielsen-/' target='_blank') LinkedIn
-		
+							| Iterative processes and user-centered design methods have driven my ideas and decisions while
+							| studying at 
+							a#sfu.in-text-popup(href='https://www.sfu.ca/siat.html' target='_blank' rel="external") Simon Fraser University&rsquo;s School of Interactive Arts and Technology (SIAT) program
+								span.hide-visually opens in new tab
+							| . In 2024, attending 
+							a#tue.in-text-popup(href='https://www.tue.nl/en/our-university/departments/industrial-design' target='_blank' rel="external")
+								| TU/e&rsquo;s Industrial Design
+								| exchange program
+								span.hide-visually opens in new tab
+							|  in The Netherlands introduced me to a unique learning and working environment.
+							| Their emphasis on active reflection and personal development helps me bring fresh perspectives to
+							| projects today and refinements to my design process tomorrow.
+					section#about-details
+						h3#details-heading.heading-underline(aria-live="polite") Simon Fraser University, Canada
+						p#details-subheading(aria-live="polite") 5th year student
+						.popup-content
+							img#details-image(src='../img/sfu.webp' width='1280' height='853' alt="Simon Fraser University's Surrey campus, embedded in a mall and office high-rise" aria-live="polite")
+							.popup-content-links
+								div
+									h4#details-title(aria-live="polite") Projects from SFU
+									a#details-project-1.button-small(href='project/headliner.html' aria-live="polite") Transit Fare Map
+									a#details-project-2.button-small(href='project/bc.html' aria-live="polite") BC Healthcare Hub
+								div
+									h4 Check out the program
+									a#details-program.button-small(href='https://siat.sfu.ca/' target='_blank' aria-live="polite" rel="external")
+										| Interactive Arts and Technology
+										span.hide-visually opens in new tab
+			// Contact
+			section#connect
+				h2 Let&apos;s connect through:
+				address
+					a.button-small(href='mailto:max@maxnielsen.ca') Email
+					a.button-small(href='tel:7786364131') Phone
+					a.button-small(href='https://www.linkedin.com/in/mnielsen-/' target='_blank' rel="external") LinkedIn
+						span.hide-visually opens in new tab
+			
 		// Footer
 		include includes/footer
