@@ -1,0 +1,316 @@
+
+
+
+include ../mixins/head.pug
+doctype html
+html(lang="en")
+  // HTML Head
+  +project_head('Adaptive Interfaces (SparkJam 2026) - Max Nielsen')
+  script(src='../../js/medium-zoom.min.js' defer='')
+  script(src='../../js/medium-zoom-custom.js' defer='')
+  script(src='../../js/dual_video.js' defer='')
+  
+  body
+    // Header
+    include includes/header
+    
+    // Title and nav(?)
+    picture.project-hero-img.adaptive-interfaces-hero-img
+      source(
+        srcset="../../img/design/adaptive-interfaces/mockup-tall.webp" 
+        alt="Mockup of Accessibility Settings screen showing step 1 of 2, where users pick between a simple, default, or custom toolbar layout. Shown on a desktop monitor against a yellow background."
+        media="(min-width: 58.125rem)"
+        )
+      source(
+        srcset="../../img/design/adaptive-interfaces/mockup-zoomed.webp" 
+        alt="Mockup of Accessibility Settings screen showing step 1 of 2, where users pick between a simple, default, or custom toolbar layout. Shown on a desktop monitor against a yellow background."
+        media="(max-width: 58.125rem)"
+        )
+      img(src="../../img/design/adaptive-interfaces/mockup-tall.webp" 
+        alt="Mockup of Accessibility Settings screen showing step 1 of 2, where users pick between a simple, default, or custom toolbar layout. Shown on a desktop monitor against a yellow background.")
+
+    // About Me
+    #main.two-col
+      aside(id="table_of_contents")
+        h1(id="table_of_contents_title") Adaptive Interfaces
+        p.tagline
+          | Helping blind users better learn and create with Miro, a visual whiteboarding tool.
+        div(id="project_details")
+          .project-details.details-border
+            .h-btn
+              h2.details-title(id="project_details_title") Project details
+              a.button-tiny.button-small.button-toggle(
+                data-hide-text="Hide" 
+                data-show-text="Show" 
+                id="project_details_toggle"
+                href="#"
+                aria-labelledby="project_details_toggle project_details"
+								aria-expanded="true"
+								aria-controls="project_details_wrapper") Hide
+            .project-details-wrapper(id="project_details_wrapper")
+              .project-for.project-detail-item
+                h3 Group project for
+                a.button-tiny(
+                  href="https://sparkjam.design/" 
+                  target="_blank"
+                  )
+                  | Sparkjam 2026
+                  |   - A design jam
+              .project-detail-item
+                h3 Timeframe
+                p May 2026 (5 days)
+              .project-detail-item
+                h3 Project focus
+                ul.smaller-list-indent
+                  li Accessible design
+                  li UX research
+                  li High-fidelity prototyping
+              .project-detail-item
+                h3 Tools used
+                ul.smaller-list-indent
+                  li Figjam/Figma
+                  li Claude Code
+              .project-detail-item
+                h3 The team
+                ul.smaller-list-indent
+                  li
+                    a.button-tiny(
+                      target="_blank" 
+                      href="https://www.linkedin.com/in/amandajeng19/"
+                      ) Amanda Eng
+                  li
+                    a.button-tiny(
+                      target="_blank" 
+                      href="https://www.linkedin.com/in/elizabeth-liz-liao/"
+                      ) Elizabeth Liao
+                  li
+                    a.button-tiny(
+                      target="_blank" 
+                      href="https://www.linkedin.com/in/irina-ng-035a4b251/"
+                      ) Irina Ng
+              .project-detail-item
+                h3 What I did
+                p
+                  | Conducted autoethnography, designed and created the prototype, and developed a persona (Linda) to center our pitch around storytelling.
+        #toc.toc
+          h2 In this piece
+          ul
+            li
+              a(
+                data-target="mission" 
+                href="#mission"
+                ) The mission & first day
+            li
+              a(
+                data-target="research" 
+                href="#research"
+                )
+                | Research
+            li
+              a(
+                data-target="solution" 
+                href="#solution"
+                )
+                | Our solution
+            li
+              a(
+                data-target="prototyping" 
+                href="#prototyping"
+                ) Prototyping with AI
+            li
+              a(
+                data-target="storytelling" 
+                href="#storytelling"
+                ) Storytelling (feat. Linda)
+            li
+              a(
+                data-target="what_i_learned" 
+                href="#what_i_learned"
+                ) What I learned
+            li
+              a(
+                data-target="check_it_out" 
+                href="#check_it_out"
+                ) Check it out
+      #article
+        section.wrapper-padding.article-section(id="mission")
+          h2.heading-underline The mission & first day
+          .explanation-wrapper
+            div
+              p.summary-text
+                em The mission: 
+                | Change a creation tool to be used by a different audience. For example, making Photoshop beginner friendly. 
+              p.summary-text
+                em The first day: 
+                | We collectively wanted to focus on accessibility in this competition. Opportunity arose when we used a keyboard to navigate around our brainstorming whiteboard. It was so unreliable tabbing through content.
+              p.summary-text
+                em That got us thinking: 
+                | how do blind and low vision (
+                abbr(aria-label="Blind and Low Vision") BLV
+                | ) users use these visual-based whiteboarding tools?
+            .trailer.subheading
+              h3.heading-underline Early discovery phase: Keyboard navigation with FigJam
+              video(
+                  width="1600" 
+                  height="1064"
+                  autoplay
+                  muted
+                  loop
+                  controls
+                  )
+                  source(src="../../video/design/adaptive-interfaces/navigating-figjam.mp4" type="video/mp4")
+        section.wrapper-padding.article-section(id="research")
+          h2.heading-underline Research
+          .explanation-wrapper
+            div
+              p
+                | Secondary research pointed to how cognitively demanding it was for  
+                abbr(aria-label="Blind and Low Vision") BLV
+                |  users: they’re in a team discussion, navigating through the board with a screen reader, and contributing to the board. All simultaneously.
+              p
+                | We hosted a mock event planning meeting using Miro. I used a screen reader and a towel over my monitor and documented my experience using Miro while visually deprived.
+              p
+                | While our simulation is not in any way representative of how blind users might use Miro and screen readers, the exercise helped me gain empathy more than anything. We read the papers, but experiencing it first-hand made me realize:
+              p
+                | oh, this is a 
+                em big 
+                | problem.
+              
+            .subheading.multiple-media
+              div
+                h3.heading-underline From a 
+                  a(href="https://dl.acm.org/doi/epdf/10.1145/2700648.2809864#page=5" target=_blank) workplace accessibility field study.
+                div.content-border.pullquote
+                  p “One thing I learned when I was working with sighted people is they would talk while I was still listening [to my screen reader]… I can’t listen to two streams at the same time."
+                  p - Catherine
+
+              div
+                h3.heading-underline My crude method to restrict my senses
+                img(
+                  alt="Winner-takes-all system" 
+                  width="1600" 
+                  height="1200" 
+                  src="../../img/design/adaptive-interfaces/autoethnography.webp"
+                  )
+        section.wrapper-padding.article-section(id="solution")
+          h2.heading-underline Our solution
+          div.section-spacing
+            div
+              p
+                | We created an accessibility onboarding experience for first-time 
+                abbr(aria-label="Blind and Low Vision") BLV
+                |  Miro users with a focus on toolbar customization. The user can start with a simple 6-tool toolbar to gradually learn Miro and then create their own custom toolbar aligned with their needs.
+            .trailer.subheading
+              h3.heading-underline Adaptive Interfaces Prototype
+              video(
+                  width="1544" 
+                  height="1080"
+                  muted
+                  controls
+                  )
+                  source(src="../../video/design/adaptive-interfaces/prototype-walkthrough.mp4" type="video/mp4")
+              a.button-small(
+                target="_blank" 
+                href="https://bluejunimo.github.io/SparkJamMiroExhibition/"
+                ) Visit website
+          .explanation-wrapper
+            div
+              p
+                | We agreed that tackling this big problem in a small way would help us design something feasible and grounded in research. We leaned into customization to reduce cognitive overload of learning so many tools and to accommodate the differing needs of 
+                abbr(aria-label="Blind and Low Vision") BLV
+                |    users.
+              
+            .subheading
+              div
+                h3.heading-underline From a 
+                  a(href="https://faculty.washington.edu/wobbrock/pubs/w4a-25.02.pdf#:~:text=%E2%80%9CBeing,%E2%80%9D" target=_blank) screen reader study.
+                div.content-border.pullquote
+                  p “Being able to choose the information felt important and meaningful because I had more autonomy and control over the information I wanted; it would save time not having to listen to information I didn’t need or care about." 
+                  p - Participant C2
+        section.wrapper-padding.article-section(id="prototyping")
+          h2.heading-underline Prototyping with AI
+          .explanation-wrapper.section-spacing
+            div
+              p
+                | I used AI (Claude Code) to prototype our website as a Figma prototype would limit our ability to showcase how it would be used by a screen reader.
+              p 
+                | I designed high-fidelity static pages in Figma and sent them to Claude with instructions on the interaction design. Iterations on ARIA use, alt-text, and focus order were made to align the prototype to how our target audience would use Miro.
+          .explanation-wrapper.two-sections.media-only
+            div
+              .subheading
+                h3.heading-underline Screen reader accessibility iterations 
+                .dual-video-wrapper
+                  .dual-video-buttons
+                    a.button-small(
+                      href="#" 
+                      data-src="../../video/design/adaptive-interfaces/prototype-before-accessibility-iterations.mp4"
+                      )
+                      svg(xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 -960 960 960" aria-hidden="false" alt-text="Play").play-pause-icon
+                        path(d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z")
+                      | Screen reader before accessibility iterations 
+                    a.button-small(
+                      href="#" 
+                      data-src="../../video/design/adaptive-interfaces/prototype-after-accessibility-iterations.mp4"
+                      )
+                      svg(xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 -960 960 960" aria-hidden="false" alt-text="Play").play-pause-icon
+                        path(d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z")
+                      | Screen reader after accessibility iterations 
+                  video(
+                    id="dual_video_player"
+                    width="1600" 
+                    height="1064"
+                    controls
+                    playsinline
+                    )
+                    source(src="../../video/design/adaptive-interfaces/prototype-before-accessibility-iterations.mp4" type="video/mp4")
+                   
+        section.wrapper-padding.article-section(id="storytelling")
+          h2.heading-underline Storytelling (feat. Linda)
+          .explanation-wrapper
+            div
+              p I drafted a persona right after our research concluded. We used Linda in mentor critiques to give backstory on the downsides of Miro and how our proposed solutions address those pain points. She was also effective in 
+                a(href="#check_it_out") our video pitch.
+            .subheading
+              h3.heading-underline Linda kicks off our pitch video
+              img(
+                  alt="User persona card for 'Linda', a Backend Software Developer, illustrated with an orange avatar wearing sunglasses. Background: Linda works in an agile team of five on fraud systems backend and struggles to participate in virtual scrum meetings using Miro, which limits her ability to work with teammates and stifles her professional development. What she's tried so far: her PM and team accommodate her by following Miro's accessibility best practices and verbally describing what they reference on the board. Frustrations: writing down her thoughts is time consuming; relying on a teammate to write for her; navigating the interface is unreliable with a screen reader; inaccurately positioning elements on the board. Her needs: to easily collaborate with her team during brainstorming sessions, and to comprehend teammates' contributions so she can stay informed and meaningfully contribute." 
+                  width="2600" 
+                  height="1463" 
+                  src="../../img/design/adaptive-interfaces/persona-linda.webp"
+                  data-zoomable
+                  )
+        section#what_i_learned.wrapper-padding.article-section
+          h2.heading-underline What I learned
+          .explanation-wrapper
+            ul.fancy-list
+              li Making designs accessible brings more meaning to my work. This is something I want to continue in future work.
+              li After vibe coding for the first time, I now better understand AI’s value in design communication: it’s a prototyping tool just like Figma, to be used in certain situations based on your project’s solution. It also lets me spend more time designing and less on prototyping.
+              li While our research was lengthy, I don’t imagine how our project would have survived without it. Linda wouldn’t exist and our design decisions would be based off vibes.
+        section.wrapper-padding.article-section(id="check_it_out")
+          h2.heading-underline Check it out
+          .explanation-wrapper.figma-embed
+            .trailer.subheading
+              h3.heading-underline Watch the video
+              iframe(
+                allowfullscreen="" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                title="YouTube video player" 
+                src="https://www.youtube-nocookie.com/embed/KzTT_EAvH9I?si=iK4k-KtzEFwrUfTU" 
+                height="315" 
+                width="560"
+                )
+            .trailer.subheading.figma-embed
+              h3.heading-underline View the process documentation
+              iframe(
+                allowfullscreen="" 
+                src="https://embed.figma.com/proto/th3i9P6dAIvwDrqYdUXmQW/Team-18---SparkJam-2026?node-id=301-4288&viewport=264%2C475%2C0.02&scaling=scale-down-width&content-scaling=min-zoom&page-id=301%3A4287&embed-host=share" 
+                height="450" 
+                width="800"
+                )
+              a.button-small(
+                target="_blank" 
+                href="../../file/design/adaptive-interfaces/adaptive-interfaces-process.pdf"
+                ) Download static slide deck
+    // Footer
+    include includes/footer

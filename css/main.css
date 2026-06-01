@@ -186,6 +186,7 @@
   --c-bg-light-85: rgba(249, 246, 246, 0.85);
   --c-bg-light-80: rgba(249, 246, 246, 0.8);
   --c-bg-light-70: rgba(249, 246, 246, 0.7);
+  --c-overlay: #360c00ea;
   --c-link: #8b1c00;
   --c-link-80: #8b1c0099;
   --c-link-change: #360c00;
@@ -258,7 +259,7 @@ h4:not(:first-of-type) {
   margin-top: 1rem;
 }
 
-p {
+p, .fancy-list li {
   margin: 0;
   margin-bottom: 1rem;
   max-width: 35rem;
@@ -284,11 +285,11 @@ abbr, dfn {
   text-decoration-line: underline;
 }
 
-dfn {
+dfn, abbr {
   position: relative;
 }
 
-dfn[aria-label]:hover::after {
+dfn[aria-label]:hover::after, abbr[aria-label]:hover::after {
   content: attr(aria-label);
   position: absolute;
   top: 2rem;
@@ -301,6 +302,11 @@ dfn[aria-label]:hover::after {
   padding: 0.5rem;
   display: block;
   box-shadow: 0.25rem 0.25rem var(--c-link);
+}
+
+abbr[aria-label]:hover::after {
+  width: fit-content;
+  min-width: 12rem;
 }
 
 .pullquote {
@@ -333,16 +339,27 @@ a:focus {
 p a:hover,
 p a:focus,
 footer a:hover,
-footer a:focus {
+footer a:focus,
+.dual-video-button-active,
+h3 a:hover,
+h3 a:focus {
   color: var(--c-bg-light);
   background-color: var(--c-link);
   text-decoration: underline;
+}
+
+.dual-video-button-active svg {
+  fill: var(--c-bg-light) !important;
 }
 
 img {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.medium-zoom-overlay, .medium-zoom-image {
+  z-index: 2;
 }
 
 body {
@@ -1137,6 +1154,21 @@ hgroup {
   z-index: 0;
 }
 
+#adaptive-interfaces {
+  background-color: #FFEB3B;
+}
+
+#adaptive-interfaces .project-thumbnail {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  right: 0;
+}
+
+.adaptive-interfaces-hero-img img {
+  object-position: 0 10%;
+}
+
 .project-tags {
   margin: 1.25rem 1.25rem 0 auto;
   width: fit-content;
@@ -1564,6 +1596,10 @@ li:last-of-type {
   gap: 5rem;
 }
 
+.explanation-wrapper.two-sections.media-only {
+    gap: 1.25rem;
+  }
+
 .summary-text {
   font-size: 1.25rem;
 }
@@ -1576,6 +1612,21 @@ li:last-of-type {
   zoom: 0.6;
   padding: 1.2rem !important;
 }
+
+.website-embed.scale-70 iframe {
+  zoom: 0.65;
+  padding: 1.2rem !important;
+}
+
+.website-embed.aspect-3-2 iframe {
+  aspect-ratio: 3/2 !important;
+  height: auto !important;
+}
+
+.section-spacing {
+  margin-bottom: 2.5rem;
+}
+
 
 .explanation-wrapper > :not(:last-child) {
   padding-bottom: 2.5rem;
@@ -1625,7 +1676,7 @@ li:last-of-type {
   aspect-ratio: 16/10.75;
 }
 
-.subheading img, .subheading .content-border, .subheading video {
+.subheading img, .subheading .content-border, .subheading video, .subheading .dual-video-wrapper {
   width: 100%;
   height: auto;
   border: solid 0.075rem var(--c-link);
@@ -1638,6 +1689,43 @@ li:last-of-type {
   gap: 1rem;
 }
 
+.dual-video-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.dual-video-wrapper video {
+  padding: 0;
+}
+
+.dual-video-buttons {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+  height: fit-content;
+}
+
+.dual-video-buttons svg {
+  fill: var(--c-link);
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.dual-video-buttons a:has(svg) {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.dual-video-buttons a:hover svg, .dual-video-buttons a:focus svg {
+  fill: var(--c-bg-light);
+}
+
 .img-2by1 {
   aspect-ratio: 2/1 !important;
 }
@@ -1647,7 +1735,7 @@ li:last-of-type {
   min-width: 20rem;
 }
 
-.subheading:has(img), .subheading:has(video) {
+.subheading:has(img), .subheading:has(video), .subheading:has(.pullquote) {
   margin-bottom: 1.25rem;
 }
 
@@ -2434,6 +2522,10 @@ iframe {
   .subheading h3 {
     font-size: 1rem;
   }
+
+  .dual-video-wrapper {
+    grid-template-columns: 1fr;
+  }
   /* FOOTER */
   footer .footer-links {
     order: 0;
@@ -2569,9 +2661,12 @@ iframe {
   .trailer iframe,
   .subheading img,
   .subheading .content-border,
-  .subheading video {
+  .subheading video,
+  .subheading .dual-video-wrapper {
     padding: 0.75rem;
+    padding-top: 1.25rem;
   }
+
   .project-details-wrapper .subheading h3 {
     border: none;
     margin: 0 0 0 auto;
@@ -2612,6 +2707,10 @@ iframe {
     display: grid;
     justify-items: end;
     row-gap: 0.5rem;
+  }
+  .two-col {
+    padding: 0.5rem;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 21.875rem) {

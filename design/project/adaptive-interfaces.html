@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HTML Head-->
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Adaptive Interfaces (SparkJam 2026) - Max Nielsen</title>
+    <link rel="stylesheet" href="../../css/main.css"/>
+    <script src="../../js/header.js" defer=""></script>
+    <script src="../../js/footer.js" defer=""></script>
+    <script src="../../js/toc.js" defer=""></script>
+    <script src="../../js/clicky-menu.js" defer=""></script>
+    <link rel="shortcut icon" href="../../img/logo.svg" type="image/x-icon"/>
+  </head>
+  <script src="../../js/medium-zoom.min.js" defer=""></script>
+  <script src="../../js/medium-zoom-custom.js" defer=""></script>
+  <script src="../../js/dual_video.js" defer=""></script>
+  <body>
+    <!-- Header-->
+    <header><a class="skip-link" href="#main">Skip to main content</a><a class="skip-link" href="#footer">Skip to footer</a>
+      <nav id="nav-website" aria-label="Website section menu">
+        <ul class="clicky-menu no-js" id="website-menu">
+          <li><a class="clicky-menu-dropdown" href="../../design/index.html" aria-expanded="false"><span class="h1">Max Nielsen's Designs</span>
+              <svg class="chevron" width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" alt="Show submenu">
+                <path d="M1.94466 1.94456L17.9451 17.945L33.9455 1.94456" stroke="#8B1C00" stroke-width="5.5"></path>
+              </svg></a>
+            <ul>
+              <li id="link-item-design"><a href="../../design/index.html"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" aria-hidden="true" alt="Magic wand">
+                    <path fill="#f9f6f6" fill-rule="evenodd" d="M7.577.141a1.26 1.26 0 0 0-1.818.89a6.6 6.6 0 0 0-.003 2.415a8.1 8.1 0 0 0-1.87 1.376c-.613.6-.481 1.624.292 2.031c.4.21.805.377 1.227.505L.256 12.507a.875.875 0 0 0 1.238 1.237l5.148-5.148q.192.63.505 1.226a1.266 1.266 0 0 0 2.031.293a8.1 8.1 0 0 0 1.377-1.871a6.6 6.6 0 0 0 2.414-.002a1.26 1.26 0 0 0 .89-1.818a8 8 0 0 0-1.382-1.919a6.9 6.9 0 0 0 .746-2.308A1.257 1.257 0 0 0 11.805.779a6.9 6.9 0 0 0-2.31.744A8 8 0 0 0 7.577.141m-.59 1.119l.003-.007l.002-.002h.007l.008.003a6.9 6.9 0 0 1 1.92 1.475a.625.625 0 0 0 .78.109c.744-.448 1.468-.713 2.266-.82h.007l.003.001v.001l.001.002v.007c-.108.796-.373 1.52-.822 2.264a.625.625 0 0 0 .11.78a6.9 6.9 0 0 1 1.475 1.92l.003.008v.008l-.002.002l-.007.002c-.785.145-1.545.118-2.38-.088a.625.625 0 0 0-.716.344a6.9 6.9 0 0 1-1.36 1.971l-.012.01H8.26l-.001-.001l-.002-.002l-.004-.007a5.8 5.8 0 0 1-.652-2.272a.625.625 0 0 0-.57-.571a5.8 5.8 0 0 1-2.28-.655v-.001l-.002-.005v-.008q0-.003.01-.013a6.9 6.9 0 0 1 1.971-1.36a.625.625 0 0 0 .344-.716c-.206-.835-.233-1.595-.087-2.38" clip-rule="evenodd"></path>
+                  </svg>Design <span class="hide-visually">website section</span>(current)</a></li>
+              <li id="link-item-photography"><a href="../../photography/index.html"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" aria-hidden="true" alt="Camera">
+                    <path fill="darkblue" fill-rule="evenodd" d="M4.257 1.154a.5.5 0 0 1 .438-.258h4.61a.5.5 0 0 1 .438.258l1.015 1.84l.344.029l.066.005a2.59 2.59 0 0 1 2.335 2.195c.128.863.247 1.78.247 2.724s-.12 1.861-.247 2.725a2.59 2.59 0 0 1-2.335 2.194c-1.369.118-2.764.238-4.168.238s-2.799-.12-4.168-.238a2.59 2.59 0 0 1-2.335-2.194C.369 9.808.25 8.892.25 7.947s.12-1.86.247-2.724a2.59 2.59 0 0 1 2.335-2.195l.08-.006l.33-.029zm5.356 6.498c0 1.673-.94 2.613-2.613 2.613c-1.672 0-2.613-.94-2.613-2.613c0-1.672.94-2.613 2.613-2.613c1.672 0 2.613.94 2.613 2.613" clip-rule="evenodd"></path>
+                  </svg>Photography<span class="hide-visually">website section</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav id="nav-design" aria-label="Main menu">
+        <ul class="clicky-menu no-js" id="main-menu">
+          <li><a class="button-small" id="about-link" href="../index.html#about">About me</a></li>
+          <li><a class="button-small submenu-dropdown" id="nav-projects" href="../index.html#projects">Projects<img class="chevron" src="../../img/icon/chevron.png" width="36" height="18" aria-hidden="true" alt="Show submenu"></a>
+            <ul class="dropdown" id="subnav-projects">
+              <li><a class="button-small button-dropdown" href="headliner.html">Transit Fare Map</a></li>
+              <li><a class="button-small button-dropdown" href="astra.html">Astra</a></li>
+              <li><a class="button-small button-dropdown" href="serendipity.html">Serendipity</a></li>
+              <li><a class="button-small button-dropdown" href="bc.html">BC Healthcare Hub</a></li>
+            </ul>
+          </li>
+          <li><a class="button-small submenu-dropdown" id="nav-connect" href="../index.html#connect">Contact<img class="chevron" src="../../img/icon/chevron.png" width="36" height="18" aria-hidden="true" alt="Show submenu"></a>
+            <ul class="dropdown sub-menu--right" id="subnav-connect">
+              <li><a class="button-small button-dropdown" href="mailto:max@maxnielsen.ca">Email</a></li>
+              <li><a class="button-small button-dropdown" href="tel:7786364131">Phone</a></li>
+              <li><a class="button-small button-dropdown" href="https://www.linkedin.com/in/mnielsen-/">LinkedIn<span class="hide-visually">opens in new tab</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Title and nav(?)-->
+    <picture class="project-hero-img adaptive-interfaces-hero-img">
+      <source srcset="../../img/design/adaptive-interfaces/mockup-tall.webp" alt="Mockup of Accessibility Settings screen showing step 1 of 2, where users pick between a simple, default, or custom toolbar layout. Shown on a desktop monitor against a yellow background." media="(min-width: 58.125rem)">
+      <source srcset="../../img/design/adaptive-interfaces/mockup-zoomed.webp" alt="Mockup of Accessibility Settings screen showing step 1 of 2, where users pick between a simple, default, or custom toolbar layout. Shown on a desktop monitor against a yellow background." media="(max-width: 58.125rem)"><img src="../../img/design/adaptive-interfaces/mockup-tall.webp" alt="Mockup of Accessibility Settings screen showing step 1 of 2, where users pick between a simple, default, or custom toolbar layout. Shown on a desktop monitor against a yellow background.">
+    </picture>
+    <!-- About Me-->
+    <div class="two-col" id="main">
+      <aside id="table_of_contents">
+        <h1 id="table_of_contents_title">Adaptive Interfaces</h1>
+        <p class="tagline">Helping blind users better learn and create with Miro, a visual whiteboarding tool.</p>
+        <div id="project_details">
+          <div class="project-details details-border">
+            <div class="h-btn">
+              <h2 class="details-title" id="project_details_title">Project details</h2><a class="button-tiny button-small button-toggle" data-hide-text="Hide" data-show-text="Show" id="project_details_toggle" href="#" aria-labelledby="project_details_toggle project_details" aria-expanded="true" aria-controls="project_details_wrapper">Hide</a>
+            </div>
+            <div class="project-details-wrapper" id="project_details_wrapper">
+              <div class="project-for project-detail-item">
+                <h3>Group project for</h3><a class="button-tiny" href="https://sparkjam.design/" target="_blank">
+                  Sparkjam 2026
+                    - A design jam</a>
+              </div>
+              <div class="project-detail-item">
+                <h3>Timeframe</h3>
+                <p>May 2026 (5 days)</p>
+              </div>
+              <div class="project-detail-item">
+                <h3>Project focus</h3>
+                <ul class="smaller-list-indent">
+                  <li>Accessible design</li>
+                  <li>UX research</li>
+                  <li>High-fidelity prototyping</li>
+                </ul>
+              </div>
+              <div class="project-detail-item">
+                <h3>Tools used</h3>
+                <ul class="smaller-list-indent">
+                  <li>Figjam/Figma</li>
+                  <li>Claude Code</li>
+                </ul>
+              </div>
+              <div class="project-detail-item">
+                <h3>The team</h3>
+                <ul class="smaller-list-indent">
+                  <li><a class="button-tiny" target="_blank" href="https://www.linkedin.com/in/amandajeng19/">Amanda Eng</a></li>
+                  <li><a class="button-tiny" target="_blank" href="https://www.linkedin.com/in/elizabeth-liz-liao/">Elizabeth Liao</a></li>
+                  <li><a class="button-tiny" target="_blank" href="https://www.linkedin.com/in/irina-ng-035a4b251/">Irina Ng</a></li>
+                </ul>
+              </div>
+              <div class="project-detail-item">
+                <h3>What I did</h3>
+                <p>Conducted autoethnography, designed and created the prototype, and developed a persona (Linda) to center our pitch around storytelling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="toc" id="toc">
+          <h2>In this piece</h2>
+          <ul>
+            <li><a data-target="mission" href="#mission">The mission & first day</a></li>
+            <li><a data-target="research" href="#research">Research</a></li>
+            <li><a data-target="solution" href="#solution">Our solution</a></li>
+            <li><a data-target="prototyping" href="#prototyping">Prototyping with AI</a></li>
+            <li><a data-target="storytelling" href="#storytelling">Storytelling (feat. Linda)</a></li>
+            <li><a data-target="what_i_learned" href="#what_i_learned">What I learned</a></li>
+            <li><a data-target="check_it_out" href="#check_it_out">Check it out</a></li>
+          </ul>
+        </div>
+      </aside>
+      <div id="article">
+        <section class="wrapper-padding article-section" id="mission">
+          <h2 class="heading-underline">The mission & first day</h2>
+          <div class="explanation-wrapper">
+            <div>
+              <p class="summary-text"><em>The mission: </em>Change a creation tool to be used by a different audience. For example, making Photoshop beginner friendly. </p>
+              <p class="summary-text"><em>The first day: </em>We collectively wanted to focus on accessibility in this competition. Opportunity arose when we used a keyboard to navigate around our brainstorming whiteboard. It was so unreliable tabbing through content.</p>
+              <p class="summary-text"><em>That got us thinking: </em>how do blind and low vision (<abbr aria-label="Blind and Low Vision">BLV</abbr>) users use these visual-based whiteboarding tools?</p>
+            </div>
+            <div class="trailer subheading">
+              <h3 class="heading-underline">Early discovery phase: Keyboard navigation with FigJam</h3>
+              <video width="1600" height="1064" autoplay muted loop controls>
+                <source src="../../video/design/adaptive-interfaces/navigating-figjam.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="research">
+          <h2 class="heading-underline">Research</h2>
+          <div class="explanation-wrapper">
+            <div>
+              <p>Secondary research pointed to how cognitively demanding it was for  <abbr aria-label="Blind and Low Vision">BLV</abbr> users: they’re in a team discussion, navigating through the board with a screen reader, and contributing to the board. All simultaneously.</p>
+              <p>We hosted a mock event planning meeting using Miro. I used a screen reader and a towel over my monitor and documented my experience using Miro while visually deprived.</p>
+              <p>While our simulation is not in any way representative of how blind users might use Miro and screen readers, the exercise helped me gain empathy more than anything. We read the papers, but experiencing it first-hand made me realize:</p>
+              <p>oh, this is a <em>big </em>problem.</p>
+            </div>
+            <div class="subheading multiple-media">
+              <div>
+                <h3 class="heading-underline">From a <a href="https://dl.acm.org/doi/epdf/10.1145/2700648.2809864#page=5">workplace accessibility field study.</a></h3>
+                <div class="content-border pullquote">
+                  <p>“One thing I learned when I was working with sighted people is they would talk while I was still listening [to my screen reader]… I can’t listen to two streams at the same time."</p>
+                  <p>- Catherine</p>
+                </div>
+              </div>
+              <div>
+                <h3 class="heading-underline">My crude method to restrict my senses</h3><img alt="Winner-takes-all system" width="1600" height="1200" src="../../img/design/adaptive-interfaces/autoethnography.webp">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="solution">
+          <h2 class="heading-underline">Our solution</h2>
+          <div class="section-spacing">
+            <div>
+              <p>We created an accessibility onboarding experience for first-time <abbr aria-label="Blind and Low Vision">BLV</abbr> Miro users with a focus on toolbar customization. The user can start with a simple 6-tool toolbar to gradually learn Miro and then create their own custom toolbar aligned with their needs.</p>
+            </div>
+            <div class="trailer subheading">
+              <h3 class="heading-underline">Adaptive Interfaces Prototype</h3>
+              <video width="1544" height="1080" muted controls>
+                <source src="../../video/design/adaptive-interfaces/prototype-walkthrough.mp4" type="video/mp4">
+              </video><a class="button-small" target="_blank" href="https://bluejunimo.github.io/SparkJamMiroExhibition/">Visit website</a>
+            </div>
+          </div>
+          <div class="explanation-wrapper">
+            <div>
+              <p>We agreed that tackling this big problem in a small way would help us design something feasible and grounded in research. We leaned into customization to reduce cognitive overload of learning so many tools and to accommodate the differing needs of <abbr aria-label="Blind and Low Vision">BLV</abbr>   users.</p>
+            </div>
+            <div class="subheading">
+              <div>
+                <h3 class="heading-underline">From a <a href="https://faculty.washington.edu/wobbrock/pubs/w4a-25.02.pdf#:~:text=%E2%80%9CBeing,%E2%80%9D">screen reader study.</a></h3>
+                <div class="content-border pullquote">
+                  <p>“Being able to choose the information felt important and meaningful because I had more autonomy and control over the information I wanted; it would save time not having to listen to information I didn’t need or care about." </p>
+                  <p>- Participant C2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="prototyping">
+          <h2 class="heading-underline">Prototyping with AI</h2>
+          <div class="explanation-wrapper section-spacing">
+            <div>
+              <p>I used AI (Claude Code) to prototype our website as a Figma prototype would limit our ability to showcase how it would be used by a screen reader.</p>
+              <p>
+                 I designed high-fidelity static pages in Figma and sent them to Claude with instructions on the interaction design. Iterations on ARIA use, alt-text, and focus order were made to align the prototype to how our target audience would use Miro.</p>
+            </div>
+          </div>
+          <div class="explanation-wrapper two-sections media-only">
+            <div>
+              <div class="subheading">
+                <h3 class="heading-underline">Screen reader accessibility iterations </h3>
+                <div class="dual-video-wrapper">
+                  <div class="dual-video-buttons"><a class="button-small" href="#" data-src="../../video/design/adaptive-interfaces/prototype-before-accessibility-iterations.mp4">
+                      <svg class="play-pause-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 -960 960 960" aria-hidden="false" alt-text="Play">
+                        <path d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"></path>
+                      </svg>Screen reader before accessibility iterations </a><a class="button-small" href="#" data-src="../../video/design/adaptive-interfaces/prototype-after-accessibility-iterations.mp4">
+                      <svg class="play-pause-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 -960 960 960" aria-hidden="false" alt-text="Play">
+                        <path d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"></path>
+                      </svg>Screen reader after accessibility iterations </a></div>
+                  <video id="dual_video_player" width="1600" height="1064" controls playsinline>
+                    <source src="../../video/design/adaptive-interfaces/prototype-before-accessibility-iterations.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="storytelling">
+          <h2 class="heading-underline">Storytelling (feat. Linda)</h2>
+          <div class="explanation-wrapper">
+            <div>
+              <p>I drafted a persona right after our research concluded. We used Linda in mentor critiques to give backstory on the downsides of Miro and how our proposed solutions address those pain points. She was also effective in <a href="#check_it_out">our video pitch.</a></p>
+            </div>
+            <div class="subheading">
+              <h3 class="heading-underline">Linda kicks off our pitch video</h3><img alt="User persona card for 'Linda', a Backend Software Developer, illustrated with an orange avatar wearing sunglasses. Background: Linda works in an agile team of five on fraud systems backend and struggles to participate in virtual scrum meetings using Miro, which limits her ability to work with teammates and stifles her professional development. What she's tried so far: her PM and team accommodate her by following Miro's accessibility best practices and verbally describing what they reference on the board. Frustrations: writing down her thoughts is time consuming; relying on a teammate to write for her; navigating the interface is unreliable with a screen reader; inaccurately positioning elements on the board. Her needs: to easily collaborate with her team during brainstorming sessions, and to comprehend teammates' contributions so she can stay informed and meaningfully contribute." width="2600" height="1463" src="../../img/design/adaptive-interfaces/persona-linda.webp" data-zoomable>
+            </div>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="what_i_learned">
+          <h2 class="heading-underline">What I learned</h2>
+          <div class="explanation-wrapper">
+            <ul class="fancy-list">
+              <li>Making designs accessible brings more meaning to my work. This is something I want to continue in future work.</li>
+              <li>After vibe coding for the first time, I now better understand AI’s value in design communication: it’s a prototyping tool just like Figma, to be used in certain situations based on your project’s solution. It also lets me spend more time designing and less on prototyping.</li>
+              <li>While our research was lengthy, I don’t imagine how our project would have survived without it. Linda wouldn’t exist and our design decisions would be based off vibes.</li>
+            </ul>
+          </div>
+        </section>
+        <section class="wrapper-padding article-section" id="check_it_out">
+          <h2 class="heading-underline">Check it out</h2>
+          <div class="explanation-wrapper figma-embed">
+            <div class="trailer subheading">
+              <h3 class="heading-underline">Watch the video</h3>
+              <iframe allowfullscreen="" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="YouTube video player" src="https://www.youtube-nocookie.com/embed/KzTT_EAvH9I?si=iK4k-KtzEFwrUfTU" height="315" width="560"></iframe>
+            </div>
+            <div class="trailer subheading figma-embed">
+              <h3 class="heading-underline">View the process documentation</h3>
+              <iframe allowfullscreen="" src="https://embed.figma.com/proto/th3i9P6dAIvwDrqYdUXmQW/Team-18---SparkJam-2026?node-id=301-4288&amp;viewport=264%2C475%2C0.02&amp;scaling=scale-down-width&amp;content-scaling=min-zoom&amp;page-id=301%3A4287&amp;embed-host=share" height="450" width="800"></iframe><a class="button-small" target="_blank" href="../../file/design/adaptive-interfaces/adaptive-interfaces-process.pdf">Download static slide deck</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Footer-->
+    <footer tabindex="-1" id="footer">
+      <p id="copyright">&copy; Max Nielsen</p>
+      <nav aria-label="Other links">
+        <ul>
+          <li><a href="https://maxnielsen.ca">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" aria-hidden="true" alt="Home">
+                <path fill="#f6f6f9" d="M4 19v-9q0-.475.213-.9t.587-.7l6-4.5q.525-.4 1.2-.4t1.2.4l6 4.5q.375.275.588.7T20 10v9q0 .825-.588 1.413T18 21h-3q-.425 0-.712-.288T14 20v-5q0-.425-.288-.712T13 14h-2q-.425 0-.712.288T10 15v5q0 .425-.288.713T9 21H6q-.825 0-1.412-.587T4 19"></path>
+              </svg>Go home (maxnielsen.ca)</a></li>
+          <li><a href="https://github.com/bluejunimo/maxnielsen.ca/" target="_blank" rel="external">View website on GitHub<span class="hide-visually">opens in new tab</span></a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
