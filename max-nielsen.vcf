@@ -1,0 +1,24 @@
+BEGIN:VCARD
+VERSION:4.0
+KIND:individual
+FN:Max Nielsen
+N:Nielsen;Maxwell;;;
+NICKNAME:Max
+LANG:en-CA
+LANGUAGE:en-CA
+PRONOUNS:he/him
+GENDER:M
+BDAY:0404
+EMAIL:max@maxnielsen.ca
+TEL;type=CELL:+1-778-636-4131
+URL;PREF=1:https://maxnielsen.ca
+SOCIALPROFILE;TYPE=linkedin:https://linkedin.com/in/mnielsen-/
+ORG:Maths — No Problem!;
+URL;type=work;PREF=2:https://mathsnoproblem.com/
+TITLE:Jr. Production Controller
+ADR;type=HOME:;;;Port Moody;British Columbia;;Canada
+TZ:America/Vancouver
+SOURCE:https://maxnielsen.ca/max-nielsen.vcf
+UID:urn:uuid:ec3a65c5-4df4-4f8f-a7db-278929073b0e
+REV:20261105T225209
+END:VCARD

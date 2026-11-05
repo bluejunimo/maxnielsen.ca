@@ -1,0 +1,47 @@
+include design/mixins/head.pug
+
+doctype html
+html
+	// HTML Head
+	+index_head("Contact - Max Nielsen")
+
+	body.min-screen-height-100
+
+		// Header
+		include design/includes/header
+
+		.two-col
+			aside(id="table_of_contents").remove-height
+				// <hgroup class="title-wrapper">
+				h1(id="table_of_contents_title") Contact
+				p.tagline
+					| Living right outside of Vancouver, BC in beautiful Port Moody.
+
+
+
+			section.wrapper-padding.article-section(id="contact_info").wrapper-padding-vertical.width-100
+				div.contact-info-wrapper
+					div
+						h2.heading-underline Email
+						a(href="mailto:max@maxnielsen.ca").button-small
+							| max@maxnielsen.ca
+
+					div
+						h2.heading-underline Phone
+						a(href="tel:7786364131").button-small
+							| (778) 636-4131
+
+					div
+						h2.heading-underline LinkedIn
+						a(href="https://www.linkedin.com/in/mnielsen-/").button-small
+							| linkedin.com/in/mnielsen-
+					
+					div
+						h2.heading-underline .vcf Contact Card
+						a(href="max-nielsen.vcf").button-small
+							| max-nielsen.vcf
+					
+
+
+		// Footer
+		include design/includes/footer
